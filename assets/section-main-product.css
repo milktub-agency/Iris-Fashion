@@ -26,6 +26,12 @@
 }
 
 @media screen and (min-width: 750px) {
+  .cbb-also-bought-slider-list .cbb-also-bought-product-name {
+    margin: 10px;
+  }
+  .cbb-also-bought-slider{
+    padding: 0 30px !important;
+  }
   .product-wrapper .price-item.price-item--regular {
     font-size: 2rem;
     font-weight: 500;
@@ -1644,7 +1650,6 @@ background-position:left !important
   .cbb-also-bought-container {
     margin-top: 40px;
     margin-bottom: 40px;
-    padding: 0 2rem;
   }
 }
 .cbb-also-bought-next,
@@ -1653,7 +1658,9 @@ background-position:left !important
 }
 .cbb-also-bought-title {
   padding-bottom: 0 !important;
+  padding-left: 0 !important;
   font-size: 36px !important;
+  font-weight: 700 !important;
   margin: 0 0 40px 0 !important;
   text-align: left !important;
   padding: 5rem;
@@ -1670,12 +1677,14 @@ background-position:left !important
  .cbb-also-bought-title {
     padding-left: 0; 
   }
+  .shop-the--look .cbb-also-bought-slider{
+    padding: 0 !important;
+  }
 }
 
 .cbb-also-bought-slider {
   margin: 0 !important;
   width: 100% !important;
-  padding: 0 60px !important;
 }
 @media (max-width: 768px) {
   .cbb-also-bought-slider {
@@ -1729,31 +1738,35 @@ background-position:left !important
   .cbb-also-bought-slider-list .cbb-also-bought-product:nth-of-type(n + 3) {
     margin-top: 50px !important;
   }
+  .cbb-also-bought-slider-list .cbb-also-bought-product-name {
+    margin-left: 13px !important;
+  }
 }
+
 .cbb-also-bought-slider-list .cbb-also-bought-product-image {
   max-width: 100% !important;
   width: 100% !important;
   background-size: contain !important;
+  height: 375px !important;
 }
 @media (max-width: 768px) {
   .cbb-also-bought-slider-list .cbb-also-bought-product-image {
     height: 70vw !important;
   }
+  .cbb-also-bought-slider-list .cbb-also-bought-product-vendor{
+    font-size: 1.6rem;
+  }
 }
 .cbb-also-bought-slider-list .cbb-also-bought-product-vendor {
-  font-size: 16px !important;
-  font-weight: bold !important;
-  letter-spacing: normal !important;
-  text-align: left !important;
-  font-style: normal !important;
-  min-height: 0 !important;
-  margin: 1.7rem 0 0.25rem 0 !important;
-  text-transform: uppercase !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    margin: 15px 0 10px !important;
+    letter-spacing: 0rem;
 }
 .cbb-also-bought-slider-list .cbb-also-bought-product-name {
   font-size: 13px !important;
   font-weight: 300 !important;
-  margin: 0 0 16px !important;
   text-align: left !important;
   min-height: 0 !important;
   letter-spacing: normal !important;
@@ -1761,6 +1774,8 @@ background-position:left !important
 }
 .cbb-also-bought-product-regular-price {
   padding: 0 !important;
+  font-size: 16px;
+  font-weight: 300;
 }
 .cbb-also-bought-product-compare-at-price {
   padding: 0 !important;
@@ -1782,6 +1797,17 @@ background-position:left !important
 .cbb-also-bought-product-name a {
   text-decoration: none;
   color: inherit;
+  font-family: proxima-nova, sans-serif !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  margin: 6px 0 !important;
+  font-weight: 300 !important;
+}
+.cbb-also-bought-container.cbb-desktop-view{
+  padding: 0 4rem !important;
+}
+.shop-the--look .cbb-also-bought-container.cbb-desktop-view{
+  padding: 0rem !important;
 }
 .product-usp-details--icon {
   width: 25px;
