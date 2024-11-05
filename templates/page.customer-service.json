@@ -1,0 +1,464 @@
+{
+  "sections": {
+    "banner": {
+      "type": "page-banner",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "customer_service_faq_qYq7rp": {
+      "type": "customer-service-faq",
+      "blocks": {
+        "text_NgdGLk": {
+          "type": "text",
+          "settings": {
+            "heading": "Orders"
+          }
+        },
+        "text_nAyBzC": {
+          "type": "text",
+          "settings": {
+            "heading": "Payment"
+          }
+        },
+        "text_BRUNeW": {
+          "type": "text",
+          "settings": {
+            "heading": "Delivery"
+          }
+        },
+        "text_jkgRek": {
+          "type": "text",
+          "settings": {
+            "heading": "Returns & Exchanges"
+          }
+        },
+        "text_QkVmTA": {
+          "type": "text",
+          "settings": {
+            "heading": "General"
+          }
+        }
+      },
+      "block_order": [
+        "text_NgdGLk",
+        "text_nAyBzC",
+        "text_BRUNeW",
+        "text_jkgRek",
+        "text_QkVmTA"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "caption": "I have a question about…",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "padding_top": 80,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_czT8dV": {
+      "type": "faqs-collapsible-content",
+      "blocks": {
+        "collapsible_row_YcbpLy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I order from Iris",
+            "icon": "none",
+            "row_content": "<p>SHOPPING ONLINE:<\/p><p>You can shop online anytime on our secure website irisfashion.co.uk<\/p><p>1. Simply browse and select the item(s) and size(s) you want to purchase and click ‘ADD TO BASKET’<\/p><p>2. Click ‘MY SHOPPING TROLLY ICON’ (top right hand side of the page on desktop for from along the bottom of your screen when shopping on mobile) and ensure the item(s) and pricing is correct (including any applicable discount codes). You can continue to shop or browse the site at any time and return back to ‘your basket when you are ready to purchase. Your item(s) will remain in your bag until purchased.<\/p><p>3. When you have chosen and are satisfied with the item(s) in your basket Click the ‘CHECKOUT’ button<\/p><p>4. Select your ‘CHECKOUT METHOD’ (Create\/Login to your Iris Account or Checkout as Guest)<\/p><p>5. Proceed to follow the very simple prompts on your screen through our secure Checkout process<\/p><p>6. Once your order has been placed successfully, you will receive an Order Confirmation email.<\/p><p>If you are experiencing any problems, please contact Customer Care by emailing customercare@irisfashion.co.uk or 0208 7473597 before proceeding with your order.<\/p><p>SHOPPING BY PHONE:<\/p><p>Our Customer Care Team are available to assist you with placing orders, size and styling advice and happy to help in any way possible.<\/p><p>Contact Customer Care by emailing customercare@irisfashion.co.uk or call us on 0208 7473597 (09:30 - 17:30 Mon – Fri.<\/p><p>SHOPPING IN STORE:<\/p><p>We welcome you to visit any of our Stores. Click Stores for our locations, contact information, opening hours and directions.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mMHpaq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I log into my account",
+            "icon": "none",
+            "row_content": "<p>Click ‘account icon’ at the top right-hand side of the page.<\/p><p>Click ‘SIGN IN’ if you have already registered with us. Fill in the required fields.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8mDDie": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I have forgotten my password, how do I reset this?",
+            "icon": "none",
+            "row_content": "<p>Click the account icon at the top right hand side of the page.<\/p><p>Click ‘FORGOT MY PASSWORD’<\/p><p>Fill in the required fields and follow the prompts.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6rj8Gp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to create an account to order online?",
+            "icon": "none",
+            "row_content": "<p>You can shop with us without creating an account however, when you register with us and login to your account you will enjoy the following benefits:<\/p><p>Track your orders and review past purchases and order history<\/p><p>Monitor and review current and previous order statuses including Returns history and updates<\/p><p>Receive news about Exclusive Offers, Previews and New Arrivals before anyone else<\/p><p>Create personal Wishlists to keep an eye on your favourites<\/p><p>Stay up to date with your online Store and Gift Card credit<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Q6dkAc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I know my order has been placed successfully?",
+            "icon": "none",
+            "row_content": "<p>SHOPPING ONLINE:<\/p><p>You can shop online anytime on our secure website irisfashion.co.uk<\/p><p>1. Simply browse and select the item(s) and size(s) you want to purchase and click ‘ADD TO BASKET’<\/p><p>2. Click ‘MY SHOPPING TROLLY ICON’ (top right hand side of the page on desktop for from along the bottom of your screen when shopping on mobile) and ensure the item(s) and pricing is correct (including any applicable discount codes). You can continue to shop or browse the site at any time and return back to ‘your basket when you are ready to purchase. Your item(s) will remain in your bag until purchased.<\/p><p>3. When you have chosen and are satisfied with the item(s) in your basket Click the ‘CHECKOUT’ button<\/p><p>4. Select your ‘CHECKOUT METHOD’ (Create\/Login to your Iris Account or Checkout as Guest)<\/p><p>5. Proceed to follow the very simple prompts on your screen through our secure Checkout process<\/p><p>6. Once your order has been placed successfully, you will receive an Order Confirmation email.<\/p><p>If you are experiencing any problems, please contact Customer Care by emailing customercare@irisfashion.co.uk or 0208 7473597 before proceeding with your order.<\/p><p>SHOPPING BY PHONE:<\/p><p>Our Customer Care Team are available to assist you with placing orders, size and styling advice and happy to help in any way possible.<\/p><p>Contact Customer Care by emailing customercare@irisfashion.co.uk or call us on 0208 7473597 (09:30 - 17:30 Mon – Fri.<\/p><p>SHOPPING IN STORE:<\/p><p>We welcome you to visit any of our Stores. Click Stores for our locations, contact information, opening hours and directions.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kgpFhd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I use a discount\/promotional code?",
+            "icon": "none",
+            "row_content": "<p>Once you have finished shopping, Click checkout.<\/p><p>At the checkout enter the Discount\/Promotional Code and click ‘APPLY’. Your Shopping Bag page will refresh showing the correct discount price, and a message will appear at the top of the page to confirm if the code has been successfully applied.<\/p><p>Please Note: When an order is placed using a promotional code and contains a number of items, the value of the discount is spread over each item according to the pro-rated value of that item. Any refund of an item purchased in such an order will be reduced by the value of discount attached to it. The ‘discount’ will not be refunded.<\/p><p> All of our Promotional\/Discount Offers are subject to the below <\/p><p>Valid on full-priced items and cannot be used on sale or promotional items which are already discounted unless otherwise stated<br\/>Cannot be used in conjunction with any other offer;<br\/>Valid for a limited period of time as specified in the marketing communication, they cannot be used outside of that period and previous purchases are not eligible;<br\/>They may not be valid in stores unless otherwise stated;<br\/>If an item is returned which brings the amount spent below any qualifying level, the offer value may be deducted from any refund;<br\/>Promotional codes are for use by the intended recipient only and proof of entitlement may be requested;<br\/>All orders are subject to acceptance and any improper use of promotional codes may result in the cancellation of your order;<br\/>Specific offer terms and conditions are provided with each Promotional Code - for specific information relevant to that offer, please refer to marketing material on which it is featured.<\/p><p>All orders are subject to stock availability and we reserve the right to withdraw, amend or extend offers at any time, without prior notice;<br\/>Orders cannot be amended once placed and promotional codes cannot be applied retrospectively;<\/p><p><br\/>If applicable, free delivery and free returns applies only within the UK<br\/>If applicable, free delivery applies to Standard UK delivery only<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jtdfbH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I have received my order but something is missing?",
+            "icon": "none",
+            "row_content": "<p>If something is missing from your order, in the first instance please check your Shipment Confirmation email and your confirmation invoice to see if your order has been part-dispatched. The missing item may have been on pre-purchase and will be dispatched at a later date. This information will be visible in the Product Description online. If the missing item is not on pre-purchase please call Customer Care immediately who will investigate for you.<\/p><p>If you find a discrepancy, please contact customer care  by emailing customercare@irisfashion.co.uk or call us on 0208 747 3597<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_YcbpLy",
+        "collapsible_row_mMHpaq",
+        "collapsible_row_8mDDie",
+        "collapsible_row_6rj8Gp",
+        "collapsible_row_Q6dkAc",
+        "collapsible_row_kgpFhd",
+        "collapsible_row_jtdfbH"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Orders",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "container_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_c9rxhy": {
+      "type": "faqs-collapsible-content",
+      "blocks": {
+        "collapsible_row_ChHUFt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When is payment taken",
+            "icon": "none",
+            "row_content": "<p>Your chosen method of payment will be charged at the time you place your order. If you have chosen to pre-purchase stock, your chosen payment method will be charged to secure the item(s) and will be despatched to you as soon as the stock arrives with us.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LkiprA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do any tax charges apply?",
+            "icon": "none",
+            "row_content": "<p>All prices quoted on this website are inclusive of UK taxes (VAT) at the current rate (20%). There is no VAT charge on orders being delivered outside of the UK.  Any customs or import duties levied once the package reaches your destination country will be your responsibility as we have no control over these charges and cannot predict them.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kf39dA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Payment Methods do you Accept?",
+            "icon": "none",
+            "row_content": "<p>We accept all major credit cards including Visa, Mastercard and Amex. You can also pay using paypal and amazon pay and Apple pay.<\/p><p>All transactions are taken in pounds sterling (£). If your credit card is in any other currency, the rate of exchange will be that of your card issuer and you may be charged an international fee by them.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_ChHUFt",
+        "collapsible_row_LkiprA",
+        "collapsible_row_kf39dA"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Payment",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_eABzpn": {
+      "type": "faqs-collapsible-content",
+      "blocks": {
+        "collapsible_row_73rPFt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What delivery options do you provide?",
+            "icon": "none",
+            "row_content": "<p>You can see all our delivery options <a href=\"https:\/\/www.irisfashion.co.uk\/pages\/delivery-returns\" title=\"https:\/\/www.irisfashion.co.uk\/pages\/delivery-returns\">here <\/a>on our shipping page. All our current UK and International Delivery services and costs.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8MtcEU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which delivery provider do you use?",
+            "icon": "none",
+            "row_content": "<p>UK orders are shipped with Evri for Standard and DPD for Next Day deliveries.<\/p><p>International orders are shipped with OCR<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rEpWpT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I upgrade my delivery after I have placed my order?",
+            "icon": "none",
+            "row_content": "<p>Unfortunately, once the order has been placed it is not possible to change your delivery choice.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zBFe69": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I track my order once it has been tracked?",
+            "icon": "none",
+            "row_content": "<p>Your tracking link will be sent in your dispatch email. <\/p><p>For any other tracking information please contact customer care by emailing customercare@irisfashion.co.uk or by calling 0208 747 3597<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_M4AeKy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I have a problem with my delivery, what should I do?",
+            "icon": "none",
+            "row_content": "<p>Call us 0208 747 3597 or email us at customercare@irisfashion.co.uk<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_73rPFt",
+        "collapsible_row_8MtcEU",
+        "collapsible_row_rEpWpT",
+        "collapsible_row_zBFe69",
+        "collapsible_row_M4AeKy"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Delivery",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_znMRPm": {
+      "type": "faqs-collapsible-content",
+      "blocks": {
+        "collapsible_row_MYCXfw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your returns policy?",
+            "icon": "none",
+            "row_content": "<p>If for some reason you are not completely satisfied with your purchase, you can return or exchange your item .<\/p><p>All items must be returned within 14<strong> days<\/strong> of receipt of your order with the completed Online Returns Form enclosed, and must be returned new, unused, and in the original packaging with all IRIS garment tags and labels attached.<\/p><p>The cost of return and care of the goods for orders under £150 are your responsibility until they reach us, therefore we recommend for security purposes, that you insure the parcel for the value of the goods and retain your Proof of Postage Receipt. For orders over £150 we offer free returns.<br\/>International customers must clearly mark their return packages ‘British Return Goods’ with a domestic sale value of £0.00, as your returned items are not applicable to Duty once they reach the UK.<\/p><p>Once your return has been received at our warehouse we will inspect the returned item(s) and providing the order has been sent back as per the IRIS Returns Policy, we will process your return request within 10 days of receiving your returned goods and will send you an email notification to confirm this.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kVGGpf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are there any guidelines or restrictions for returns",
+            "icon": "none",
+            "row_content": "<p>All items must be:<\/p><p>Unworn, unwashed and in perfect condition<\/p><p>Have all the original labels attached<\/p><p>In their original packaging<\/p><p>Free gifts, promotional items, lingerie and swimwear are not returnable<\/p><p>As we are not responsible for any goods lost or damaged in transit, we advise you to return items by registered post.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3QBfLB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Ff9hT9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should I return my items?",
+            "icon": "none",
+            "row_content": "<p>You can return your items within 14 days of receipt of your order. Please use our returns portal  <strong>here<\/strong> to log your return and obtain your return address label. We offer free returns for orders over £150 otherwise you can purchase a returns label in the IRIS returns portal.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ezBzKP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I still return my order after the 14 day deadline?",
+            "icon": "none",
+            "row_content": "<p>Your item(s) should be sent back to us within 14<strong> days<\/strong> of receipt as per the our Returns Policy. Returns outside these timeframes may be accepted at the our discretion but may be returned back to the you or may only be refunded as Online Credit.  <\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CDYRwB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I have received my refund confirmation email but cannot see the funds in my account, how long will this take?",
+            "icon": "none",
+            "row_content": "<p>Once you receive your refund notification from IRIS, refunds may take up to 15 working days to appear in your bank account due to varying processing times between payment providers.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_MYCXfw",
+        "collapsible_row_kVGGpf",
+        "collapsible_row_3QBfLB",
+        "collapsible_row_Ff9hT9",
+        "collapsible_row_ezBzKP",
+        "collapsible_row_CDYRwB"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Returns & Exchanges",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_Y9V9Nk": {
+      "type": "faqs-collapsible-content",
+      "blocks": {
+        "collapsible_row_UjAD96": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Signing up to our newsletter",
+            "icon": "none",
+            "row_content": "<p>If you haven’t received your sign up news letter discount, please check your junk email and make sure to move these emails in to your inbox. If you still have not received this email, please give us a call.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GcHEb6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Gift Vouchers",
+            "icon": "none",
+            "row_content": "<p>Gift vouchers that are purchased in store are only available to use in store if you would like to change this to an online gift card, please call us…<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UjAD96",
+        "collapsible_row_GcHEb6"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "General",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faqs_contact_DAacjq": {
+      "type": "faqs-contact",
+      "blocks": {
+        "contact_info_GWgA3e": {
+          "type": "contact_info",
+          "settings": {
+            "title": "CUSTOMER SERVICE",
+            "email": "customercare@irisfashion.co.uk",
+            "tel": "+44(0)20 8747 3597",
+            "address": ""
+          }
+        },
+        "contact_info_jk7hx7": {
+          "type": "contact_info",
+          "settings": {
+            "title": "PRESS ENQUIRIES",
+            "email": "natasha@irisfashion.co.uk",
+            "tel": "+44(0)20 8747 3597",
+            "address": ""
+          }
+        },
+        "contact_info_EnUqen": {
+          "type": "contact_info",
+          "settings": {
+            "title": "HEAD OFFICE",
+            "email": "webteam@irisfashion.co.uk",
+            "tel": "02087473597",
+            "address": ""
+          }
+        }
+      },
+      "block_order": [
+        "contact_info_GWgA3e",
+        "contact_info_jk7hx7",
+        "contact_info_EnUqen"
+      ],
+      "settings": {
+        "title": "",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "subtitle": "",
+        "contact_title": "",
+        "contact_subtitle": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main",
+    "customer_service_faq_qYq7rp",
+    "collapsible_content_czT8dV",
+    "collapsible_content_c9rxhy",
+    "collapsible_content_eABzpn",
+    "collapsible_content_znMRPm",
+    "collapsible_content_Y9V9Nk",
+    "faqs_contact_DAacjq"
+  ]
+}

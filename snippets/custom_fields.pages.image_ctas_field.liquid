@@ -1,0 +1,30 @@
+{% if page.metafields["custom_fields"]["image_ctas_field"] != blank %}
+  <div class="custom-field custom-field__image-ctas-field custom-field__type--field-collection">
+    <h3 class="custom-field--title">Image CTAs</h3>
+    <div class="custom-field--value">
+      {% assign separator = "|###|" %}
+      {% assign image_array = page.metafields["custom_fields"]["image"] | split: separator %}
+      {% assign title_array = page.metafields["custom_fields"]["title"] | split: separator %}
+      {% assign text_2_array = page.metafields["custom_fields"]["text_2"] | split: separator %}
+      {% assign link_array = page.metafields["custom_fields"]["link"] | split: separator %}
+      {% assign fc_keys = page.metafields["custom_fields"]["image_ctas_field"] | split: "," %}
+      {% for i in fc_keys %}
+        {% assign index = i | plus: 0 %}
+        <div class="fc-item fc-item--image cta fc-index--{{ index }}">
+          <div class="fc-field field__image">
+            {{ image_array[index] }}
+          </div>
+          <div class="fc-field field__title">
+            {{ title_array[index] }}
+          </div>
+          <div class="fc-field field__text-2">
+            {{ text_2_array[index] }}
+          </div>
+          <div class="fc-field field__link">
+            {{ link_array[index] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

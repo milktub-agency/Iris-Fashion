@@ -1,0 +1,19 @@
+{%- if image_cta_image_url.size > 0 and image_cta_url.size > 0 -%}
+    <a href="{{ image_cta_url }}" class="image-cta">
+        <div class="image-cta__image object-cover">
+            <img src="{{ image_cta_image_url }}" alt="{{ image_cta_image_url | split: '.' | first }}" loading="lazy">
+        </div>
+        {%- if image_cta_title.size > 0 or image_cta_text.size > 0 -%}
+            <div class="image-cta__content bg-white text-align-center">
+                {%- if image_cta_title.size > 0 -%}
+                    <h2 class="image-cta__title title-sm">{{ image_cta_title }}</h2>
+                {%- endif -%}
+                {%- if image_cta_text.size > 0 -%}
+                    <div class="image-cta__text rte fnt-sec">
+                        {{ image_cta_text }}
+                    </div>
+                {%- endif -%}
+            </div>
+        {%- endif -%}
+    </a>
+{%- endif -%}

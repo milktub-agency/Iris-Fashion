@@ -1,0 +1,78 @@
+<link rel="preload" href="{{ 'base.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
+</noscript>
+{%- if template.name == 'index' -%}
+    <link rel="preload" href="{{ 'section-image-banner.css' | asset_url }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}">
+    </noscript>
+{%- endif -%}
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print"
+    onload="this.media='all'">
+{% comment %} <link rel="stylesheet" href="{{ 'splide.min.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'splide.min.css' | asset_url | stylesheet_tag }}
+</noscript> {% endcomment %}
+<link rel="stylesheet" href="{{ 'product-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'product-card.css' | asset_url | stylesheet_tag }}
+</noscript>
+<link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+</noscript>
+<link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+</noscript>
+<link rel="stylesheet" href="{{ 'component-volume-pricing.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+</noscript>
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'component-price.css' | asset_url | stylesheet_tag }}
+</noscript>
+<link rel="stylesheet" href="{{ 'quick-order-list.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
+</noscript>
+{%- if settings.cart_type == 'drawer' -%}
+<link rel="preload" href="{{ 'component-cart-drawer.css' | asset_url }}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ 'component-cart.css' | asset_url }}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ 'component-totals.css' | asset_url }}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ 'component-price.css' | asset_url }}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ 'component-discounts.css' | asset_url }}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'component-cart-drawer.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'component-cart.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'component-totals.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'component-discounts.css' | asset_url }}">
+</noscript>
+{%- endif -%}
+{%- if settings.predictive_search_enabled -%}
+<link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print"
+    onload="this.media='all'">
+{%- endif -%}
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- unless settings.type_body_font.system? -%}
+{% comment %}theme-check-disable AssetPreload{% endcomment %}
+<link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+{% comment %}theme-check-enable AssetPreload{% endcomment %}
+{%- endunless -%}
+{%- unless settings.type_header_font.system? -%}
+{% comment %}theme-check-disable AssetPreload{% endcomment %}
+<link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+{% comment %}theme-check-enable AssetPreload{% endcomment %}
+{%- endunless -%}

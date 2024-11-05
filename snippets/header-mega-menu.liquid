@@ -1,0 +1,67 @@
+{% comment %}
+  Renders a megamenu for the header.
+
+  Usage:
+  {% render 'header-mega-menu' %}
+{% endcomment %}
+
+<nav class="header__inline-menu">
+  <ul class="list-menu list-menu--inline" role="list">
+    {%- for link in section.settings.menu.links -%}
+      <li>
+        {%- if link.links != blank -%}
+          <header-menu data-openOnHover='true'>
+            <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+              <summary id="HeaderMenu-{{ link.handle }}" class="nav-link header__menu-item list-menu__item link {% if link.handle == 'sale' %}sale-text{% endif %}">
+                <span {%- if link.child_active %} class="header__active-menu-item" {% endif %}>
+                  <a href="{{ link.url}}">
+                    {{ link.title | split: '[' | first }}
+                  </a>
+                </span>
+              </summary>
+              <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup" tabindex="-1" data-submenu='{{ link.title | handle }}'>
+                <ul class="mega-menu__list mega-menu--content page-mx-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"role="list">
+                  {%- for childlink in link.links -%}
+                    <li>
+                      <a id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}" href="{{ childlink.url }}" class="submenu-title" {% if childlink.current %} aria-current="page"{% endif %}>
+                        {{ childlink.title | split: '[' | first }}
+                      </a>
+                      {%- if childlink.links != blank -%}
+                      <ul class="list-unstyled no-style-menu {% if childlink.links.size > 6 %}menu-columns{% endif %}" role="list">
+                        {%- for grandchildlink in childlink.links -%}
+                          <li>
+                            <a id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}" href="{{ grandchildlink.url }}" class="mega-menu menu-drawer__menu-item menu-custom-title list-menu__item link link--text {% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                              {{ grandchildlink.title | split: '[' | first }}
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+
+                {% comment %}
+                  Mega menu content gets appended separately from component-megamenu-item.js.
+                  Customization for each Mega menu item can be done from megamenu-item.liquid section file.
+                  You can make different variations of the "megamenu-item.liquid" section.
+                  The parent's "data-submenu='{{ link.title | handle }}'" attribute is linked to "data-target-location="{{ section.settings.parent }}" in the section file.
+                {% endcomment %}
+
+                {% comment %}
+                  Note: If the mega menu dropdown is only showing the loading overlay, from customizer add a "Mega Menu Item" section in Header.
+                {% endcomment %}
+              </div>
+            </details>
+          </header-menu>
+        {%- else -%}
+          <a id="HeaderMenu-{{ link.handle }}" href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset" {% if link.current %}   aria-current="page" {% endif %}>
+            <span {%- if link.current %}  class="header__active-menu-item" {% endif %}>
+              {{- link.title | escape -}}
+            </span>
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

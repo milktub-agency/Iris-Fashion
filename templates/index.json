@@ -1,0 +1,588 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_PnWppx": {
+          "type": "heading",
+          "settings": {
+            "heading": "MAGIC IN THE AIR",
+            "heading_size": "h1"
+          }
+        },
+        "text_MNKAUm": {
+          "type": "text",
+          "settings": {
+            "text": "The Holiday Collection",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_37qVHN": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify:\/\/collections\/the-holiday-collection",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PnWppx",
+        "text_MNKAUm",
+        "buttons_37qVHN"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_design.png",
+        "mobile_image": "shopify:\/\/shop_images\/Holiday2_Mobile.png",
+        "banner_url": "shopify:\/\/collections\/by-iris-new-in",
+        "image_overlay_opacity": 0,
+        "show_overlay_content": true,
+        "enable_sale_text": false,
+        "desktop_content_position": "middle-right",
+        "show_text_box": false,
+        "enable_image_zoom": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-022ef7e5-df4c-4fe5-a6b9-03a54cd43ca3",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "featured_product_list_RxJ7FF": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_YBQwGH": {
+          "type": "product",
+          "settings": {
+            "product_item": "amira-sequin-jacket-black"
+          }
+        },
+        "product_wPGbwm": {
+          "type": "product",
+          "settings": {
+            "product_item": "camilla-metallic-knit-jumper-gold"
+          }
+        },
+        "product_T4jRkN": {
+          "type": "product",
+          "settings": {
+            "product_item": "flora-gathered-dress-black"
+          }
+        },
+        "product_pYGJkk": {
+          "type": "product",
+          "settings": {
+            "product_item": "ina-sequin-dress-gold"
+          }
+        }
+      },
+      "block_order": [
+        "product_YBQwGH",
+        "product_wPGbwm",
+        "product_T4jRkN",
+        "product_pYGJkk"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 36,
+        "top_overlap": 0
+      }
+    },
+    "image_with_text_6xDng3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_CNkJcR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Spend and Save",
+            "heading_size": "h0"
+          }
+        },
+        "text_barcQW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With Autumn in full swing, we’re offering a fantastic mid-season promotion.<\/p><p><\/p><p>Spend £200: Enjoy £30 Off  <\/p><p>Spend £400 - Enjoy £70 Off <\/p><p>Spend £750 - Enjoy £150 Off<\/p><p><\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_T7nH4q": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/new-in-this-week-1",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CNkJcR",
+        "text_barcQW",
+        "button_T7nH4q"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/2024_08_12_Iris_AW_Campaign_SHOT_16_069.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_list_7JkEPV": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_rMaHta": {
+          "type": "product",
+          "settings": {
+            "product_item": "tillie-ditsy-print-dress-brown"
+          }
+        },
+        "product_aRMmiM": {
+          "type": "product",
+          "settings": {
+            "product_item": "mae-cotton-linen-blouse-white"
+          }
+        },
+        "product_Qg6G9e": {
+          "type": "product",
+          "settings": {
+            "product_item": "skyla-wool-vest-brown"
+          }
+        },
+        "product_e6ztRB": {
+          "type": "product",
+          "settings": {
+            "product_item": "reign-cord-jean-khaki"
+          }
+        }
+      },
+      "block_order": [
+        "product_rMaHta",
+        "product_aRMmiM",
+        "product_Qg6G9e",
+        "product_e6ztRB"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 36,
+        "top_overlap": 200
+      }
+    },
+    "image_with_text_Br3ntN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Y4UYnk": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Holiday Collection",
+            "heading_size": "h0"
+          }
+        },
+        "text_VYaXLt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Aglow with seasonal shimmer and moody jewel tones, each piece has been designed for generous helpings of comfort and joy.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_qmWPqg": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/the-holiday-collection",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y4UYnk",
+        "text_VYaXLt",
+        "button_qmWPqg"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/WOWWDRX40028_BUR_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_XEQrep": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hqtqfh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Autumnal Heritage",
+            "heading_size": "h0"
+          }
+        },
+        "text_YeyFdT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're going autumnal heritage for bonfire night this year: think classic tweeds and checks layered over vintage florals in soft, earthy colourways.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_Vjp47A": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/new-in-this-week-1",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hqtqfh",
+        "text_YeyFdT",
+        "button_Vjp47A"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/def0e1376e6b1add086b678f17f3d1ec_2a42edfa-cf81-4526-af7d-0fe5e66e0ba1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_list_WmVGRP": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_FUeXU8": {
+          "type": "product",
+          "settings": {
+            "product_item": "sonia-long-coat-oatmeal"
+          }
+        },
+        "product_PFh7Mg": {
+          "type": "product",
+          "settings": {
+            "product_item": "roberta-dress-print"
+          }
+        },
+        "product_UpzwNw": {
+          "type": "product",
+          "settings": {
+            "product_item": "harpe-check-pants-black-white"
+          }
+        },
+        "product_8JUeHE": {
+          "type": "product",
+          "settings": {
+            "product_item": "flower-blouse-black"
+          }
+        }
+      },
+      "block_order": [
+        "product_FUeXU8",
+        "product_PFh7Mg",
+        "product_UpzwNw",
+        "product_8JUeHE"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "top_overlap": 150
+      }
+    },
+    "image_with_text_VPMcKz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_n637jg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Moi London in store today!",
+            "heading_size": "h0"
+          }
+        },
+        "text_6jpe7Y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join the founders of Moi London  in our Battersea store today for an event to celebrate our exclusive collaboration.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_XAbKcU": {
+          "type": "button",
+          "settings": {
+            "button_label": "DISCOVER MORE",
+            "button_link": "shopify:\/\/pages\/events-at-iris",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_n637jg",
+        "text_6jpe7Y",
+        "button_XAbKcU"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/moi_london.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_P3jnNt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nLFVyR": {
+          "type": "heading",
+          "settings": {
+            "heading": "New In Brands at IRIS",
+            "heading_size": "h0"
+          }
+        },
+        "text_JJM8pf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover our latest arrivals<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_LJwUJ8": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NEW IN BRANDS",
+            "button_link": "shopify:\/\/collections\/new-in-branded",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nLFVyR",
+        "text_JJM8pf",
+        "button_LJwUJ8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/0d7a031ae2561517ef22a88e49818903_61ef20bc-0700-4a34-b36d-728f2f634a73.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_list_jmaU7k": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_awa77Q": {
+          "type": "product",
+          "settings": {
+            "product_item": "opera-printed-gilet-navy"
+          }
+        },
+        "product_rmJrqU": {
+          "type": "product",
+          "settings": {
+            "product_item": "coralie-stud-ballerina-black"
+          }
+        },
+        "product_TPVrUW": {
+          "type": "product",
+          "settings": {
+            "product_item": "tokyo-embroidered-top-ecru"
+          }
+        },
+        "product_bW3eCy": {
+          "type": "product",
+          "settings": {
+            "product_item": "mineta-flower-knit-red"
+          }
+        }
+      },
+      "block_order": [
+        "product_awa77Q",
+        "product_rmJrqU",
+        "product_TPVrUW",
+        "product_bW3eCy"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 36,
+        "top_overlap": 200
+      }
+    },
+    "covet_pics_3CTMqb": {
+      "type": "covet-pics",
+      "settings": {
+        "gallery-code": "<covet-pics-widget gallery-embed-id=\"151684\"><\/covet-pics-widget>",
+        "color_scheme": "",
+        "top_margin": 50,
+        "bottom_margin": 0,
+        "title": "#irisfashion"
+      }
+    },
+    "image_banner_d8WJUJ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_HKcWJg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_JN6fRX": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_g8LTJw": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HKcWJg",
+        "text_JN6fRX",
+        "buttons_g8LTJw"
+      ],
+      "disabled": true,
+      "settings": {
+        "banner_url": "",
+        "image_overlay_opacity": 0,
+        "show_overlay_content": false,
+        "enable_sale_text": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "enable_image_zoom": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_product_list_RxJ7FF",
+    "image_with_text_6xDng3",
+    "featured_product_list_7JkEPV",
+    "image_with_text_Br3ntN",
+    "image_with_text_XEQrep",
+    "featured_product_list_WmVGRP",
+    "image_with_text_VPMcKz",
+    "image_with_text_P3jnNt",
+    "featured_product_list_jmaU7k",
+    "covet_pics_3CTMqb",
+    "image_banner_d8WJUJ"
+  ]
+}

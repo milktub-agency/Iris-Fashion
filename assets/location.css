@@ -1,0 +1,245 @@
+.location-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 3rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+
+.location-content--item {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  gap: 6rem;
+  margin-bottom: 4rem;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.location-content--image {
+  flex: 1;
+}
+
+.location-content--text {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.locations-selector--list {
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 68px;
+  z-index: 1;
+  color: rgba(var(--color-foreground));
+  background-color: rgb(var(--color-background));
+  padding: 2rem 0;
+  display: flex;
+  margin-bottom: 8rem;
+}
+
+.locations-selector--list .grid__item {
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #c1857e;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fbfaf0;
+  text-transform: uppercase;
+  min-height: 3rem;
+}
+
+.location-content--phone,
+.location-content--email {
+  align-items: center;
+  width: fit-content;
+}
+
+.grid__item.active {
+  background-color: #330f07;
+  color: #fff;
+}
+
+.location-content--cta {
+  background-color: #222;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.location-content--btn {
+  width: max-content;
+}
+
+.location-content--cta:hover,
+.location-content--cta:focus {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid;
+}
+
+.location-content--title {
+  font-size: 4rem;
+  line-height: 120%;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.location-content--address {
+  align-items: center;
+}
+
+.uc {
+  text-transform: uppercase;
+}
+
+.location-content--textarea {
+  flex-direction: column;
+}
+
+.location-content--item:last-child {
+  margin-bottom: 0;
+}
+
+.location-content--address {
+  align-items: center;
+}
+
+.address-truncate {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.location-content--email svg,
+.location-content--phone svg,
+.location-content--address svg {
+  width: 2rem;
+}
+a.location-content--address {
+  text-decoration: underline;
+}
+.location-container {
+  flex-wrap: wrap;
+}
+.page-description * {
+  margin: 0;
+}
+.page-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background: #e3c4b8;
+}
+/* details[open] summary ~ * {
+  animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.page-description-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.page-description-accordion{
+   background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.page-description-accordion summary {
+  width: 100%;
+  padding: 0.5rem 0;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.page-description-accordion summary:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: 0;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+.page-description-accordion[open] summary:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+.page-description-accordion summary {
+  outline: 0;
+}
+.page-description-accordion p {
+  margin: 0 0 1rem;
+  padding-top: 1rem;
+} */
+
+@media (max-width: 749px) {
+  .locations-selector--list .grid__item {
+    font-size: 1rem;
+    min-height: 3rem;
+  }
+
+  .location-content--item {
+    display: block;
+    margin-bottom: -2rem;
+  }
+
+  .locations-selector--list {
+    margin-bottom: 4rem;
+    row-gap: 1.5rem;
+    top: 6.6rem;
+  }
+
+  .location-content--title {
+    font-size: 3rem;
+  }
+}

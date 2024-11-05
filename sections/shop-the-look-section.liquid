@@ -1,0 +1,135 @@
+{%- capture lazy_load_section %}
+{%- render 'lazy-load-section-validations' -%}
+{%- endcapture -%}
+
+{% if lazy_load_section != blank %}
+<lazy-section>
+  {% endif %}
+{% if lazy_load_section == blank %}
+{{ 'shop-the-look.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{%- endstyle -%}
+{%- if product.metafields.custom_fields.style_it_with_products2 != blank
+  or product.metafields.custom_fields.style_it_with__products != blank
+-%}
+  <div class="color-{{ section.settings.color_scheme }} gradient">
+    <div class="shop-the--look isolate page-width section-{{ section.id }}-padding">
+      <div class="title-wrapper title-wrapper--no-top-margin{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <h2 class="title inline-richtext">{{ section.settings.heading }}</h2>
+      </div>
+      <div class="flex shop-the-look-container">
+        <div class="shop-the-look product-grid">
+          {%- if product.metafields.custom_fields.style_it_with_products2 != blank
+            or product.metafields.custom_fields.style_it_with__products != blank
+          -%}
+            {%- render 'shop-the-look', product: product -%}
+          {%- endif -%}
+        </div>
+        {%- if section.settings.enable_product_featured_image == true -%}
+          <div class="shop-the-look featured-image">
+            {%- assign media_class = section.settings.featured_image_style -%}
+            {%- render 'responsive-picture', desktopImage: product.featured_image, class: media_class -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+{% else %}
+  {%- render 'lazy-spinner' -%}
+{% endif %}
+
+{% if lazy_load_section != blank %}
+  </lazy-section>
+{% endif %}
+{% schema %}
+{
+  "name": "Shop the Look",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "this section will only be visible if the metafield values is present"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Shop the look",
+      "label": "Heading"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_product_featured_image",
+      "label": "Enable product featured image",
+      "default":true
+    },
+    {
+      "type": "select",
+      "id": "featured_image_style",
+      "options": [
+        {
+          "value": "media media--square",
+          "label": "Squared Image"
+        },
+        {
+          "value": "media media--portrait",
+          "label": "Portrait Image"
+        },
+        {
+          "value": "media media--landscape",
+          "label": "Landscape Image"
+        }
+      ],
+      "default": "media media--portrait",
+      "label": "Featured image style"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop the look"
+    }
+  ]
+}
+{% endschema %}

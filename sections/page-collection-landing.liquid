@@ -1,0 +1,254 @@
+{{ 'collection-landing.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+  {% if page.metafields.custom_fields.hero_image != blank
+    and page.metafields.custom_fields.mobile_hero_image == blank
+  %}
+    <section
+      class="page-collection-landing hero{% if page.metafields.custom_fields["dark_hero_text"] != blank and page.metafields.custom_fields["dark_hero_text"] == 1 %} primary{% else %} white{% endif %}"
+      data-sidebar-color
+    >
+      <img
+        class="hero__image"
+        src="{{ page.metafields.custom_fields["hero_image"] }}"
+        alt="{{ page.title }}"
+        loading="lazy"
+      >
+
+      <div class="text-center__lg">
+        <h1 class="hero__title title">{{ page.title }}</h1>
+        <div class="hero__text rte">
+          {{ page.content }}
+        </div>
+      </div>
+    </section>
+  {% elsif page.metafields.custom_fields.hero_image != blank
+    and page.metafields.custom_fields.mobile_hero_image != blank
+  %}
+    <section
+      class="page-collection-landing hero{% if page.metafields.custom_fields["dark_hero_text"] != blank and page.metafields.custom_fields["dark_hero_text"] == 1 %} primary{% else %} white{% endif %}"
+      data-sidebar-color
+    >
+      <img
+        class="hero__image above-mobile-large"
+        src="{{ page.metafields.custom_fields["hero_image"] }}"
+        alt="{{ page.title }}"
+        loading="lazy"
+      >
+      <img
+        class="hero__image mobile-large-only"
+        src="{{ page.metafields.custom_fields["mobile_hero_image"] }}"
+        alt="{{ page.title }}"
+        loading="lazy"
+      >
+
+      <div class="text-center__lg">
+        <h1 class="hero__title title">{{ page.title }}</h1>
+        <div class="hero__text rte">
+          {{ page.content }}
+        </div>
+      </div>
+    </section>
+  {% elsif page.metafields.custom_fields.hero_image == blank
+    and page.metafields.custom_fields.mobile_hero_image != blank
+  %}
+    <!-- hide this on mobile -->
+    <section class="collection-landing-title above-mobile-large{% if page.metafields.custom_fields["dark_hero_text"] != blank and page.metafields.custom_fields["dark_hero_text"] == 1 %} primary{% else %} white{% endif %}">
+      <div class="text-center">
+        <h1 class="text-center__title title">{{ page.title }}</h1>
+        <div class="text-center__text rte">
+          {{ page.content }}
+        </div>
+      </div>
+    </section>
+
+    <!-- show this on mobile -->
+    <section
+      class="page-collection-landing hero mobile-large-only{% if page.metafields.custom_fields["dark_hero_text"] != blank and page.metafields.custom_fields["dark_hero_text"] == 1 %} primary{% else %} white{% endif %}"
+      data-sidebar-color
+    >
+      <img
+        class="hero__image"
+        src="{{ page.metafields.custom_fields["mobile_hero_image"] }}"
+        alt="{{ page.title }}"
+        loading="lazy"
+      >
+
+      <div class="text-center__lg">
+        <h1 class="hero__title title">{{ page.title }}</h1>
+        <div class="hero__text rte">
+          {{ page.content }}
+        </div>
+      </div>
+    </section>
+  {% else %}
+    <section class="collection-landing-title{% if page.metafields.custom_fields["dark_hero_text"] != blank and page.metafields.custom_fields["dark_hero_text"] == 1 %} primary{% else %} white{% endif %}">
+      <div class="text-center">
+        <h1 class="text-center__title title">{{ page.title }}</h1>
+        <div class="text-center__text rte">
+          {{ page.content }}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <div class="hero__text--mobile container rte mobile-large-only text-align-center p-t-s">
+    {{ page.content }}
+  </div>
+
+  {% if page.metafields.custom_fields.collection_landing_modules != blank %}
+    {% assign separator = '|###|' %}
+    {% assign cf_image_cta_1_image = page.metafields.custom_fields.image_cta_1__image | split: separator %}
+    {% assign cf_image_cta_1_title = page.metafields.custom_fields.image_cta_1__title | split: separator %}
+    {% assign cf_image_cta_1_text = page.metafields.custom_fields.image_cta_1__text | split: separator %}
+    {% assign cf_image_cta_1_url = page.metafields.custom_fields.image_cta_1__url | split: separator %}
+    {% assign cf_image_cta_2_image = page.metafields.custom_fields.image_cta_2__image | split: separator %}
+    {% assign cf_image_cta_2_title = page.metafields.custom_fields.image_cta_2__title | split: separator %}
+    {% assign cf_image_cta_2_text = page.metafields.custom_fields.image_cta_2__text | split: separator %}
+    {% assign cf_image_cta_2_url = page.metafields.custom_fields.image_cta_2__url | split: separator %}
+    {% assign cf_image_cta_3_image = page.metafields.custom_fields.image_cta_3__image | split: separator %}
+    {% assign cf_image_cta_3_title = page.metafields.custom_fields.image_cta_3__title | split: separator %}
+    {% assign cf_image_cta_3_text = page.metafields.custom_fields.image_cta_3__text | split: separator %}
+    {% assign cf_image_cta_3_url = page.metafields.custom_fields.image_cta_3__url | split: separator %}
+    {% assign cf_featured_content_image = page.metafields.custom_fields.featured_content__image | split: separator %}
+    {% assign cf_featured_content_title = page.metafields.custom_fields.featured_content__title | split: separator %}
+    {% assign cf_featured_content_text = page.metafields.custom_fields.featured_content__text | split: separator %}
+    {% assign cf_featured_content_cta = page.metafields.custom_fields.featured_content__cta | split: separator %}
+    {% assign cf_featured_content_reverse = page.metafields.custom_fields.featured_content__reverse
+      | split: separator
+    %}
+    {% assign cf_featured_content_rotate_title = page.metafields.custom_fields.featured_content__rotate_title
+      | split: separator
+    %}
+    {% assign cf_text = page.metafields.custom_fields.text | split: separator %}
+    {% assign fc_keys = page.metafields.custom_fields.collection_landing_modules | split: ',' %}
+    {% for i in fc_keys %}
+      {% assign index = i | plus: 0 %}
+
+      {%- if cf_image_cta_1_image[index].size > 0 and cf_image_cta_1_url[index].size > 0 -%}
+        {% assign grid_size = 2 %}
+        {%- if cf_image_cta_3_image[index].size > 0 and cf_image_cta_3_url[index].size > 0 -%}
+          {% assign grid_size = 3 %}
+        {%- endif -%}
+        <section class="image-cta-wrapper">
+          <div class="image-cta-grid image-cta-grid__{{ grid_size }} container flex">
+            {%- render 'single-image-cta',
+              image_cta_image_url: cf_image_cta_1_image[index],
+              image_cta_title: cf_image_cta_1_title[index],
+              image_cta_text: cf_image_cta_1_text[index],
+              image_cta_url: cf_image_cta_1_url[index]
+            -%}
+            {%- render 'single-image-cta',
+              image_cta_image_url: cf_image_cta_2_image[index],
+              image_cta_title: cf_image_cta_2_title[index],
+              image_cta_text: cf_image_cta_2_text[index],
+              image_cta_url: cf_image_cta_2_url[index]
+            -%}
+            {%- render 'single-image-cta',
+              image_cta_image_url: cf_image_cta_3_image[index],
+              image_cta_title: cf_image_cta_3_title[index],
+              image_cta_text: cf_image_cta_3_text[index],
+              image_cta_url: cf_image_cta_3_url[index]
+            -%}
+          </div>
+        </section>
+      {%- endif -%}
+
+      {%- if cf_featured_content_image.size > 0 and cf_featured_content_text.size > 0 -%}
+        <section class="featured-content no-accent">
+          <div class="container-lg flex f-vertical-center{% if cf_featured_content_reverse[index] == '1' %} f-dir-reverse{% endif %}">
+            <div class="featured-content__content">
+              <div class="inner">
+                {%- unless cf_featured_content_rotate_title[index] == '1' -%}
+                  <h2 class="featured-content__title title">{{ cf_featured_content_title[index] }}</h2>
+                {%- endunless -%}
+                <div class="featured-content__text rte title-sm fnt-sec">
+                  {{ cf_featured_content_text[index] }}
+                </div>
+                {%- if cf_featured_content_cta[index].size > 0 -%}
+                  <span class="featured-content__cta btn">{{ cf_featured_content_cta[index] }}</span>
+                {%- endif -%}
+              </div>
+            </div>
+
+            {%- if cf_featured_content_image[index].size > 0 -%}
+              <div class="featured-content__image">
+                <img
+                  src="{{ cf_featured_content_image[index] }}"
+                  alt="{{ cf_featured_content_image[index] | split: '.' | first }}"
+                  loading="lazy"
+                >
+                {%- if cf_featured_content_rotate_title[index] == '1' -%}
+                  <div class="sideways">
+                    <h2 class="featured-content__title title">{{ cf_featured_content_title[index] }}</h2>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </section>
+      {%- endif -%}
+
+      {%- if cf_text[index].size > 0 -%}
+        <section class="text-center__lg rte">
+          {{ cf_text[index] }}
+        </section>
+      {%- endif -%}
+    {% endfor %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+    "name":"collection landing",
+    "settings":[
+        {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+      {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+       {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+    ],
+    "presets": [
+      {
+        "name": "collection landing"
+      }
+    ]
+}
+{% endschema %}

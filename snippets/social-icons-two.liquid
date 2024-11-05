@@ -1,0 +1,37 @@
+{% assign item = product | default: article %}
+
+<div class="social-icons{% if share %} social-icons__share{% endif %} flex f-vertical-center{% if class %} {{ class }}{% endif %}" itemscope itemtype="https://schema.org/Organization">
+    <link itemprop="url" href="{{ shop.url }}">
+
+    {%- if share -%}
+
+        {% capture share_url %}{{- shop.url -}}{{- item.url -}}{% endcapture %}
+        {% capture facebook_share_url %}https://www.facebook.com/sharer.php?u={{- share_url -}}{% endcapture %}
+        {% capture twitter_share_url %}https://twitter.com/share?url={{- share_url -}}&text={{- item.title | strip | url_encode -}}{% endcapture %}
+        {% capture pinterest_share_url %}https://pinterest.com/pin/create/button/?url={{ share_url }}&media={{ item.image.src }}&description={{ item.excerpt | url_encode }}{% endcapture %}
+
+        {%- if label -%}
+            <h3 class="subtitle share-title">{{ label }}</h3>
+        {%- endif -%}
+
+        <a href="{{ twitter_share_url }}" target="_blank" class="share">{%- render 'icons', icon: 'twitter' -%}</a>
+        <a href="{{ facebook_share_url }}" target="_blank" class="share">{%- render 'icons', icon: 'facebook' -%}</a>
+        <a href="{{ pinterest_share_url }}" target="_blank" class="share">{%- render 'icons', icon: 'pinterest' -%}</a>
+
+    {%- else -%}
+
+        {%- if settings.facebook_url.size > 0 -%}
+            <a itemprop="sameAs" href="{{ settings.facebook_url }}" target="_blank">{%- render 'icons', icon: 'facebook' -%}</a>
+        {%- endif -%}
+        {%- if settings.instagram_url.size > 0 -%}
+            <a itemprop="sameAs" href="{{ settings.instagram_url }}" target="_blank">{%- render 'icons', icon: 'instagram' -%}</a>
+        {%- endif -%}
+        {%- if settings.twitter_url.size > 0 -%}
+            <a itemprop="sameAs" href="{{ settings.twitter_url }}" target="_blank">{%- render 'icons', icon: 'twitter' -%}</a>
+        {%- endif -%}
+        {%- if settings.youtube_url.size > 0 -%}
+            <a itemprop="sameAs" href="{{ settings.youtube_url }}" target="_blank">{%- render 'icons', icon: 'youtube' -%}</a>
+        {%- endif -%}
+
+    {%- endif -%}
+</div>

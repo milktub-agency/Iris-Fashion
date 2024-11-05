@@ -1,0 +1,13 @@
+{% if page.metafields["custom_fields"]["dark_hero_text"] != blank %}
+  <div class="custom-field custom-field__dark-hero-text custom-field__type--checkbox">
+    <h3 class="custom-field--title">Dark hero text</h3>
+    <div class="custom-field--value">
+      {% if page.metafields["custom_fields"]["dark_hero_text"] == 1 %}
+        TRUE
+      {% else %}
+        FALSE
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}

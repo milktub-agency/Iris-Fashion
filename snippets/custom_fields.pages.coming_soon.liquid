@@ -1,0 +1,9 @@
+{% if page.metafields["custom_fields"]["coming_soon"] != blank %}
+  <div class="custom-field custom-field__coming-soon custom-field__type--multi-line-text-field">
+    <h3 class="custom-field--title">Coming Soon</h3>
+    <div class="custom-field--value">
+      {{ page.metafields["custom_fields"]["coming_soon"] }}
+
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 55.2 (78181) - https://sketchapp.com -->
+    <title>641fe391-10d6-45b5-9a77-5e5ad3d2e9fd@1.00x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M10.6495177,19.7931034 C10.8038585,19.9310345 10.9967846,20 11.2090032,20 C11.4212219,20 11.6141479,19.9310345 11.7684887,19.7931034 C12.0771704,19.5172414 12.0771704,19.0689655 11.7684887,18.7931034 L1.92926045,10 L11.7684887,1.20689655 C12.0771704,0.931034483 12.0771704,0.482758621 11.7684887,0.206896552 C11.4598071,-0.0689655172 10.9581994,-0.0689655172 10.6495177,0.206896552 L0.231511254,9.5 C-0.077170418,9.77586207 -0.077170418,10.2241379 0.231511254,10.5 L10.6495177,19.7931034 L10.6495177,19.7931034 Z" id="path-1"></path>
+    </defs>
+    <g id="⭕️-Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-10.-Arrow-/-01.-Left">
+            <g id="Icons-/-05.-Arrow-/-01.-Left" transform="translate(4.000000, 0.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Path" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="Colour-/-04.-Dark-Grey" mask="url(#mask-2)" fill="#4C4B53">
+                    <g transform="translate(-4.000000, 0.000000)" id="Rectangle-Copy-8">
+                        <rect x="0" y="0" width="20" height="20"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

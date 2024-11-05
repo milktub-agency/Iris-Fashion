@@ -1,0 +1,131 @@
+.accordion summary {
+  display: flex;
+  position: relative;
+  line-height: 1;
+  padding: 1.5rem 0;
+}
+
+.accordion .summary__title {
+  display: flex;
+  flex: 1;
+}
+.customer-service-faq h1{
+  font-size: 6rem;
+}
+.accordion .summary__title + .icon-caret {
+  height: calc(var(--font-heading-scale) * 0.6rem);
+}
+
+.accordion + .accordion {
+  margin-top: 0;
+  border-top: none;
+}
+
+.accordion {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+}
+.collapsible-content--blocks ul {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  gap: 0;
+}
+.collapsible-content__wrapper {
+  padding-left: 60px;
+  padding-right: 120px;
+  margin: 0 8rem;
+}
+
+.collapsible-content--blocks ul li {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #4c4b53;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 0 4rem;
+}
+.collapsible-content--faqs {
+  cursor: pointer;
+}
+
+.accordion__title {
+  display: inline-block;
+  max-width: calc(100% - 6rem);
+  min-height: 1.6rem;
+  margin: 0;
+  font-size: 3rem;
+  word-break: break-word;
+}
+
+.accordion .icon-accordion {
+  align-self: center;
+  fill: rgb(var(--color-foreground));
+  height: calc(var(--font-heading-scale) * 2rem);
+  margin-right: calc(var(--font-heading-scale) * 1rem);
+  width: calc(var(--font-heading-scale) * 2rem);
+}
+
+.accordion details[open] > summary .icon-caret {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+  overflow-x: auto;
+}
+
+.accordion__content img {
+  max-width: 100%;
+}
+.collapsible-content--faqs.active {
+  font-weight: 900;
+}
+@media screen and (max-width: 749px) {
+  .collapsible-content--blocks {
+    padding: 0 2rem;
+  }
+  .collapsible-content--blocks ul {
+    flex-wrap: nowrap;
+  }
+  h2.collapsible-content__heading {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .collapsible-content-wrapper-narrow {
+    margin: 0 !important;
+    padding: 0 2rem !important;
+  }
+  .collapsible-content__wrapper {
+    padding: 0;
+    margin: 0;
+  }
+  .caption-with-letter-spacing {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .collapsible-content--blocks ul li {
+    font-size: 14px;
+  }
+  .accordion__title {
+    font-size: 2rem;
+  }
+  summary .icon-caret {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 749px) {
+  .accordion summary {
+    margin: 0 0 22px 0;
+  }
+  .collapsible-content--blocks{
+    margin: 40px 0 0 0;
+  }
+}

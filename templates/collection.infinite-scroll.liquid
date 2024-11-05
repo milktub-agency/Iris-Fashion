@@ -1,0 +1,27 @@
+{% layout none %}
+{%- paginate collection.products by 16 -%} 
+    {%- for product in collection.products -%}
+                {% assign lazy_load = false %}
+                {%- if forloop.index > 2 -%}
+                  {%- assign lazy_load = true -%}
+                {%- endif -%}
+                <li
+                  class="product-card grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {% render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: 'adapt',
+                    image_shape: 'default',
+                    show_secondary_image: true,
+                    show_vendor: true,
+                    show_rating: false,
+                    lazy_load: lazy_load,
+                    quick_add: false,                
+                  %}
+                </li>
+              {%- endfor -%}
+{%  endpaginate %}

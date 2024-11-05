@@ -1,0 +1,285 @@
+{{ 'about-page.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom  }}px;
+
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- render 'section-hero', title_class: 'title-lg' -%}
+
+<div class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'text' -%}
+        <section class="text-center-section">
+          <div class="text-center__lg">
+            {%- if block.settings.title.size > 0 -%}
+              <h2 class="text-center__lg--title title">{{ block.settings.title }}</h2>
+            {%- endif -%}
+            {%- if block.settings.subtitle.size > 0 -%}
+              <h3 class="text-center__lg--subtitle title-sm">{{ block.settings.subtitle }}</h3>
+            {%- endif -%}
+            {%- if block.settings.text.size > 0 -%}
+              <div class="text-center__lg--text rte">
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
+          </div>
+        </section>
+
+      {%- when 'image_text' -%}
+        {% assign image_animation = ' data-bottom-top="transform:translateX(0vh)" data-top-bottom="transform:translateX(-28vh)"' %}
+        {% assign text_animation = ' data-bottom-top="transform:translateX(0vh)" data-top-bottom="transform:translateX(5vh)"' %}
+        {% if block.settings.reverse %}
+          {% assign image_animation = ' data-bottom-top="transform:translateX(0vh)" data-top-bottom="transform:translateX(28vh)"' %}
+          {% assign text_animation = ' data-bottom-top="transform:translateX(0vh)" data-top-bottom="transform:translateX(-5vh)"' %}
+        {% endif %}
+        <section class="image-text">
+          <div class="container-lg flex {% if block.settings.reverse %}f-dir-reverse{% endif %} f-vertical-center f-half-width f-wrap">
+            <div
+              class="image-text__image"
+              data-bottom-top="transform:translateX(0vh);"
+              data-top-bottom="transform:translateX({% if block.settings.reverse %}28vh{% else %}-28vh{% endif %});"
+            >
+              {% render 'responsive-picture', desktopImage: block.settings.image %}
+            </div>
+            <div
+              class="image-text__text"
+              data-bottom-top="transform:translateX(0vh);"
+              data-top-bottom="transform:translateX({% if block.settings.reverse %}-5vh{% else %}5vh{% endif %});"
+            >
+              <div class="inner">
+                {%- if block.settings.title.size > 0 -%}
+                  <h2 class="image-text__title title">{{ block.settings.title }}</h2>
+                {%- endif -%}
+                {%- if block.settings.text.size > 0 -%}
+                  <div class="rte">
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </section>
+
+      {%- when 'featured_articles' -%}
+        <section class="featured-articles">
+          <div class="container">
+            <div class="text-align-center">
+              <h2 class="title">{{ block.settings.title }}</h2>
+              <h3 class="title-sm">{{ block.settings.subtitle }}</h3>
+            </div>
+            <div class="article-grid flex">
+              {%- render 'single-article', article: articles[block.settings.article_1] -%}
+              {%- render 'single-article', article: articles[block.settings.article_2] -%}
+              {%- render 'single-article', article: articles[block.settings.article_3] -%}
+            </div>
+          </div>
+        </section>
+    {%- endcase -%}
+  {%- endfor -%}
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" defer></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      function isMobile() {
+          return window.innerWidth <= 749;
+      }
+      if (!isMobile()) {
+          var s = skrollr.init();
+      }
+  });
+</script>
+
+{% schema %}
+{
+    "name":"About Page",
+    "settings":[
+        {
+            "type":"checkbox",
+            "id":"enable_hero",
+            "label":"Enable hero",
+            "default":true
+        },
+        {
+            "type":"image_picker",
+            "id":"hero_image",
+            "label":"Hero Image"
+        },
+            {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+        {
+            "type":"image_picker",
+            "id":"hero_image_mobile",
+            "label":"Hero mobile image"
+        },
+        {
+            "type":"range",
+            "id":"hero_overlay_opacity",
+            "min":0,
+            "max":100,
+            "step":1,
+            "label":"Hero overlay opacity",
+            "default":10
+        },
+        {
+            "type":"range",
+            "id":"hero_height",
+            "min":0,
+            "max":500,
+            "step":10,
+            "unit":"px",
+            "label":"Hero height",
+            "default":500
+        },
+        {
+            "type":"range",
+            "id":"hero_height_mobile",
+            "min":0,
+            "max":500,
+            "step":10,
+            "unit":"px",
+            "label":"Hero mobile height",
+            "default":250
+        },
+        {
+            "type":"color",
+            "id":"hero_text_color",
+            "label":"Hero text color",
+            "default":"#ffffff"
+        },
+        {
+            "type":"text",
+            "id":"hero_title",
+            "label":"Hero title"
+        },
+        {
+            "type":"richtext",
+            "id":"hero_text",
+            "label":"Hero text"
+        },
+        {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+    ],
+    "blocks":[
+        {
+            "type":"text",
+            "name":"Text",
+            "settings":[
+                {
+                    "type":"text",
+                    "id":"title",
+                    "label":"Title"
+                },
+                {
+                    "type":"textarea",
+                    "id":"subtitle",
+                    "label":"Subtitle"
+                },
+                {
+                    "type":"richtext",
+                    "id":"text",
+                    "label":"Text"
+                }
+            ]
+        },
+        {
+            "type":"image_text",
+            "name":"Image and text",
+            "settings":[
+                {
+                    "type":"image_picker",
+                    "id":"image",
+                    "label":"Image"
+                },
+                {
+                    "type":"text",
+                    "id":"title",
+                    "label":"Title"
+                },
+                {
+                    "type":"richtext",
+                    "id":"text",
+                    "label":"Text"
+                },
+                {
+                    "type":"checkbox",
+                    "id":"reverse",
+                    "label":"Reverse",
+                    "default":false,
+                    "info":"image: right, text: left"
+                }
+            ]
+        },
+        {
+            "type":"featured_articles",
+            "name":"Featured articles",
+            "settings":[
+                {
+                    "type":"text",
+                    "id":"title",
+                    "label":"Title",
+                    "default":"Hear more stories"
+                },
+                {
+                    "type":"text",
+                    "id":"subtitle",
+                    "label":"Subtitle",
+                    "default":"Discover our blog"
+                },
+                {
+                    "type":"article",
+                    "id":"article_1",
+                    "label":"Article 1"
+                },
+                {
+                    "type":"article",
+                    "id":"article_2",
+                    "label":"Article 2"
+                },
+                {
+                    "type":"article",
+                    "id":"article_3",
+                    "label":"Article 3"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "About Page"
+        }
+    ]
+}
+{% endschema %}

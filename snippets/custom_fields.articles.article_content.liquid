@@ -1,0 +1,34 @@
+{% if article.metafields["custom_fields"]["article_content"] != blank %}
+  <div class="custom-field custom-field__article-content custom-field__type--field-collection">
+    <h3 class="custom-field--title">Article content</h3>
+    <div class="custom-field--value">
+      {% assign separator = "|###|" %}
+      {% assign text_array = article.metafields["custom_fields"]["text"] | split: separator %}
+      {% assign two_images_image_1_array = article.metafields["custom_fields"]["two_images__image_1"] | split: separator %}
+      {% assign two_images_image_2_array = article.metafields["custom_fields"]["two_images__image_2"] | split: separator %}
+      {% assign featured_products_title_array = article.metafields["custom_fields"]["featured_products_title"] | split: separator %}
+      {% assign shop_the_look_products_array = article.metafields["custom_fields"]["shop_the_look_products"] | split: separator %}
+      {% assign fc_keys = article.metafields["custom_fields"]["article_content"] | split: "," %}
+      {% for i in fc_keys %}
+        {% assign index = i | plus: 0 %}
+        <div class="fc-item fc-item--content fc-index--{{ index }}">
+          <div class="fc-field field__text">
+            {{ text_array[index] }}
+          </div>
+          <div class="fc-field field__two-images__image-1">
+            {{ two_images_image_1_array[index] }}
+          </div>
+          <div class="fc-field field__two-images__image-2">
+            {{ two_images_image_2_array[index] }}
+          </div>
+          <div class="fc-field field__featured-products-title">
+            {{ featured_products_title_array[index] }}
+          </div>
+          <div class="fc-field field__shop-the-look-products">
+            {{ shop_the_look_products_array[index] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

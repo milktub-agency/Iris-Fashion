@@ -1,0 +1,9 @@
+{% if product.metafields["custom_fields"]["low_stock_threshold"] != blank %}
+  <div class="custom-field custom-field__low-stock-threshold custom-field__type--number">
+    <h3 class="custom-field--title">Low stock threshold</h3>
+    <div class="custom-field--value">
+      {{ product.metafields["custom_fields"]["low_stock_threshold"] }}
+
+    </div>
+  </div>
+{% endif %}

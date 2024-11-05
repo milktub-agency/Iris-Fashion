@@ -1,0 +1,29 @@
+{%- if section.settings.api_key.size > 0 -%}
+
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ section.settings.api_key | strip }}&callback=initMap" async defer></script>
+
+    <script>
+    function initMap() {
+      const lat = {{ lat | plus: 0.0 }}
+      const lng = {{ lng | plus: 0.0 }}
+
+      map = new google.maps.Map(document.getElementById('map'), {
+          zoom: {{ section.settings.map_zoom }},
+          center: new google.maps.LatLng(lat,lng),
+          mapTypeId: 'roadmap'{%- if section.settings.map_style.size > 0 -%},
+          styles: {{- section.settings.map_style -}}
+          {%- endif -%}
+        })
+
+        var mapMarker = new google.maps.Marker({
+          position: {lat: lat, lng: lng},
+          map: map{%- if section.settings.map_marker.size > 0 -%},
+          icon: "{{- section.settings.map_marker | img_url: 'master' -}}"
+          {%- endif -%}
+        });
+    }
+    </script>
+
+    <div class="map{% if class %} {{ class }}{% endif %}" id="map" data-lat="{{ lat }}" data-lng="{{ lng }}"></div>
+
+{%- endif -%}

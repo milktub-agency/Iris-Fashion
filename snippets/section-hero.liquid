@@ -1,0 +1,48 @@
+
+{%- unless image -%}
+    {% assign image = section.settings.hero_image %}
+{%- endunless -%}
+
+{%- if section.settings.enable_hero -%}
+
+    {%- if image.size > 0 -%}
+        <section class="hero" data-sidebar-color>
+            <div class="text-center__lg">
+                <h1 class="hero__title {{ title_class | default: 'title' }}">{{ section.settings.hero_title }}</h1>
+                <div class="hero__text title-sm">
+                    {{ section.settings.hero_text }}
+                </div>
+            </div>
+        </section>
+    {%- endif -%}
+
+
+    <style media="screen">
+        .hero {
+            height:{{ section.settings.hero_height | append: 'px' }};
+            background-image:url('{{ image | img_url: 'master' }}');
+        }
+        .hero * {
+            color:{{ section.settings.hero_text_color }}
+        }
+        .hero:before {
+            opacity:{{ section.settings.hero_overlay_opacity | divided_by: 100.0 }}
+        }
+
+
+        @media (max-width:768px) {
+            .hero {
+                height: {{ section.settings.hero_height_mobile | plus: section.settings.hero_height | divided_by: 2 | append: 'px' }}
+            }
+        }
+
+        @media (max-width:480px) {
+            .hero {
+                height:{{ section.settings.hero_height_mobile | append: 'px' }};
+                {%- if section.settings.hero_image_mobile.size > 0 -%}
+                    background-image:url('{{ section.settings.hero_image_mobile | img_url: 'master' }}')
+                {%- endif -%}
+            }
+        }
+    </style>
+{%- endif -%}

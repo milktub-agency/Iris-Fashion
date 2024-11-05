@@ -1,0 +1,8 @@
+{% if collection.metafields["custom_fields"]["mobile_hero_image"] != blank %}
+  <div class="custom-field custom-field__mobile-hero-image custom-field__type--image">
+    <h3 class="custom-field--title">Mobile Hero image</h3>
+    <div class="custom-field--value">  
+      {% render 'cf-image' with image: collection.metafields["custom_fields"]["mobile_hero_image"], print: 'url' %}
+    </div>
+  </div>
+{% endif %}

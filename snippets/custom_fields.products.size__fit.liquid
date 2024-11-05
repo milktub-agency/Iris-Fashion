@@ -1,0 +1,9 @@
+{% if product.metafields["custom_fields"]["size__fit"] != blank %}
+  <div class="custom-field custom-field__size__fit custom-field__type--html">
+    <h3 class="custom-field--title">Size & fit</h3>
+    <div class="custom-field--value">
+      {{ product.metafields["custom_fields"]["size__fit"] }}
+
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,38 @@
+{% if page.metafields["custom_fields"]["featured_collection_products_2"] != blank %}
+  <div class="custom-field custom-field__featured-collection-products-2 custom-field__type--field-collection">
+    <h3 class="custom-field--title">Featured collection products</h3>
+    <div class="custom-field--value">
+      {% assign separator = "|###|" %}
+      {% assign collection_array = page.metafields["custom_fields"]["collection"] | split: separator %}
+      {% assign main_image_array = page.metafields["custom_fields"]["main_image"] | split: separator %}
+      {% assign title_2_array = page.metafields["custom_fields"]["title_2"] | split: separator %}
+      {% assign subtitle_array = page.metafields["custom_fields"]["subtitle"] | split: separator %}
+      {% assign product_array = page.metafields["custom_fields"]["product"] | split: separator %}
+      {% assign cta_text_array = page.metafields["custom_fields"]["cta_text"] | split: separator %}
+      {% assign fc_keys = page.metafields["custom_fields"]["featured_collection_products_2"] | split: "," %}
+      {% for i in fc_keys %}
+        {% assign index = i | plus: 0 %}
+        <div class="fc-item fc-item--collection product fc-index--{{ index }}">
+          <div class="fc-field field__collection">
+            {{ collection_array[index] }}
+          </div>
+          <div class="fc-field field__main-image">
+            {{ main_image_array[index] }}
+          </div>
+          <div class="fc-field field__title-2">
+            {{ title_2_array[index] }}
+          </div>
+          <div class="fc-field field__subtitle">
+            {{ subtitle_array[index] }}
+          </div>
+          <div class="fc-field field__product">
+            {{ product_array[index] }}
+          </div>
+          <div class="fc-field field__cta-text">
+            {{ cta_text_array[index] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,90 @@
+{% if page.metafields["custom_fields"]["collection_landing_modules"] != blank %}
+  <div class="custom-field custom-field__collection-landing-modules custom-field__type--field-collection">
+    <h3 class="custom-field--title">Collection Landing Modules</h3>
+    <div class="custom-field--value">
+      {% assign separator = "|###|" %}
+      {% assign image_cta_1_image_array = page.metafields["custom_fields"]["image_cta_1__image"] | split: separator %}
+      {% assign image_cta_1_title_array = page.metafields["custom_fields"]["image_cta_1__title"] | split: separator %}
+      {% assign image_cta_1_text_array = page.metafields["custom_fields"]["image_cta_1__text"] | split: separator %}
+      {% assign image_cta_1_url_array = page.metafields["custom_fields"]["image_cta_1__url"] | split: separator %}
+      {% assign image_cta_2_image_array = page.metafields["custom_fields"]["image_cta_2__image"] | split: separator %}
+      {% assign image_cta_2_title_array = page.metafields["custom_fields"]["image_cta_2__title"] | split: separator %}
+      {% assign image_cta_2_text_array = page.metafields["custom_fields"]["image_cta_2__text"] | split: separator %}
+      {% assign image_cta_2_url_array = page.metafields["custom_fields"]["image_cta_2__url"] | split: separator %}
+      {% assign image_cta_3_image_array = page.metafields["custom_fields"]["image_cta_3__image"] | split: separator %}
+      {% assign image_cta_3_title_array = page.metafields["custom_fields"]["image_cta_3__title"] | split: separator %}
+      {% assign image_cta_3_text_array = page.metafields["custom_fields"]["image_cta_3__text"] | split: separator %}
+      {% assign image_cta_3_url_array = page.metafields["custom_fields"]["image_cta_3__url"] | split: separator %}
+      {% assign featured_content_image_array = page.metafields["custom_fields"]["featured_content__image"] | split: separator %}
+      {% assign featured_content_title_array = page.metafields["custom_fields"]["featured_content__title"] | split: separator %}
+      {% assign featured_content_text_array = page.metafields["custom_fields"]["featured_content__text"] | split: separator %}
+      {% assign featured_content_cta_array = page.metafields["custom_fields"]["featured_content__cta"] | split: separator %}
+      {% assign featured_content_reverse_array = page.metafields["custom_fields"]["featured_content__reverse"] | split: separator %}
+      {% assign featured_content_rotate_title_array = page.metafields["custom_fields"]["featured_content__rotate_title"] | split: separator %}
+      {% assign text_array = page.metafields["custom_fields"]["text"] | split: separator %}
+      {% assign fc_keys = page.metafields["custom_fields"]["collection_landing_modules"] | split: "," %}
+      {% for i in fc_keys %}
+        {% assign index = i | plus: 0 %}
+        <div class="fc-item fc-item--module fc-index--{{ index }}">
+          <div class="fc-field field__image-cta-1__image">
+            {{ image_cta_1_image_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-1__title">
+            {{ image_cta_1_title_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-1__text">
+            {{ image_cta_1_text_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-1__url">
+            {{ image_cta_1_url_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-2__image">
+            {{ image_cta_2_image_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-2__title">
+            {{ image_cta_2_title_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-2__text">
+            {{ image_cta_2_text_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-2__url">
+            {{ image_cta_2_url_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-3__image">
+            {{ image_cta_3_image_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-3__title">
+            {{ image_cta_3_title_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-3__text">
+            {{ image_cta_3_text_array[index] }}
+          </div>
+          <div class="fc-field field__image-cta-3__url">
+            {{ image_cta_3_url_array[index] }}
+          </div>
+          <div class="fc-field field__featured-content__image">
+            {{ featured_content_image_array[index] }}
+          </div>
+          <div class="fc-field field__featured-content__title">
+            {{ featured_content_title_array[index] }}
+          </div>
+          <div class="fc-field field__featured-content__text">
+            {{ featured_content_text_array[index] }}
+          </div>
+          <div class="fc-field field__featured-content__cta">
+            {{ featured_content_cta_array[index] }}
+          </div>
+          <div class="fc-field field__featured-content__reverse">
+            {{ featured_content_reverse_array[index] }}
+          </div>
+          <div class="fc-field field__featured-content__rotate-title">
+            {{ featured_content_rotate_title_array[index] }}
+          </div>
+          <div class="fc-field field__text">
+            {{ text_array[index] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,12 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+{% assign on_sale = false %}
+{% if current_variant.price < current_variant.compare_at_price %}
+    {% assign on_sale = true %}
+{% endif %}
+
+
+<p class="product-price{% if class %} {{ class }}{% endif %}">
+    {% if on_sale %} <s class="product-original-price">{{ current_variant.compare_at_price | money_without_trailing_zeros }}</s>{% endif %}
+    <span class="{% if on_sale %} product-sale-price sale-text{% endif %}">{{ current_variant.price | money_without_trailing_zeros }}</span>
+</p>

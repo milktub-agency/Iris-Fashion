@@ -1,0 +1,141 @@
+{{ 'article.css' |  asset_url |  stylesheet_tag }}
+
+<section class="hero-2 object-cover">
+
+    {% if article.metafields.custom_fields["header_image"] != blank %}
+        <img src="{{ article.metafields.custom_fields["header_image"] }}" alt="{{ article.image.alt }}" loading="lazy">
+    {% else %}
+        {%- render 'responsive-picture', desktopImage: article.image, desktopSize:'100' -%}
+    {% endif %}
+
+</section>
+
+<section class="article">
+    <div class="article-wrapper container flex">
+
+        <div class="article-main">
+
+            <div class="article-meta-row flex f-vertical-center f-space-between">
+
+                <div class="single-article__meta flex xs">
+                    <span>By <strong>{{ article.author }}</strong></span>
+                    <span>{{ article.published_at | date: "%b %d, %Y" }}</span>
+                    <span class="bold"></span>
+                </div>
+
+                {%- render 'social-icons-two', share: true, label: 'Share' -%}
+            </div>
+
+            <div class="article__content">
+                <h1 class="article__title title-md">{{ article.title }} </h1>
+
+                <article class="rte">
+                    {{ article.content }}
+
+
+                    {% if article.metafields.custom_fields["article_content"] != blank %}
+
+                        {% assign separator = "|###|" %}
+                        {% assign text_array = article.metafields.custom_fields["text"] | split: separator %}
+                        {% assign two_images_image_1_array = article.metafields.custom_fields["two_images__image_1"] | split: separator %}
+                        {% assign two_images_image_2_array = article.metafields.custom_fields["two_images__image_2"] | split: separator %}
+                        {% assign featured_titles = article.metafields.custom_fields['featured_products_title'] | split: separator %}
+                        {% assign shop_the_look_products_array = article.metafields.custom_fields["shop_the_look_products"] | split: separator %}
+                        {% assign fc_keys = article.metafields.custom_fields["article_content"] | split: "," %}
+                        {% for i in fc_keys %}
+                            {% assign index = i | plus: 0 %}
+
+                            {%- if text_array[index].size > 0 -%}
+                                {{ text_array[index] }}
+                            {%- endif -%}
+
+                            {%- if two_images_image_1_array[index].size > 0 and two_images_image_1_array[index].size > 0 -%}
+                                <div class="two-images flex">
+                                    <img src="{{ two_images_image_1_array[index] }}" alt="{{ two_images_image_1_array[index] | split: '.' | first }}" loading="lazy">
+                                    <img src="{{ two_images_image_2_array[index] }}" alt="{{ two_images_image_2_array[index] | split: '.' | first }}" loading="lazy">
+                                </div>
+                            {%- endif -%}
+
+                            {%- if shop_the_look_products_array[index].size > 0 -%}
+                                {% assign products = shop_the_look_products_array[index] | split: '|' %}
+                                
+                                <div class="product-accessories">
+                                    {%- if featured_titles.size > 0 -%}
+                                        <h2 class="product-accessories__title title-sm">{% if featured_titles[index] != blank %}{{ featured_titles[index] }}{% else %}Shop the look {% endif %}</h2>
+                                    {% else %}
+                                        <h2 class="product-accessories__title title-sm">Shop the look</h2>
+                                    {%- endif -%}
+                                    <div class="product-accessories__grid flex">
+                                        {% for product_handle in products %}
+                                            {% assign product_ref = all_products[product_handle] %}
+                                            {%- render 'single-product', product: product_ref, class: 'single-product__sm' -%}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                        {% endfor %}
+
+                    {% endif %}
+
+                </article>
+
+                {%- render 'social-icons-two', class: 'm-xl' share: true, label: 'SHARE THIS ARTICLE' -%}
+
+                {%- render 'article-pagination' -%}
+            </div>
+
+
+        </div>
+
+
+        {% if article.metafields.custom_fields["recommended_articles"] != blank %}
+            <div class="article-side">
+                <h2 class="article-side__title subtitle-sm">Recommended articles</h2>
+
+                <div class="article-side__articles">
+                    {% assign related_articles = article.metafields.custom_fields["recommended_articles"] | split: "|" %}
+
+                    {%- for related_article in related_articles -%}
+                        {% assign related_article_split = related_article | split: "." %}
+                        {% assign related_article_blog = related_article_split[0] %}
+                        {% assign related_article_handle = related_article_split[1] %}
+
+                        {% for blog_article in blogs[related_article_blog].articles %}
+                            {% if blog_article.handle contains related_article_handle %}
+                                {%- render 'single-article', article: blog_article, class: 'single-article__sm', hide_excerpt: true, read_more: 'Read more' -%}
+                                {% break %}
+                            {% endif %}
+                        {% endfor %}
+                    {%- endfor -%}
+                </div>
+
+            </div>
+        {% endif %}
+
+
+    </div>
+</section>
+
+{% render 'custom-fields-articles' %}
+{% schema %}
+  {
+    "name": "Custom Fields",
+    "settings": [
+        {
+            "type": "paragraph",
+            "content": "[View Documentation](https:\/\/custom-fields.docs.bonify.io\/)"
+        },
+        {
+            "type": "paragraph",
+            "content": "[Edit Custom Fields](https:\/\/customfields.bonify.io\/dashboard\/iris-fashion-esc.myshopify.com\/articles\/configure)"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Fields",
+            "blocks": []
+        }
+    ],
+    "blocks": []
+}
+{% endschema %}

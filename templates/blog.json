@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "page_banner_qKGRMP": {
+      "type": "page-banner",
+      "settings": {
+        "title": "Iris Journal",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_UUxEWr": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "5 Questions",
+        "heading_size": "h1",
+        "blog": "5-questions",
+        "post_limit": 4,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "adapt",
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_ihpRbr": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "News",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 4,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "page_banner_qKGRMP",
+    "featured_blog_UUxEWr",
+    "main",
+    "featured_blog_ihpRbr"
+  ]
+}

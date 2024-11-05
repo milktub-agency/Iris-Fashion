@@ -1,0 +1,22 @@
+{% if product.metafields["custom_fields"]["colour_swatches"] != blank %}
+  <div class="custom-field custom-field__colour-swatches custom-field__type--field-collection">
+    <h3 class="custom-field--title">Colour swatches</h3>
+    <div class="custom-field--value">
+      {% assign separator = "|###|" %}
+      {% assign swatch_name_array = product.metafields["custom_fields"]["swatch_name"] | split: separator %}
+      {% assign swatch_array = product.metafields["custom_fields"]["swatch"] | split: separator %}
+      {% assign fc_keys = product.metafields["custom_fields"]["colour_swatches"] | split: "," %}
+      {% for i in fc_keys %}
+        {% assign index = i | plus: 0 %}
+        <div class="fc-item fc-item--swatch fc-index--{{ index }}">
+          <div class="fc-field field__swatch-name">
+            {{ swatch_name_array[index] }}
+          </div>
+          <div class="fc-field field__swatch">
+            {{ swatch_array[index] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

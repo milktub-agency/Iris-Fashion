@@ -1,0 +1,285 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+<div class="contact container-sm flex color-{{ section.settings.color_scheme }}">
+  <div class="contact-main">
+    {%- if section.settings.section_heading == blank -%}
+      <h1 class="contact-main__title title-lg">{{ page.title }}</h1>
+    {%- else -%}
+      <h1 class="contact-main__title title-lg">{{ section.settings.section_heading }}</h1>
+    {%- endif -%}
+    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {{ section.settings.section_description }}
+    </div>
+    <h2 class="contact-main__subtitle subtitle-md">{{ section.settings.title }}</h2>
+    {% form 'contact' %}
+      {%- if form.posted_successfully? -%}
+        <div class="thank-you-text m-t-m rte">
+          <h2 class="subtitle-sm">{{ section.settings.thank_you_title }}</h2>
+          {{ section.settings.thank_you_text }}
+          <a href="{{ section.settings.thank_you_cta_link }}" class="btn m-t-s">
+            {{- section.settings.thank_you_cta_text -}}
+          </a>
+        </div>
+      {%- elsif form.errors -%}
+        {{ form.errors | default_errors }}
+        <a href="{{ page.url }}" class="btn">Try again</a>
+      {%- else -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'form_field' -%}
+            {% assign has_form_fields = true %}
+            {% assign field_id = block.settings.placeholder
+              | replace: ' ', '_'
+              | strip
+              | default: block.settings.placeholder
+              | replace: ' ', '_'
+              | strip
+              | downcase
+            %}
+            <div class="input-field">
+              {%- case block.settings.field_type -%}
+                {%- when 'text' -%}
+                  <input
+                    type="text"
+                    id="{{ field_id }}"
+                    name="contact[{{ block.settings.placeholder | default: block.settings.placeholder }}]"
+                    {% if block.settings.placeholder.size > 0 %}
+                      placeholder="{{ block.settings.placeholder }}"
+                    {% endif -%}
+                    {% if block.settings.required %}
+                      required
+                    {% endif %}
+                  >
+                {%- when 'email' -%}
+                  <input
+                    data-sub-two
+                    data-sub-email
+                    type="email"
+                    id="{{ field_id }}"
+                    name="contact[email]"
+                    {% if block.settings.placeholder.size > 0 %}
+                      placeholder="{{ block.settings.placeholder }}"
+                    {% endif -%}
+                    {% if block.settings.required %}
+                      required
+                    {% endif %}
+                  >
+                {%- when 'textarea' -%}
+                  <textarea
+                    id="{{ field_id }}"
+                    name="contact[message]"
+                    {% if block.settings.placeholder.size > 0 %}
+                      placeholder="{{ block.settings.placeholder }}"
+                    {% endif -%}
+                    {% if block.settings.required %}
+                      required
+                    {% endif -%}
+                  ></textarea>
+                {%- when 'select' -%}
+                  {% assign options = block.settings.options | split: ',' %}
+                  {%- if options.size > 0 -%}
+                    <select id="{{ field_id }}" class="choices__input">
+                      <option value="{{ block.settings.placeholder }}">{{ block.settings.placeholder }}</option>
+                      {%- for option in options -%}
+                        <option value="{{ option | strip }}">{{ option | strip }}</option>
+                      {%- endfor -%}
+                    </select>
+                  {%- endif -%}
+              {%- endcase -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if has_form_fields -%}
+          <input type="submit" value="Get in touch" class="button">
+        {%- endif -%}
+      {%- endif -%}
+    {% endform %}
+  </div>
+  <div class="sticky-container--wrapper">
+    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <div class="sticky-container">
+        <sticky-element class="contact-information__list" data-sticky="{}">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'contact_info' -%}
+              <div class="contact-information__grid--item">
+                <h3 class="subtitle-md">{{ block.settings.title }}</h3>
+                <ul class="list-unstyled list-clear">
+                  {%- if block.settings.email.size > 0 -%}
+                    <li class="bold md">
+                      {%- render 'icons', icon: 'email' -%}
+                      <a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a>
+                    </li>
+                  {%- endif -%}
+                  {%- if block.settings.tel.size > 0 -%}
+                    <li class="bold md">
+                      {%- render 'icons', icon: 'phone' -%}
+                      <a href="tel:{{ block.settings.tel | replace: '+44(0)', '0' | remove: ' ' | remove: '+' | remove: '(' | remove: ')' }}">
+                        {{- block.settings.tel -}}
+                      </a>
+                    </li>
+                  {%- endif -%}
+                  {%- if block.settings.address.size > 0 -%}
+                    <li class="bold md">
+                      {%- render 'icons', icon: 'pin' -%}
+                      <p>{{ block.settings.address }}</p>
+                    </li>
+                  {%- endif -%}
+                </ul>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </sticky-element>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "contact us",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "richtext",
+      "id": "section_description",
+      "label": "Section description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "header",
+      "content": "Contact form"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "GET IN TOUCH WITH US"
+    },
+    {
+      "type": "header",
+      "content": "Contact form - Thank you page"
+    },
+    {
+      "type": "text",
+      "id": "thank_you_title",
+      "label": "Title",
+      "default": "Thank you"
+    },
+    {
+      "type": "richtext",
+      "id": "thank_you_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "thank_you_cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "text",
+      "id": "thank_you_cta_text",
+      "label": "CTA text",
+      "default": "Back to home"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "form_field",
+      "name": "Form field",
+      "settings": [
+        {
+          "type": "select",
+          "id": "field_type",
+          "options": [
+            {
+              "value": "text",
+              "label": "Text"
+            },
+            {
+              "value": "email",
+              "label": "Email"
+            },
+            {
+              "value": "textarea",
+              "label": "Textarea/Message"
+            },
+            {
+              "value": "select",
+              "label": "Select/Dropdown"
+            }
+          ],
+          "label": "Field type"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "Required",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "placeholder": "Email address"
+        },
+        {
+          "type": "text",
+          "id": "options",
+          "label": "Select options",
+          "info": "Only required for Select/Dropdown fields. Separate options with a comma.",
+          "placeholder": "Return query, damaged item, enquiry type 3"
+        }
+      ]
+    },
+    {
+      "type": "contact_info",
+      "name": "Contact information",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "label": "Email"
+        },
+        {
+          "type": "text",
+          "id": "tel",
+          "label": "Telephone"
+        },
+        {
+          "type": "text",
+          "id": "address",
+          "label": "Address"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "contact us"
+    }
+  ]
+}
+{% endschema %}

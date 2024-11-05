@@ -1,0 +1,20 @@
+<div class="article-pagination flex f-space-between m-xl">
+    {%- if blog.previous_article -%}
+        <a class="article-pagination__prev flex f-vertical-center" href="{{ blog.previous_article }}">
+            {%- render 'icons', icon: 'chevron-left' -%}
+            <div>
+                <span class="uc flex"> Previous article</span>
+                <h2 class="article-pagination__title fnt-pri">{{ blog.previous_article.title }}</h2>
+            </div>
+        </a>
+    {%- endif -%}
+    {%- if blog.next_article -%}
+        <a class="article-pagination__next flex f-vertical-center" href="{{ blog.next_article }}">
+            <div>
+                <span class="uc flex">Next article</span>
+                <h2 class="article-pagination__title fnt-pri">{{ blog.next_article.title }}</h2>
+            </div>
+            {%- render 'icons', icon: 'chevron-right' -%}
+        </a>
+    {%- endif -%}
+</div>

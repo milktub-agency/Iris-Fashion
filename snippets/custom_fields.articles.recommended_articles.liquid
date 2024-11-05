@@ -1,0 +1,21 @@
+{% if article.metafields["custom_fields"]["recommended_articles"] != blank %}
+  <div class="custom-field custom-field__recommended-articles custom-field__type--article-reference">
+    <h3 class="custom-field--title">Recommended articles</h3>
+    <div class="custom-field--value">  
+      {% assign article_refs = article.metafields["custom_fields"]["recommended_articles"] | split: "|" %}
+      <ul>
+        {% for article_handle in article_refs %}
+          <li>
+            {% assign article_blog_handle = article_handle | split: "." %}
+            {% for article in blogs[article_blog_handle[0]].articles %}
+              {% if article.handle contains article_blog_handle[1] %}
+                {{ article.title | link_to: article.url }}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}

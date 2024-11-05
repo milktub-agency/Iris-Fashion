@@ -1,0 +1,517 @@
+{
+  "current": {
+    "preload_image_desktop": "shopify:\/\/shop_images\/HP_DT_WK30.jpg",
+    "preload_image_mobile": "shopify:\/\/shop_images\/HP_MB_Wk30.jpg",
+    "enable_lazy_loading_sections": true,
+    "hp_eager_section_count": 5,
+    "logo": "shopify:\/\/shop_images\/IRIS_logo_BURGUNDY_CMYK_1.png",
+    "logo_width": 100,
+    "favicon": "shopify:\/\/shop_images\/IMG_5803.jpg",
+    "sale_text": "#e1142c",
+    "type_header_font": "assistant_n4",
+    "heading_scale": 100,
+    "type_body_font": "assistant_n4",
+    "body_scale": 100,
+    "page_width": 1400,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 8,
+    "spacing_grid_vertical": 36,
+    "animations_reveal_on_scroll": true,
+    "animations_hover_elements": "none",
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 10,
+    "variant_pills_radius": 0,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "scheme-2",
+    "product_styling_details": "<p><strong>Styling and Fit advice available.<\/strong><\/p><p>Call our Customer Service team on 020 8747 3597<\/p>",
+    "product_usp_block_1_icon": "shopify:\/\/shop_images\/delivery-truck.png",
+    "product_usp_block_1_text": "Next Day delivery £7.95 Order before 1pm Mon-Thu",
+    "product_usp_block_2_icon": "shopify:\/\/shop_images\/checked_1.png",
+    "product_usp_block_2_text": "Free delivery on orders over £150",
+    "product_usp_block_3_icon": "shopify:\/\/shop_images\/delivery-box.png",
+    "product_usp_block_3_text": "Hassle-free returns",
+    "delivery_text": "<p><strong>Standard UK FREE Delivery and Returns<\/strong> for orders over £150<\/p><p><strong>Standard UK Delivery<\/strong> £4.95.<br\/><strong>Delivery to store FREE<\/strong> - Order online and collect in store. Delivery days to store are Wednesday and Friday<\/p><p><strong>Call to Collect FREE<\/strong> - Call your local store to purchase over the phone and arrange collection.<br\/><strong>Next day £7.95 DPD<\/strong> - Order before 2pm Monday - Thursday.<br\/><strong>Same day £15<\/strong> - <br\/><strong>International | Europe £20 | Rest of World £25<\/strong> - <\/p><p><strong>Returns<\/strong> <br\/>If you are not completely satisfied with any items in your order, you can return them within <strong>14 days of receipt <\/strong>of your order.<strong> <\/strong><\/p><p><strong>Please note it can take up to 15 working days from receiving your return in our warehouse for the money to reach your bank account.<\/strong><\/p><p><strong>You return your order either through our returns portal<\/strong><a href=\"https:\/\/returnsportal.co\/version-live\/r\/irisfashion?s=1&backbutton=no&lang=\" target=\"_blank\" title=\"https:\/\/returnsportal.co\/version-live\/r\/irisfashion?s=1&backbutton=no&lang=\"><strong>  here<\/strong><\/a><strong> to our warehouse or by dropping your return in store.<\/strong><\/p><p>Please click here for full Delivery & Returns information.<\/p><p><strong>Earrings, Swimwear & Underwear<\/strong><\/p><p>Please note that Earrings can not be returned for hygiene reasons. Swimwear and underwear can only be returned with the hygiene sticker still intact.<\/p><p><\/p>",
+    "call_to_buy_tel": "020 8747 3597",
+    "gift_wrap_product": "gift-wrapping",
+    "size_order": "One Size,No Size,0 - 3,6 - 12,12 - 18,12 - 24,18 - 24,18 - 24,1 - 2,1 - 3,2 - 3,3 - 4,3 - 5,4 - 5,3 - 6,4 - 6,5 - 6,6 - 7,6 - 8,7 - 8,6 - 9,8 - 9,9 - 10,9 - 11,10 - 11,11 - 12,Teen,0,1,2,3,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10,11,12,13,14,15,15.5,16,16.5,17,17.5,18,22,23,24,25,26,27,28,29,30,30R,31,31R,32,32A,32B,32C,32D,32R,32L,33,33R,33L,34,34A,34B,34C,34D,34E,34R,34L,35,36,36A,36B,36C,36D,36E,36F,36FF,36R,36L,36.5,37,37.5,38,38R,38.5,39,39.5,40,40.5,41,42,43,44,45,46,48,50,52,54,56,62,68,74,80,86,92,98,104,110,116,122,XXS,XS,XS\/S,S,S\/M,M,M\/L,L,L\/XL,XL,XXL",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "whats_this_title": "Styling Appointments & Fit Advice",
+    "whats_this_text": "If you are in need of styling advice for an event or a wardrobe re-fresh or are unsure about size and fit, our expert team of advisors and in-store stylists are available during store opening hours",
+    "whats_this_image": "shopify:\/\/shop_images\/Iris_Harper_1.jpg",
+    "whats_this_step_1_title": "CUSTOMER CARE",
+    "whats_this_step_1_text": "Call our team<br>0208 747 3597<br> Monday - Friday<br>9.30am - 5.30pm",
+    "whats_this_step_2_title": "STORE TEAM",
+    "whats_this_step_2_text": "See our Store locations page and either pop in or call to speak to one of our stylists.",
+    "whats_this_step_3_title": "PERSONAL STYLING",
+    "whats_this_step_3_text": "Email jane@irisfashion.co.uk to book an in-store or virtual appointment",
+    "whats_this_instruction": "Contact us here",
+    "whats_this_link_url": "shopify:\/\/pages\/contact-us",
+    "whats_this_link_text": "Learn more",
+    "collection_card_style": "standard",
+    "collection_card_image_padding": 0,
+    "collection_card_text_alignment": "left",
+    "collection_card_color_scheme": "scheme-2",
+    "collection_card_border_thickness": 0,
+    "collection_card_border_opacity": 10,
+    "collection_card_corner_radius": 0,
+    "collection_card_shadow_opacity": 0,
+    "collection_card_shadow_horizontal_offset": 0,
+    "collection_card_shadow_vertical_offset": 4,
+    "collection_card_shadow_blur": 5,
+    "blog_card_style": "standard",
+    "blog_card_image_padding": 0,
+    "blog_card_text_alignment": "left",
+    "blog_card_color_scheme": "scheme-2",
+    "blog_card_border_thickness": 0,
+    "blog_card_border_opacity": 10,
+    "blog_card_corner_radius": 0,
+    "blog_card_shadow_opacity": 0,
+    "blog_card_shadow_horizontal_offset": 0,
+    "blog_card_shadow_vertical_offset": 4,
+    "blog_card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 1,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": -6,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 5,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "scheme-4",
+    "sold_out_badge_color_scheme": "scheme-3",
+    "brand_headline": "",
+    "brand_description": "<p><\/p>",
+    "brand_image_width": 100,
+    "social_facebook_link": "https:\/\/www.facebook.com\/IrisFashionUK",
+    "social_instagram_link": "https:\/\/www.instagram.com\/irisfashion\/",
+    "social_youtube_link": "",
+    "social_tiktok_link": "",
+    "social_twitter_link": "",
+    "social_snapchat_link": "",
+    "social_pinterest_link": "",
+    "social_tumblr_link": "",
+    "social_vimeo_link": "",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": true,
+    "predictive_search_show_price": false,
+    "currency_code_enabled": false,
+    "cart_type": "drawer",
+    "show_vendor": false,
+    "show_cart_note": false,
+    "cart_drawer_collection": "",
+    "cart_color_scheme": "scheme-1",
+    "free_shipping": "150",
+    "free_shipping_container_color": "#e3c4b8",
+    "free_shipping_bar_color": "#c1857e",
+    "cart_usp_icon_1": "shopify:\/\/shop_images\/delivery-truck.png",
+    "cart_usp_icon_label_1": "Next Day Delivery",
+    "cart_usp_icon_caption_1": "Available",
+    "cart_usp_icon_label_2": "",
+    "cart_usp_icon_caption_2": "",
+    "cart_usp_icon_3": "shopify:\/\/shop_images\/delivery-box.png",
+    "cart_usp_icon_label_3": "Hassle free",
+    "cart_usp_icon_caption_3": "returns",
+    "sections": {
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "4372474792694305445": {
+        "type": "shopify:\/\/apps\/also-bought\/blocks\/app-embed-block\/b94b27b4-738d-4d92-9e60-43c22d1da3f2",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "4275615285897611771": {
+        "type": "shopify:\/\/apps\/fera\/blocks\/embed\/2fbfcfa7-8a04-479f-89a8-0621fa099c51",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14479319785270113485": {
+        "type": "shopify:\/\/apps\/zapiet-pick-delivery\/blocks\/app-embed\/5599aff0-8af1-473a-a372-ecd72a32b4d5",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "d93f61bc-af48-48d3-8a00-7e1057bbb9fb": {
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "16422382648059844097": {
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/instant-search-app-embedded\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "3678330922655817062": {
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd-ssr\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": true,
+        "settings": {
+          "templateId": ""
+        }
+      }
+    },
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "background": "#fbfaf0",
+          "background_gradient": "",
+          "text": "#330f07",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-2": {
+        "settings": {
+          "background": "#f3f3f3",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#f3f3f3",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-3": {
+        "settings": {
+          "background": "#242833",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#000000",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-4": {
+        "settings": {
+          "background": "#121212",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#330f07",
+          "button_label": "#ffffff",
+          "secondary_button_label": "rgba(0,0,0,0)",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-5": {
+        "settings": {
+          "background": "#334fb4",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#334fb4",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-1df5212b-e629-45d9-b983-a9e65edf95fb": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "#757b82fa",
+          "text": "#eeeeee",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-022ef7e5-df4c-4fe5-a6b9-03a54cd43ca3": {
+        "settings": {
+          "background": "#fbfaf0",
+          "background_gradient": "",
+          "text": "#fbfaf0",
+          "button": "#c1857e",
+          "button_label": "#fbfaf0",
+          "secondary_button_label": "#330f07",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-6bcca103-74e2-4115-a8d3-8336eb326342": {
+        "settings": {
+          "background": "#fbfaf0",
+          "background_gradient": "",
+          "text": "#330f07",
+          "button": "#c1857e",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#330f07",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-edd0a12a-6264-4390-af86-9f0a305aa314": {
+        "settings": {
+          "background": "#e3c4b8",
+          "background_gradient": "",
+          "text": "#330f07",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "logo_width": 90,
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#FFFFFF",
+            "background_gradient": "",
+            "text": "#121212",
+            "button": "#121212",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#121212",
+            "shadow": "#121212"
+          }
+        },
+        "scheme-2": {
+          "settings": {
+            "background": "#F3F3F3",
+            "background_gradient": "",
+            "text": "#121212",
+            "button": "#121212",
+            "button_label": "#F3F3F3",
+            "secondary_button_label": "#121212",
+            "shadow": "#121212"
+          }
+        },
+        "scheme-3": {
+          "settings": {
+            "background": "#242833",
+            "background_gradient": "",
+            "text": "#FFFFFF",
+            "button": "#FFFFFF",
+            "button_label": "#000000",
+            "secondary_button_label": "#FFFFFF",
+            "shadow": "#121212"
+          }
+        },
+        "scheme-4": {
+          "settings": {
+            "background": "#121212",
+            "background_gradient": "",
+            "text": "#FFFFFF",
+            "button": "#FFFFFF",
+            "button_label": "#121212",
+            "secondary_button_label": "#FFFFFF",
+            "shadow": "#121212"
+          }
+        },
+        "scheme-5": {
+          "settings": {
+            "background": "#334FB4",
+            "background_gradient": "",
+            "text": "#FFFFFF",
+            "button": "#FFFFFF",
+            "button_label": "#334FB4",
+            "secondary_button_label": "#FFFFFF",
+            "shadow": "#121212"
+          }
+        }
+      },
+      "type_header_font": "assistant_n4",
+      "heading_scale": 100,
+      "type_body_font": "assistant_n4",
+      "body_scale": 100,
+      "page_width": 1200,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 8,
+      "spacing_grid_vertical": 8,
+      "animations_reveal_on_scroll": true,
+      "animations_hover_elements": "none",
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "standard",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "scheme-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "collection_card_style": "standard",
+      "collection_card_image_padding": 0,
+      "collection_card_text_alignment": "left",
+      "collection_card_color_scheme": "scheme-2",
+      "collection_card_border_thickness": 0,
+      "collection_card_border_opacity": 10,
+      "collection_card_corner_radius": 0,
+      "collection_card_shadow_opacity": 0,
+      "collection_card_shadow_horizontal_offset": 0,
+      "collection_card_shadow_vertical_offset": 4,
+      "collection_card_shadow_blur": 5,
+      "blog_card_style": "standard",
+      "blog_card_image_padding": 0,
+      "blog_card_text_alignment": "left",
+      "blog_card_color_scheme": "scheme-2",
+      "blog_card_border_thickness": 0,
+      "blog_card_border_opacity": 10,
+      "blog_card_corner_radius": 0,
+      "blog_card_shadow_opacity": 0,
+      "blog_card_shadow_horizontal_offset": 0,
+      "blog_card_shadow_vertical_offset": 4,
+      "blog_card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 1,
+      "media_border_opacity": 5,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 5,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "bottom left",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "scheme-4",
+      "sold_out_badge_color_scheme": "scheme-3",
+      "brand_headline": "",
+      "brand_description": "<p><\/p>",
+      "brand_image_width": 100,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true,
+      "cart_type": "notification",
+      "show_vendor": false,
+      "show_cart_note": false,
+      "cart_drawer_collection": "",
+      "cart_color_scheme": "scheme-1",
+      "sections": {
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "color_scheme": "scheme-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "scheme-1"
+          }
+        }
+      }
+    }
+  }
+}

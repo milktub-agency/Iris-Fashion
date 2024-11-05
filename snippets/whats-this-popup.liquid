@@ -1,0 +1,53 @@
+<div class="whats-this-popup hidden">
+    <div class="background-overlay"></div>
+
+  <div class="popup-container">
+    <div class="wrap">
+        <div class="close-popup-btn">
+            {% render 'icon-close-bag' %}
+        </div>
+        <div class="top flex">
+            <div class="top__left">
+              <h1 class="title">{{ settings.whats_this_title }}</h1>
+              <p class="paragraph">{{ settings.whats_this_text }}</p>
+              <h4 class="availability">{{ settings.whats_this_available }}</h4>
+            </div>
+            <div class="top__right" style="background-image: url('{{ settings.whats_this_image | img_url: '300x' }}');">
+
+            </div>
+        </div>
+
+        <div class="middle flex">
+            <div class="middle_one step-wrap">
+                <div class="number">1.</div>
+                <h2 class="step">{{ settings.whats_this_step_1_title }}</h2>
+                <p class="paragraph">{{ settings.whats_this_step_1_text }}</p>
+            </div>
+            <div class="middle_two step-wrap">
+                <div class="number">2.</div>
+                <h2 class="step">{{ settings.whats_this_step_2_title }}</h2>
+                <p class="paragraph">{{ settings.whats_this_step_2_text }}</p>
+            </div>
+            <div class="middle_three step-wrap">
+                <div class="number">3.</div>
+                <h2 class="step">{{ settings.whats_this_step_3_title }}</h2>
+                <p class="paragraph">{{ settings.whats_this_step_3_text }}</p>
+            </div>
+        </div>
+
+        <div class="bottom flex f-dir-column">
+            <div class="bottom__text-wrapper">
+                <h2 class="instruction">
+                    {{ settings.whats_this_instruction }}
+                </h2>
+                <a class="link" href="{{ settings.whats_this_link_url }}">
+                    {{ settings.whats_this_link_text }}
+                </a>
+            </div>
+          </div>
+        </div>
+
+  </div>
+</div>
+
+

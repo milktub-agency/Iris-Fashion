@@ -1,0 +1,121 @@
+<script src="{{ 'tabs-switch.js' |  asset_url}}" defer></script>
+
+{%- capture style_notes_icon -%}<div class="tab-icon-wrapper"></div>{%- endcapture -%}
+{%- if settings.style_notes_icon_file_url != blank -%}
+{%- capture style_notes_icon -%}<img src="{{ settings.style_notes_icon_file_url }}" alt="style-notes-icon" loading="lazy">{%- endcapture -%}
+{%- endif -%}
+
+{%- capture details_icon -%}<div class="tab-icon-wrapper"></div>{%- endcapture -%}
+{%- if settings.details_icon_file_url != blank -%}
+{%- capture details_icon -%}<img src="{{ settings.details_icon_file_url }}" alt="details-icon" loading="lazy">{%- endcapture -%}
+{%- endif -%}
+
+{%- capture size_icon -%}<div class="tab-icon-wrapper"></div>{%- endcapture -%}
+{%- if settings.size_icon_file_url != blank -%}
+{%- capture size_icon -%}<img src="{{ settings.size_icon_file_url }}" alt="size-icon" loading="lazy">{%- endcapture -%}
+{%- endif -%}
+
+{%- capture delivery_icon -%}<div class="tab-icon-wrapper"></div>{%- endcapture -%}
+{%- if settings.delivery_icon_file_url != blank -%}
+{%- capture delivery_icon -%}<img src="{{ settings.delivery_icon_file_url }}" alt="delivery-icon" loading="lazy">{%- endcapture -%}
+{%- endif -%}
+
+
+<tab-switch class="product-tabs tabs rte above-small-desktop" data-tabs>
+    <div class="tabs-buttons">
+        <div class="tabs-button active" data-tab="style">{{ style_notes_icon }} Style Notes</div>
+        
+        <div class="tabs-button" data-tab="details">{{ details_icon }} Details</div>
+        
+        {% if product.metafields.custom_fields["size__fit"] != blank %}
+        <div class="tabs-button" data-tab="size">{{ size_icon }} Size & fit</div>
+        {% endif %}
+
+        <div class="tabs-button" data-tab="delivery">{{ delivery_icon }} Delivery & Returns</div>
+    </div>
+    <div class="tabs-content active" data-tab="style">{{ product.description }}</div>
+        <div class="tabs-content" data-tab="details">
+        {%- if product.metafields.custom_fields["product_details"] != blank -%}
+            {{- product.metafields.custom_fields["product_details"] -}}
+        {%- endif -%}
+        <div class="web_sku"><b>Product Code:</b><br><span data-sku>{{ product.selected_or_first_available_variant.sku }}</span></div>
+        </div>
+    
+
+    {% if product.metafields.custom_fields["size__fit"] != blank %}
+        <div class="tabs-content" data-tab="size">
+
+        {{ product.metafields.custom_fields["size__fit"] }}
+        {% render 'styling-popup' %}
+        {%- render 'product-size-guide' -%}
+        
+        </div>
+    {% endif %}
+
+    <div class="tabs-content" data-tab="delivery">
+        {{ settings.delivery_text }}
+         {% render 'styling-popup' %}
+    </div>
+
+</tab-switch>
+
+<div class="product-accordion rte small-desktop-only">
+  <details open>
+    <summary class="product-accordion__title">{{ style_notes_icon }} Style Notes 
+        <span class="chevron-down">
+            {% render 'chevron-down' %}
+        </span>
+        <span class="chevron-up">
+            {% render 'chevron-up-white' %}
+        </span>
+    </summary>
+    <div class="product-accordion__content">{{ product.description }}</div>
+  </details>
+
+  <details>
+    <summary class="product-accordion__title">
+        {{ details_icon }}
+        Details 
+        <span class="chevron-down">
+            {% render 'chevron-down' %}
+        </span>
+        <span class="chevron-up">
+            {% render 'chevron-up-white' %}
+        </span>
+    </summary>
+    <div class="product-accordion__content">
+      {% if product.metafields.custom_fields["product_details"] != blank %}
+        {{ product.metafields.custom_fields["product_details"] }}
+      {% endif %}
+      <div class="web_sku"><b>Product Code:</b><br><span data-sku>{{ product.selected_or_first_available_variant.sku }}</span></div>
+    </div>
+  </details>
+
+  {% if product.metafields.custom_fields["size__fit"] != blank %}
+    <details>
+      <summary class="product-accordion__title">{{ size_icon }} Size 
+        <span class="chevron-down">
+            {% render 'chevron-down' %}
+        </span>
+        <span class="chevron-up">
+            {% render 'chevron-up-white' %}
+        </span>
+    </summary>
+      <div class="product-accordion__content">
+        {{ product.metafields.custom_fields["size__fit"] }}
+      </div>
+    </details>
+  {% endif %}
+
+  <details>
+    <summary class="product-accordion__title">{{ delivery_icon }} Delivery & Returns 
+        <span class="chevron-down">
+            {% render 'chevron-down' %}
+        </span>
+        <span class="chevron-up">
+            {% render 'chevron-up-white' %}
+        </span>
+        </summary>
+    <div class="product-accordion__content">{{ settings.delivery_text }}</div>
+  </details>
+</div>

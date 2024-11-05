@@ -1,0 +1,66 @@
+{% if page.metafields["custom_fields"]["standard_content_modules"] != blank %}
+  <div class="custom-field custom-field__standard-content-modules custom-field__type--field-collection">
+    <h3 class="custom-field--title">Standard content modules</h3>
+    <div class="custom-field--value">
+      {% assign separator = "|###|" %}
+      {% assign sc_text_array = page.metafields["custom_fields"]["sc_text"] | split: separator %}
+      {% assign image_and_text_image_array = page.metafields["custom_fields"]["image_and_text__image"] | split: separator %}
+      {% assign image_and_text_title_array = page.metafields["custom_fields"]["image_and_text__title"] | split: separator %}
+      {% assign image_and_text_text_array = page.metafields["custom_fields"]["image_and_text__text"] | split: separator %}
+      {% assign image_and_text_cta_array = page.metafields["custom_fields"]["image_and_text__cta"] | split: separator %}
+      {% assign image_and_text_large_text_array = page.metafields["custom_fields"]["image_and_text_large_text"] | split: separator %}
+      {% assign image_and_text_sideways_title_array = page.metafields["custom_fields"]["image_and_text__sideways_title"] | split: separator %}
+      {% assign image_and_text_reverse_array = page.metafields["custom_fields"]["image_and_text__reverse"] | split: separator %}
+      {% assign featured_collection_products_array = page.metafields["custom_fields"]["featured_collection_products"] | split: separator %}
+      {% assign featured_products_array = page.metafields["custom_fields"]["featured_products"] | split: separator %}
+      {% assign newsletter_section_array = page.metafields["custom_fields"]["newsletter_section"] | split: separator %}
+      {% assign insert_faqs_array = page.metafields["custom_fields"]["insert_faqs"] | split: separator %}
+      {% assign image_ctas_array = page.metafields["custom_fields"]["image_ctas"] | split: separator %}
+      {% assign fc_keys = page.metafields["custom_fields"]["standard_content_modules"] | split: "," %}
+      {% for i in fc_keys %}
+        {% assign index = i | plus: 0 %}
+        <div class="fc-item fc-item--module fc-index--{{ index }}">
+          <div class="fc-field field__sc-text">
+            {{ sc_text_array[index] }}
+          </div>
+          <div class="fc-field field__image-and-text__image">
+            {{ image_and_text_image_array[index] }}
+          </div>
+          <div class="fc-field field__image-and-text__title">
+            {{ image_and_text_title_array[index] }}
+          </div>
+          <div class="fc-field field__image-and-text__text">
+            {{ image_and_text_text_array[index] }}
+          </div>
+          <div class="fc-field field__image-and-text__cta">
+            {{ image_and_text_cta_array[index] }}
+          </div>
+          <div class="fc-field field__image-and-text-large-text">
+            {{ image_and_text_large_text_array[index] }}
+          </div>
+          <div class="fc-field field__image-and-text__sideways-title">
+            {{ image_and_text_sideways_title_array[index] }}
+          </div>
+          <div class="fc-field field__image-and-text__reverse">
+            {{ image_and_text_reverse_array[index] }}
+          </div>
+          <div class="fc-field field__featured-collection-products">
+            {{ featured_collection_products_array[index] }}
+          </div>
+          <div class="fc-field field__featured-products">
+            {{ featured_products_array[index] }}
+          </div>
+          <div class="fc-field field__newsletter-section">
+            {{ newsletter_section_array[index] }}
+          </div>
+          <div class="fc-field field__insert-faqs">
+            {{ insert_faqs_array[index] }}
+          </div>
+          <div class="fc-field field__image-ctas">
+            {{ image_ctas_array[index] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

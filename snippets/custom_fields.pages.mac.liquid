@@ -1,0 +1,8 @@
+{% if page.metafields["custom_fields"]["mac"] != blank %}
+  <div class="custom-field custom-field__mac custom-field__type--image">
+    <h3 class="custom-field--title">mac</h3>
+    <div class="custom-field--value">  
+      {% render 'cf-image' with image: page.metafields["custom_fields"]["mac"] %}
+    </div>
+  </div>
+{% endif %}

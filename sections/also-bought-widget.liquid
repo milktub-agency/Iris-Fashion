@@ -1,0 +1,31 @@
+{%- capture lazy_load_section %}
+{%- render 'lazy-load-section-validations' -%}
+{%- endcapture -%}
+
+{% if lazy_load_section != blank %}
+<lazy-section>
+  {% endif %}
+  {% if lazy_load_section == blank %}
+<div class="page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="also-bought-widget"></div>
+</div>
+{% else %}
+{%- render 'lazy-spinner' -%}
+{% endif %}
+
+{% if lazy_load_section != blank %}
+</lazy-section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Also Bought widget",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Also Bought widget"
+    }
+  ]
+}
+{% endschema %}

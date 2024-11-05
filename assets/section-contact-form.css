@@ -1,0 +1,205 @@
+.contact-main__title {
+  margin: 0 0 20px 0;
+}
+.contact-information__grid--item p{
+  margin: 0;
+}
+
+.contact-information__grid--item h3 {
+  margin-bottom: 17px;
+  font-weight: 300;
+}
+.sticky-container--wrapper {
+  padding-top: 88px;
+}
+.sticky-container {
+  position: relative;
+}
+.contact-information__list .contact-information__grid--item {
+  margin: 0 0 55px;
+}
+.contact-information__grid--item li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  gap: 2.1rem;
+}
+.contact-information__grid--item ul {
+  padding: 0;
+}
+.md {
+  font-size: 13px;
+}
+.bold {
+  font-weight: 700;
+}
+.contact-information__grid--item li a {
+  text-decoration: none;
+}
+.contact-main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 130px;
+}
+.contact.container-sm {
+  padding-top: 73px;
+  padding-bottom: 107px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 769px) and (max-width: 1440px) {
+  .container-sm {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .contact.container-sm {
+      padding-top: 45px !important;
+      padding-bottom: 60px !important;
+      flex-direction: column;
+  }
+}
+.input-field {
+  margin-bottom: 20px;
+}
+.contact-main__subtitle {
+  margin-top: 41px;
+  margin-bottom: 20px;
+}
+.subtitle-md {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+.choices__input {
+  width: 160px;
+  border: 1px solid;
+  border-radius: 0px;
+  color: #000;
+  height: 40px;
+}
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+textarea {
+  height: 65px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0 28px;
+  border: 2px solid #d8d8d8;
+  text-transform: none;
+}
+.input-field textarea {
+  padding-top: 25px;
+  height: 202px;
+  border: 2px solid #d8d8d8;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;   
+  -webkit-border-radius: 0;  /* Safari 3-4, iOS 1-3.2, Android 1.6- */    
+  -moz-border-radius: 0;  /* Firefox 1-3.6 */     
+  border-radius: 0;  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+}
+.contact-form input[type="submit"] {
+  width: 424px;
+  max-width: 100%;
+  margin-top: 45px;
+}
+.btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-transition: 0.2s all ease-in-out, 0s font-size;
+  -moz-transition: 0.2s all ease-in-out, 0s font-size;
+  -ms-transition: 0.2s all ease-in-out, 0s font-size;
+  -o-transition: 0.2s all ease-in-out, 0s font-size;
+  transition: 0.2s all ease-in-out, 0s font-size;
+  font-size: 14px;
+  height: 65px;
+  letter-spacing: 2px;
+  border: 2px solid #000000;
+  width: 315px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #fff;
+}
+.contact img {
+  max-width: 100%;
+}
+@media (min-width: 769px) {
+  .btn:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.contact .form__message {
+  align-items: flex-start;
+}
+
+.contact .icon-success {
+  margin-top: 0.2rem;
+}
+
+.contact .field {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact .field {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact__button {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 749px) {
+  .contact__button {
+    margin-top: 4rem;
+  }
+  .contact__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .contact-main {
+    padding: 0;
+  }
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+  }
+}

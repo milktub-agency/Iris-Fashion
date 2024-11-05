@@ -1,0 +1,8 @@
+{% if article.metafields["custom_fields"]["large_image"] != blank %}
+  <div class="custom-field custom-field__large-image custom-field__type--image">
+    <h3 class="custom-field--title">Large image</h3>
+    <div class="custom-field--value">  
+      {% render 'cf-image' with image: article.metafields["custom_fields"]["large_image"], print: 'url' %}
+    </div>
+  </div>
+{% endif %}

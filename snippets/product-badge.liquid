@@ -1,0 +1,24 @@
+{%- unless template == 'product' -%}
+    {%- assign badge_text = '' -%}
+    {%- if position == 'top' -%}
+        {%- for tag in product.tags -%}
+            {%- if tag contains 'top-badge-' -%}
+                {% assign badge_text = tag | split: 'top-badge-' | last | strip %}
+                {% break %}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- if badge_text != '' -%}
+            <span class="single-product--badge">{{ badge_text }}</span>
+        {%- endif -%}
+    {%- else -%}
+        {%- for tag in product.tags -%}
+            {%- if tag contains 'bottom-badge-' -%}
+                {% assign badge_text = tag | split: 'bottom-badge-' | last | strip %}
+                {% break %}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- if badge_text != '' -%}
+            <span class="single-product--badge--bottom">{{ badge_text }}</span>
+        {%- endif -%}
+    {%- endif -%}
+{%- endunless -%}

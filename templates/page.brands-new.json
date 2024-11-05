@@ -1,0 +1,446 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "brands_YT4jVd": {
+      "type": "brands",
+      "blocks": {
+        "brand_UnnG9k": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "1",
+            "collection": "360-cashmere",
+            "title": "360 Cashmere",
+            "first_letter": ""
+          }
+        },
+        "brand_cbgUbL": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "american-vintage",
+            "title": "American Vintage",
+            "first_letter": ""
+          }
+        },
+        "brand_LNB6Mc": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "anna-nina",
+            "title": "Anna & Nina",
+            "first_letter": ""
+          }
+        },
+        "brand_Q8m4qg": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "autry",
+            "title": "Autry",
+            "first_letter": ""
+          }
+        },
+        "brand_mh3pUk": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "ba-sh",
+            "title": "BA&SH",
+            "first_letter": ""
+          }
+        },
+        "brand_4hTfXm": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "bellerose",
+            "title": "Bellerose",
+            "first_letter": ""
+          }
+        },
+        "brand_Jc9zaw": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "by-iris-1",
+            "title": "By Iris",
+            "first_letter": ""
+          }
+        },
+        "brand_KHxKXz": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "crush-cashmere",
+            "title": "Crush Cashmere",
+            "first_letter": ""
+          }
+        },
+        "brand_xnpX8T": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "1",
+            "collection": "devotion-twins",
+            "title": "Devotion Twins",
+            "first_letter": ""
+          }
+        },
+        "brand_rVLwUh": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "diega",
+            "title": "Diega",
+            "first_letter": "D"
+          }
+        },
+        "brand_CcX9Gj": {
+          "type": "brand",
+          "settings": {
+            "column": "2",
+            "collection": "dl1961",
+            "title": "",
+            "first_letter": ""
+          }
+        },
+        "brand_UjJcix": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "donna-ida",
+            "title": "Donna Ida",
+            "first_letter": ""
+          }
+        },
+        "brand_kEb3Wc": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "dragon-diffusion",
+            "title": "Dragon Diffusion",
+            "first_letter": "D"
+          }
+        },
+        "brand_kn3kwe": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "emile-ida",
+            "title": "Emile & Ida",
+            "first_letter": "E"
+          }
+        },
+        "brand_6j6nqQ": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "1",
+            "collection": "faune",
+            "title": "Faune",
+            "first_letter": ""
+          }
+        },
+        "brand_GYdnne": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "2",
+            "collection": "falke",
+            "title": "Falke",
+            "first_letter": ""
+          }
+        },
+        "brand_Dpi3mU": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "1",
+            "collection": "goddess-charms",
+            "title": "Goddess Charms",
+            "first_letter": ""
+          }
+        },
+        "brand_fWw4Hd": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "hod-paris",
+            "title": "Hod Paris",
+            "first_letter": ""
+          }
+        },
+        "brand_7Bxwzz": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "hunza-g",
+            "title": "Hunza G",
+            "first_letter": ""
+          }
+        },
+        "brand_4KKrD7": {
+          "type": "brand",
+          "settings": {
+            "column": "2",
+            "collection": "isabel-marant-etoile",
+            "title": "Isabel marant",
+            "first_letter": ""
+          }
+        },
+        "brand_Tp9NHc": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "indi-cold",
+            "title": "Indi & Cold",
+            "first_letter": "I"
+          }
+        },
+        "brand_DXkYNF": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "le-bonnet",
+            "title": "Le Bonnet",
+            "first_letter": "L"
+          }
+        },
+        "brand_baUtiP": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "m-a-b-e",
+            "title": "M.A.B.E",
+            "first_letter": ""
+          }
+        },
+        "brand_73M47j": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "maison-hotel",
+            "title": "Maison Hotel",
+            "first_letter": "M"
+          }
+        },
+        "brand_BNQM9r": {
+          "type": "brand",
+          "settings": {
+            "column": "3",
+            "collection": "masscob",
+            "title": "Masscob",
+            "first_letter": ""
+          }
+        },
+        "brand_LNR7pL": {
+          "type": "brand",
+          "settings": {
+            "column": "2",
+            "collection": "moi-london",
+            "title": "MOI LONDON",
+            "first_letter": "M"
+          }
+        },
+        "brand_xkKkGp": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "otiumberg",
+            "title": "Otiumberg",
+            "first_letter": ""
+          }
+        },
+        "brand_aMqRgt": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "paige",
+            "title": "Paige Denim",
+            "first_letter": ""
+          }
+        },
+        "brand_89kY8C": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "1",
+            "collection": "place-du-soleil",
+            "title": "Place Du Soleil",
+            "first_letter": ""
+          }
+        },
+        "brand_nmVWJf": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "1",
+            "collection": "place-du-soleil",
+            "title": "Place du Soleil",
+            "first_letter": ""
+          }
+        },
+        "brand_LAPMEF": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "penelope-chilvers",
+            "title": "Penelope Chilvers",
+            "first_letter": ""
+          }
+        },
+        "brand_BcJFjB": {
+          "type": "brand",
+          "settings": {
+            "column": "3",
+            "collection": "petit",
+            "title": "Petite Mendigote",
+            "first_letter": ""
+          }
+        },
+        "brand_wtPiVD": {
+          "type": "brand",
+          "settings": {
+            "column": "3",
+            "collection": "raffya",
+            "title": "Raffya",
+            "first_letter": ""
+          }
+        },
+        "brand_q8VedU": {
+          "type": "brand",
+          "settings": {
+            "column": "3",
+            "collection": "rains",
+            "title": "Rains",
+            "first_letter": ""
+          }
+        },
+        "brand_nQCkKY": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "sessun",
+            "title": "Sessun",
+            "first_letter": ""
+          }
+        },
+        "brand_RyMkmT": {
+          "type": "brand",
+          "settings": {
+            "column": "3",
+            "collection": "seventy-mochi",
+            "title": "Seventy + Mochi",
+            "first_letter": "S"
+          }
+        },
+        "brand_G79iLL": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "1",
+            "collection": "summery-copenhagen",
+            "title": "Summery Copenhagen",
+            "first_letter": ""
+          }
+        },
+        "brand_yHyYL6": {
+          "type": "brand",
+          "disabled": true,
+          "settings": {
+            "column": "4",
+            "collection": "une-a-une",
+            "title": "Une a Une",
+            "first_letter": ""
+          }
+        },
+        "brand_3XgNtM": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "vanessa-bruno",
+            "title": "Vanessa Bruno",
+            "first_letter": ""
+          }
+        },
+        "brand_DjiEed": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "wilson-jewellery",
+            "title": "Wilson Jewellery",
+            "first_letter": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_UnnG9k",
+        "brand_cbgUbL",
+        "brand_LNB6Mc",
+        "brand_Q8m4qg",
+        "brand_mh3pUk",
+        "brand_4hTfXm",
+        "brand_Jc9zaw",
+        "brand_KHxKXz",
+        "brand_xnpX8T",
+        "brand_rVLwUh",
+        "brand_CcX9Gj",
+        "brand_UjJcix",
+        "brand_kEb3Wc",
+        "brand_kn3kwe",
+        "brand_6j6nqQ",
+        "brand_GYdnne",
+        "brand_Dpi3mU",
+        "brand_fWw4Hd",
+        "brand_7Bxwzz",
+        "brand_4KKrD7",
+        "brand_Tp9NHc",
+        "brand_DXkYNF",
+        "brand_baUtiP",
+        "brand_73M47j",
+        "brand_BNQM9r",
+        "brand_LNR7pL",
+        "brand_xkKkGp",
+        "brand_aMqRgt",
+        "brand_89kY8C",
+        "brand_nmVWJf",
+        "brand_LAPMEF",
+        "brand_BcJFjB",
+        "brand_wtPiVD",
+        "brand_q8VedU",
+        "brand_nQCkKY",
+        "brand_RyMkmT",
+        "brand_G79iLL",
+        "brand_yHyYL6",
+        "brand_3XgNtM",
+        "brand_DjiEed"
+      ],
+      "settings": {
+        "enable_hero": true,
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "hero_image": "shopify:\/\/shop_images\/P1A7326.jpg",
+        "hero_overlay_opacity": 48,
+        "hero_height": 330,
+        "hero_height_mobile": 250,
+        "hero_text_color": "#fbfaf0",
+        "hero_title": "Brands",
+        "hero_text": "<h5>Iris Fashion brings you a carefully selected collection of contemporary women's fashion from established and up and coming designers.<\/h5>",
+        "padding_top": 80,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "brands_YT4jVd"
+  ]
+}

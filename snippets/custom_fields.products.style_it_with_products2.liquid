@@ -1,0 +1,26 @@
+{% if product.metafields["custom_fields"]["style_it_with_products2"] != blank %}
+  <div class="custom-field custom-field__style-it-with-products2 custom-field__type--field-collection">
+    <h3 class="custom-field--title">Style it with products</h3>
+    <div class="custom-field--value">
+      {% assign separator = "|###|" %}
+      {% assign product_array = product.metafields["custom_fields"]["product"] | split: separator %}
+      {% assign url_array = product.metafields["custom_fields"]["url"] | split: separator %}
+      {% assign image_array = product.metafields["custom_fields"]["image"] | split: separator %}
+      {% assign fc_keys = product.metafields["custom_fields"]["style_it_with_products2"] | split: "," %}
+      {% for i in fc_keys %}
+        {% assign index = i | plus: 0 %}
+        <div class="fc-item fc-item--product fc-index--{{ index }}">
+          <div class="fc-field field__product">
+            {{ product_array[index] }}
+          </div>
+          <div class="fc-field field__url">
+            {{ url_array[index] }}
+          </div>
+          <div class="fc-field field__image">
+            {{ image_array[index] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

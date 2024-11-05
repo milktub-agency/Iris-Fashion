@@ -1,0 +1,9 @@
+{% if collection.metafields["custom_fields"]["primary_collection"] != blank %}
+  <div class="custom-field custom-field__primary-collection custom-field__type--collection-reference">
+    <h3 class="custom-field--title">Primary collection</h3>
+    <div class="custom-field--value">  
+      {% assign collection_ref = collections[collection.metafields["custom_fields"]["primary_collection"]] %}
+      {{ collection_ref.title | link_to: collection_ref.url }}
+    </div>
+  </div>
+{% endif %}

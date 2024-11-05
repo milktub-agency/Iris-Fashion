@@ -1,0 +1,13 @@
+{% if product.metafields["custom_fields"]["options_ordered_naturally"] != blank %}
+  <div class="custom-field custom-field__options-ordered-naturally custom-field__type--checkbox">
+    <h3 class="custom-field--title">Enable natural ordering of variant options</h3>
+    <div class="custom-field--value">
+      {% if product.metafields["custom_fields"]["options_ordered_naturally"] == 1 %}
+        TRUE
+      {% else %}
+        FALSE
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}

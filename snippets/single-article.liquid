@@ -1,0 +1,53 @@
+{% assign article_image_dimensions = '856x' %}
+
+{%- if class contains 'single-article__large' -%}
+    {% assign article_image_dimensions = '1024x1400' %}
+{%- elsif class contains 'single-article__sm' -%}
+    {% assign article_image_dimensions = '300x300' %}
+{%- endif -%}
+
+<div class="single-article{% if class %} {{ class }}{% endif %}">
+    {%- if article.image.size > 0 -%}
+        <a href="{{ article.url }}" class="single-article__image object-cover">
+            {%- if featured -%}
+                {%- if article.metafields.custom_fields["large_image"] != blank -%}
+                    <img src="{{ article.metafields.custom_fields["large_image"] }}" alt="{{ article.image.alt }}" loading="lazy">
+                {%- else -%}
+                    {%- render 'responsive-picture', desktopImage:article.image -%}
+                {%- endif -%}
+            {%- else -%}
+            {%- render 'responsive-picture', desktopImage:article.image -%}
+            {%- endif -%}
+        </a>
+    {%- endif -%}
+
+    {%- if class contains 'single-article__large' or class contains 'single-article__sm' -%}<div class="single-article__text"><div class="inner">{%- endif -%}
+
+        <h2 class="single-article__title xl"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+
+        {%- unless class contains 'single-article__large' or class contains 'single-article__sm' -%}
+            <div class="single-article__meta flex xs">
+                <span>By <strong>{{ article.author }}</strong></span>
+                <span>{{ article.published_at | date: "%b %d, %Y" }}</span>
+                <!-- <span class="bold">test</span> -->
+            </div>
+        {%- endunless -%}
+
+        {%- unless hide_excerpt -%}
+            <a href="{{ article.url }}" class="single-article__excerpt rte">
+                {% if article.excerpt.size > 0 %}
+                    <p>{{ article.excerpt | strip_html | truncatewords: 28 }}</p>
+                {% else %}
+                  <p>
+                    {{ article.content | strip_html | truncatewords: 28 }}
+                  </p>
+                {% endif %}
+            </a>
+        {%- endunless -%}
+        {%- if class contains 'single-article__large' or class contains 'single-article__sm' -%}
+            <a href="{{ article.url }}" class="single-article__link cta-chevron">{{ read_more | default: 'View article' }}</a>
+        {%- endif -%}
+
+    {%- if class contains 'single-article__large' or class contains 'single-article__sm' -%}</div></div>{%- endif -%}
+
+</div>

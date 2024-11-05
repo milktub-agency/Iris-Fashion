@@ -1,0 +1,18 @@
+<div data-fera-widget='product_reviews' data-fera-id='fwid_2hP8qoi'
+  data-rating-count='{{ product.metafields.reviews.rating_count }}'
+  data-rating-average='{{ product.metafields.reviews.rating.value }}'
+  data-rating-count='{{ product.metafields.reviews.rating_count }}'
+  data-rating-average='{{ product.metafields.reviews.rating.value }}' data-product-id='{{ product.id }}'></div>
+{% schema %}
+{
+  "name": "Fera Reviews",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "presets": [
+    {
+      "name": "Fera Reviews"
+    }
+  ]
+}
+{% endschema %}

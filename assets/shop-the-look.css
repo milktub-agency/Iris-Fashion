@@ -1,0 +1,35 @@
+.section.product-accessories {
+  width: 100%;
+}
+.section.product-accessories
+  .single-product.single-product__sm:nth-of-type(n + 3) {
+  margin-top: 0px;
+  max-width: unset;
+}
+
+.section.product-accessories .price__regular{
+  margin: 0;
+}
+.shop-the-look-container{
+  flex-direction: column-reverse;
+  gap: 3rem;
+
+}
+@media screen and (min-width: 750px) {
+  .section.product-accessories {
+    max-width: 100%;
+  }
+  .shop-the-look-container {
+    width: 100%;
+    gap: 3rem;
+    /* flex-direction: row; */
+  }
+
+  /* .shop-the-look.product-grid {
+    flex: 0 0 70%;
+  }
+
+  .shop-the-look.featured-image {
+    flex: 0 0 30%;
+  } */
+}

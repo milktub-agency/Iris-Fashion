@@ -1,0 +1,119 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "page_banner_e7bUCi": {
+      "type": "page-banner",
+      "settings": {
+        "title": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "location_mHrXf3": {
+      "type": "location",
+      "blocks": {
+        "location_ttXVGe": {
+          "type": "location",
+          "settings": {
+            "page": "barnes-new-2",
+            "image": "shopify:\/\/shop_images\/Barnes_c50ba590-3992-4433-8b76-a948ab65f33b.jpg",
+            "email": "barnes@irisfashion.co.uk",
+            "telephone": "020 8741 0816",
+            "address": "86 Church Road, Barnes, SW13 0DQ",
+            "btn_text": "Know More",
+            "enable_map_redirection": true,
+            "map_placeholder_text": "View Location On Map",
+            "map_redirection": "https:\/\/maps.app.goo.gl\/cnYevvF1gQNwds7W8",
+            "content_position": "row"
+          }
+        },
+        "location_ALG7RM": {
+          "type": "location",
+          "settings": {
+            "page": "battersea-new-2",
+            "image": "shopify:\/\/shop_images\/Battersea.jpg",
+            "email": "battersea@irisfashion.co.uk",
+            "telephone": "020 7924 6948",
+            "address": "143-145 Northcote Road, London, SW11 6PX",
+            "btn_text": "Know More",
+            "enable_map_redirection": true,
+            "map_placeholder_text": "View Location On Map",
+            "map_redirection": "https:\/\/maps.app.goo.gl\/cPHyKLTVsM5pZPpv6",
+            "content_position": "row-reverse"
+          }
+        },
+        "location_74NJYR": {
+          "type": "location",
+          "settings": {
+            "page": "hampstead-new-2",
+            "image": "shopify:\/\/shop_images\/Store_Hampstead.jpg",
+            "email": "hampstead@irisfashion.co.uk",
+            "telephone": "0207 435 3007.",
+            "address": "28 Rosslyn Hill, London, NW3 1NH",
+            "btn_text": "Know More",
+            "enable_map_redirection": true,
+            "map_placeholder_text": "View Location On Map",
+            "map_redirection": "https:\/\/maps.app.goo.gl\/P6LhR9y2pHnpgxSWA",
+            "content_position": "row"
+          }
+        },
+        "location_TDEYFj": {
+          "type": "location",
+          "settings": {
+            "page": "wimbledon-new-2",
+            "image": "shopify:\/\/shop_images\/wimbledon_pic.jpg",
+            "email": "wimbledon@irisfashion.co.uk",
+            "telephone": "0203 7505699",
+            "address": "74 High St, Wimbledon SW19 5EG",
+            "btn_text": "Know More",
+            "enable_map_redirection": true,
+            "map_placeholder_text": "View Location On Map",
+            "map_redirection": "https:\/\/maps.app.goo.gl\/ubNXzJxQCZfsdfwVA",
+            "content_position": "row-reverse"
+          }
+        },
+        "location_DmGedT": {
+          "type": "location",
+          "settings": {
+            "page": "chiswick-pop-up-store-2",
+            "image": "shopify:\/\/shop_images\/CHISWICK_STORE.jpg",
+            "email": "chiswick@irisfashoin.co.uk",
+            "telephone": "",
+            "address": "198 Chiswick High Rd, London W4 1PD",
+            "btn_text": "Know More",
+            "enable_map_redirection": true,
+            "map_placeholder_text": "View Location On Map",
+            "map_redirection": "https:\/\/maps.app.goo.gl\/mhHaR7bPhNRepTcZ6",
+            "content_position": "row"
+          }
+        }
+      },
+      "block_order": [
+        "location_ttXVGe",
+        "location_ALG7RM",
+        "location_74NJYR",
+        "location_TDEYFj",
+        "location_DmGedT"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "title": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "page_banner_e7bUCi",
+    "location_mHrXf3"
+  ]
+}

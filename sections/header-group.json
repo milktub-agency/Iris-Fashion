@@ -1,0 +1,237 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "GET 10% OFF FIRST ORDER WHEN YOU JOIN OUR MAILING LIST",
+            "link": ""
+          }
+        },
+        "announcement_bfynm4": {
+          "type": "announcement",
+          "settings": {
+            "text": "SPEND & SAVE THIS WEEK AND SAVE  UP TO £150",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement_bfynm4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-edd0a12a-6264-4390-af86-9f0a305aa314",
+        "show_line_separator": true,
+        "auto_rotate": true,
+        "change_slides_speed": 5
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu-new",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "menu_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 6,
+        "padding_bottom": 6
+      }
+    },
+    "megamenu_item_demo_1_3HW6kN": {
+      "type": "megamenu-item-demo-1",
+      "blocks": {
+        "column_3mqPyW": {
+          "type": "column",
+          "settings": {
+            "link_image": "shopify:\/\/shop_images\/HP_NEW_SEASON_AW24.jpg",
+            "link_text": "New in",
+            "link_text_description": "Shop our newest deliveries",
+            "link_url": "shopify:\/\/collections\/by-iris-new-in"
+          }
+        }
+      },
+      "block_order": [
+        "column_3mqPyW"
+      ],
+      "settings": {
+        "parent": "New In[title]",
+        "menu_heading": "Shop All",
+        "menu_heading_url": "shopify:\/\/collections\/new-in-this-week-1",
+        "menu": "new-in",
+        "second_menu_heading": "",
+        "second_menu_heading_url": "",
+        "second_menu": "",
+        "third_menu_heading": "",
+        "third_menu_heading_url": "",
+        "third_menu": ""
+      }
+    },
+    "megamenu_item_demo_1_GLQ7dh": {
+      "type": "megamenu-item-demo-1",
+      "blocks": {
+        "column_3TC6KU": {
+          "type": "column",
+          "settings": {
+            "link_image": "shopify:\/\/shop_images\/Mega_Menu_3.jpg",
+            "link_text": "Brands",
+            "link_text_description": "View all Brands",
+            "link_url": "shopify:\/\/pages\/brands"
+          }
+        }
+      },
+      "block_order": [
+        "column_3TC6KU"
+      ],
+      "settings": {
+        "parent": "brands",
+        "menu_heading": "View All",
+        "menu_heading_url": "shopify:\/\/pages\/brands",
+        "menu": "brands",
+        "second_menu_heading": "",
+        "second_menu_heading_url": "",
+        "second_menu": "",
+        "third_menu_heading": "",
+        "third_menu_heading_url": "",
+        "third_menu": ""
+      }
+    },
+    "megamenu_item_demo_1_VtVX3w": {
+      "type": "megamenu-item-demo-1",
+      "blocks": {
+        "column_wyygVU": {
+          "type": "column",
+          "settings": {
+            "link_image": "shopify:\/\/shop_images\/BY_IRISLand.jpg",
+            "link_text": "Women's Clothing",
+            "link_text_description": "Shop Here",
+            "link_url": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "column_wyygVU"
+      ],
+      "settings": {
+        "parent": "clothing",
+        "menu_heading": "Shop All",
+        "menu_heading_url": "shopify:\/\/collections\/all-clothing",
+        "menu": "clothing",
+        "second_menu_heading": "",
+        "second_menu_heading_url": "",
+        "second_menu": "",
+        "third_menu_heading": "",
+        "third_menu_heading_url": "",
+        "third_menu": ""
+      }
+    },
+    "megamenu_item_demo_1_nVECEG": {
+      "type": "megamenu-item-demo-1",
+      "blocks": {
+        "column_NFNem3": {
+          "type": "column",
+          "settings": {
+            "link_image": "shopify:\/\/shop_images\/Mega_Menu_Bags_copy.jpg",
+            "link_text": "Accessories",
+            "link_text_description": "View all the collections",
+            "link_url": "\/collections\/womens-designer-accessories"
+          }
+        }
+      },
+      "block_order": [
+        "column_NFNem3"
+      ],
+      "settings": {
+        "parent": "Accessories",
+        "menu_heading": "Shop All",
+        "menu_heading_url": "shopify:\/\/collections\/womens-designer-accessories",
+        "menu": "accessories",
+        "second_menu_heading": "Shoes",
+        "second_menu_heading_url": "shopify:\/\/collections\/ladies-shoes",
+        "second_menu": "shoes",
+        "third_menu_heading": "Jewellery",
+        "third_menu_heading_url": "\/collections\/jewellery",
+        "third_menu": "jewellery"
+      }
+    },
+    "megamenu_item_demo_1_QLaKgT": {
+      "type": "megamenu-item-demo-1",
+      "blocks": {
+        "column_xFbtAN": {
+          "type": "column",
+          "settings": {
+            "link_image": "shopify:\/\/shop_images\/952b9864eeab8db5af34d3ddc63aaa43_8eb90d50-1487-4f9b-bca7-d8c22ce157bc.jpg",
+            "link_text": "Denim",
+            "link_text_description": "",
+            "link_url": "\/collections\/denim"
+          }
+        }
+      },
+      "block_order": [
+        "column_xFbtAN"
+      ],
+      "settings": {
+        "parent": "Denim",
+        "menu_heading": "Shop All",
+        "menu_heading_url": "\/collections\/denim",
+        "menu": "denim",
+        "second_menu_heading": "",
+        "second_menu_heading_url": "",
+        "second_menu": "",
+        "third_menu_heading": "",
+        "third_menu_heading_url": "",
+        "third_menu": ""
+      }
+    },
+    "megamenu_item_demo_1_69VUgV": {
+      "type": "megamenu-item-demo-1",
+      "blocks": {
+        "column_t97n46": {
+          "type": "column",
+          "settings": {
+            "link_image": "shopify:\/\/shop_images\/AW24_Mega_Menu.jpg",
+            "link_text": "By Iris",
+            "link_text_description": "Shop Now",
+            "link_url": "\/pages\/by-iris-collection"
+          }
+        }
+      },
+      "block_order": [
+        "column_t97n46"
+      ],
+      "settings": {
+        "parent": "By Iris",
+        "menu_heading": "Shop All",
+        "menu_heading_url": "shopify:\/\/collections\/by-iris-1",
+        "menu": "by-iris",
+        "second_menu_heading": "Collections",
+        "second_menu_heading_url": "\/collections\/by-iris-1",
+        "second_menu": "collections",
+        "third_menu_heading": "",
+        "third_menu_heading_url": "",
+        "third_menu": ""
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "megamenu_item_demo_1_3HW6kN",
+    "megamenu_item_demo_1_GLQ7dh",
+    "megamenu_item_demo_1_VtVX3w",
+    "megamenu_item_demo_1_nVECEG",
+    "megamenu_item_demo_1_QLaKgT",
+    "megamenu_item_demo_1_69VUgV"
+  ]
+}

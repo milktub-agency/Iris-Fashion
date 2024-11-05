@@ -1,0 +1,282 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+{{ 'brands.css' | asset_url | stylesheet_tag }}
+<script src="{{'brandsFilter.js' |  asset_url}}" defer></script>
+
+{% assign chars = '0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' | split: ',' %}
+
+{%- assign SEP_RECORD = '-iePhahmoo~' %}
+{%- assign SEP_COLUMN = '-ichoh7uuW~' %}
+{%- assign records = '' -%}
+{%- for block in section.blocks -%}
+  {% assign collection = collections[block.settings.collection] %}
+  {% assign title = block.settings.title | default: collection.title %}
+  {% assign first_letter = block.settings.first_letter | downcase | default: title | slice: 0 | downcase %}
+  {% assign url = collection.url %}
+
+  {%- unless collection.handle -%}
+    {%- break -%}
+  {%- endunless -%}
+
+  {% assign record = '' %}
+  {%- capture record -%}
+        {{- first_letter -}}
+        {{- SEP_COLUMN -}}
+        {{- title -}}
+        {{- SEP_COLUMN -}}
+        {{- url -}}
+    {%- endcapture -%}
+
+  {%- if records -%}
+    {%- capture records -%}
+            {{- records -}}
+            {{- SEP_RECORD -}}
+            {{- record -}}
+        {%- endcapture -%}
+  {%- else -%}
+    {%- capture records -%}
+            {{- record -}}
+        {%- endcapture -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign records = records | split: SEP_RECORD -%}
+{%- assign records = records | sort -%}
+
+{% comment %}
+  <h1>
+      TEST7
+  </h1>
+
+  <table>
+      <tbody>
+          {%- for record in records -%}
+              {% assign columns = record | split: SEP_COLUMN %}
+              <tr>
+                  <td>First letter: {{ columns[0] }}</td>
+                  <td>Title: {{ columns[1] }}</td>
+                  <td>URL: {{ columns[2] }}</td>
+              </tr>
+          {%- endfor -%}
+      </tbody>
+  </table>
+{% endcomment %}
+
+{%- render 'section-hero' -%}
+
+<section class="brands section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} ">
+  <div class="container">
+    <div class="brands-filter">
+      <h2 class="brands-filter__title fnt-pri bold">Filter by</h2>
+      <div class="flex f-space-between">
+        <ul class="brands-filter__list flex f-wrap list-clear">
+          {%- assign lastChar = null -%}
+          {%- for record in records -%}
+            {%- assign columns = record | split: SEP_COLUMN -%}
+            {%- assign first_letter = columns[0] -%}
+
+            {%- if lastChar != first_letter -%}
+              {%- assign lastChar = first_letter -%}
+              <li>
+                <button class="brands-filter__char" data-brands-filter="{{ first_letter }}">{{ first_letter }}</button>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+        <button class="brands-filter__clear btn__sm" data-brands-filter="clear">Clear</button>
+      </div>
+    </div>
+
+    <div class="brands-list">
+      {%- assign letter_changes = 0 -%}
+      {%- assign last_char = null -%}
+      {%- for record in records -%}
+        {%- assign columns = record | split: SEP_COLUMN -%}
+        {%- assign first_letter = columns[0] -%}
+        {%- assign title = columns[1] -%}
+        {%- assign url = columns[2] -%}
+
+        {%- unless first_letter and url -%}
+          {%- continue -%}
+        {%- endunless -%}
+
+        {%- if last_char == null or last_char != first_letter -%}
+          {%- assign last_char = first_letter -%}
+          {% assign letter_changes = letter_changes | plus: 1 %}
+          {%- if letter_changes > 1 -%}
+            </ul>
+            </div>
+          {%- endif -%}
+          <div class="brands-list__letter" data-brands-letter="{{ first_letter }}">
+            <h2 class="fnt-pri bold">{{ first_letter }}</h2>
+            <ul class="list-clear">
+        {%- endif -%}
+        <li>
+          <a href="{{ url }}">{{ title }}</a>
+        </li>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+    "name": "Brands",
+    "settings": [
+        {
+            "type":"checkbox",
+            "id":"enable_hero",
+            "label":"Enable hero",
+            "default":true
+        },
+          {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+        {
+            "type":"image_picker",
+            "id":"hero_image",
+            "label":"Hero Image"
+        },
+        {
+            "type":"image_picker",
+            "id":"hero_image_mobile",
+            "label":"Hero mobile image"
+        },
+        {
+            "type":"range",
+            "id":"hero_overlay_opacity",
+            "min":0,
+            "max":100,
+            "step":1,
+            "label":"Hero overlay opacity",
+            "default":10
+        },
+        {
+            "type":"range",
+            "id":"hero_height",
+            "min":0,
+            "max":500,
+            "step":10,
+            "unit":"px",
+            "label":"Hero height",
+            "default":500
+        },
+        {
+            "type":"range",
+            "id":"hero_height_mobile",
+            "min":0,
+            "max":500,
+            "step":10,
+            "unit":"px",
+            "label":"Hero mobile height",
+            "default":250
+        },
+        {
+            "type": "color",
+            "id": "hero_text_color",
+            "label": "Hero text color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "text",
+            "id": "hero_title",
+            "label": "Hero title"
+        },
+        {
+            "type": "richtext",
+            "id": "hero_text",
+            "label": "Hero text"
+        },
+        {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+    ],
+    "blocks":[
+        {
+            "type":"brand",
+            "name":"Brand",
+            "settings":[
+                {
+                    "type":"select",
+                    "id":"column",
+                    "options":[
+                        {
+                            "value":"1",
+                            "label":"1"
+                        },
+                        {
+                            "value":"2",
+                            "label":"2"
+                        },
+                        {
+                            "value":"3",
+                            "label":"3"
+                        },
+                        {
+                            "value":"4",
+                            "label":"4"
+                        }
+                    ],
+                    "label":"Column"
+                },
+                {
+                    "type":"collection",
+                    "id":"collection",
+                    "label":"Collection"
+                },
+                {
+                    "type":"text",
+                    "id":"title",
+                    "label":"Title",
+                    "info":"Optional as an alternative for default collection name"
+                },
+                {
+                    "type": "text",
+                    "id": "first_letter",
+                    "label": "First letter (optional)",
+                    "info": "Only required for brands with accented letters"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name": "brands"
+        }
+    ]
+}
+{% endschema %}

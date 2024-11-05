@@ -1,0 +1,9 @@
+{% if product.metafields["custom_fields"]["secondary_collection"] != blank %}
+  <div class="custom-field custom-field__secondary-collection custom-field__type--collection-reference">
+    <h3 class="custom-field--title">Secondary Collection</h3>
+    <div class="custom-field--value">  
+      {% assign collection_ref = collections[product.metafields["custom_fields"]["secondary_collection"]] %}
+      {{ collection_ref.title | link_to: collection_ref.url }}
+    </div>
+  </div>
+{% endif %}

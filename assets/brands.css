@@ -1,0 +1,284 @@
+.hero__title.title {
+  font-size: 5rem;
+  margin: 0;
+}
+@media (max-width: 749px) {
+  .brands .text-center__lg {
+    padding: 0;
+  }
+  .hero__title.title {
+    font-size: 3rem;
+  }
+  .hero__text.title-sm p {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .text-center,
+  .text-center__lg,
+  .text-center__xl {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 749px) {
+  .text-center,
+  .text-center__lg,
+  .text-center__xl {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+.text-center,
+.text-center__lg,
+.text-center__xl {
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.hero__text.title-sm {
+  font-size: 3rem;
+  line-height: normal;
+  font-family: "proxima-nova",sans-serif;
+}
+.hero__text.title-sm p {
+  margin: 0;
+}
+.list-clear {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.btn__sm {
+  height: auto;
+  width: auto;
+  padding: 12px 36px;
+  font-size: 12px;
+  letter-spacing: 1.71px;
+}
+.brands-list__letter h2,
+.brands-list__letter ul {
+  font-size: 1.6rem;
+  width: 203px;
+  max-width: 100%;
+}
+.btn,
+.btn__sm,
+.btn__fill,
+#esc-oos-form #esc-out-of-stock-inputs .esc-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-transition: 0.2s all ease-in-out, 0s font-size;
+  -moz-transition: 0.2s all ease-in-out, 0s font-size;
+  -ms-transition: 0.2s all ease-in-out, 0s font-size;
+  -o-transition: 0.2s all ease-in-out, 0s font-size;
+  transition: 0.2s all ease-in-out, 0s font-size;
+  font-size: 14px;
+  height: 65px;
+  letter-spacing: 2px;
+  border: 2px solid #000000;
+  width: 315px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.list-clear a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  margin: 0;
+  width: auto;
+  height: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+button {
+  resize: none;
+  border: none;
+  outline: none !important;
+  -webkit-appearance: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-transform: lowercase;
+}
+
+.brands-filter__title {
+  font-size: 16px;
+  margin-bottom: 13px;
+}
+.flex.f-space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .brands-filter__title + .flex {
+    display: block;
+  }
+}
+.text-center__lg {
+  width: 992px;
+}
+.bold {
+  font-weight: 700;
+}
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 350px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+.brands-filter__list {
+  margin-left: -15px;
+}
+.brands-filter__char {
+  color: var(--color-foreground);
+  height: 42px;
+  width: 44px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "proxima-nova",sans-serif;
+  -webkit-transition: 0.2s all ease-in-out;
+  -moz-transition: 0.2s all ease-in-out;
+  -ms-transition: 0.2s all ease-in-out;
+  -o-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+.brands-filter__char.active,
+.brands-filter__char:hover {
+  background: #000;
+  color: #fff;
+}
+.brands-filter__clear {
+  margin-left: 70px;
+  font-size: 1.2rem;
+  color: #000;
+}
+@media (max-width: 1024px) {
+  .brands-filter__clear {
+      font-size: 13.5px;
+  }
+}
+@media (max-width: 768px) {
+  .brands-filter__clear {
+    margin-left: 0;
+    margin-top: 40px;
+    width: auto;
+  }
+}
+.brands-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: calc(100% + 30px);
+  position: relative;
+  left: -15px;
+  margin-top: 50px;
+}
+.brands-list.active .brands-list__letter {
+  opacity: 0.15;
+}
+.brands-list > div {
+  width: 25%;
+  padding: 0 15px;
+}
+@media (max-width: 1024px) {
+  .brands-list > div {
+    width: 33.33333%;
+  }
+}
+@media (max-width: 768px) {
+  .brands-list > div {
+    width: 50%;
+  }
+}
+.brands-list__letter {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 40px;
+  -webkit-transition: 0.5s all ease-in-out;
+  -moz-transition: 0.5s all ease-in-out;
+  -ms-transition: 0.5s all ease-in-out;
+  -o-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+.brands-list.active .brands-list__letter.active {
+  opacity: 1;
+}
+.brands-list__letter h2,
+.brands-list__letter ul {
+  width: 203px;
+  max-width: 100%;
+}
+@media (min-width: 769px) {
+  .brands-list__column--mobile:last-of-type
+    .brands-list__column:last-of-type
+    h2,
+  .brands-list__column--mobile:last-of-type
+    .brands-list__column:last-of-type
+    ul {
+    margin-left: auto;
+  }
+}
+@media (min-width: 769px) {
+  .brands-list__column--mobile:first-of-type
+    .brands-list__column:last-of-type
+    h2,
+  .brands-list__column--mobile:first-of-type
+    .brands-list__column:last-of-type
+    ul,
+  .brands-list__column--mobile:last-of-type
+    .brands-list__column:first-of-type
+    h2,
+  .brands-list__column--mobile:last-of-type
+    .brands-list__column:first-of-type
+    ul {
+    margin: auto;
+  }
+}

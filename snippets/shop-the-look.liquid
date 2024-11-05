@@ -1,0 +1,101 @@
+{% if product.metafields.custom_fields.style_it_with_products2 != blank %}
+  {% assign separator = '|###|' %}
+  {% assign product_handles = product.metafields.custom_fields.product | split: separator %}
+  {% assign product_urls = product.metafields.custom_fields.url | split: separator %}
+  {% assign product_images = product.metafields.custom_fields.image | split: separator %}
+  {% assign product_indices = product.metafields.custom_fields.style_it_with_products2 | split: ',' %}
+
+  {% assign valid_product_count = 0 %}
+  {% for index in product_indices %}
+    {% assign product_index = index | plus: 0 %}
+    {% assign product_ref = all_products[product_handles[product_index]] %}
+    {% if product_ref.images.size > 0 %}
+      {% assign valid_product_count = valid_product_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% case valid_product_count %}
+    {% when 4 %}
+      {% assign grid_class = 'grid--2-col grid--4-col-desktop' %}
+    {% else %}
+      {% assign grid_class = 'grid--2-col grid--3-col-desktop' %}
+  {% endcase %}
+
+  <div class="section product-accessories" data-style-with-atc>
+    <div class="flex product-accessories__grid f-wrap grid {{ grid_class }}">
+      {% for index in product_indices %}
+        {% assign product_index = index | plus: 0 %}
+        {% assign product_ref = all_products[product_handles[product_index]] %}
+        {% if product_ref.images.size > 0 %}
+          {% assign class_name = 'single-product__sm grid__item' %}
+          {% render 'single-product',
+            product: product_ref,
+            class: class_name,
+            url: product_urls[product_index],
+            image: product_images[product_index],
+            include_atc: true
+          %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+{% elsif product.metafields.custom_fields.style_it_with__products != blank %}
+  <div class="section product-accessories" data-style-with-atc>
+    {% assign product_handles = product.metafields.custom_fields.style_it_with__products | split: '|' %}
+
+    {% assign valid_product_count = 0 %}
+    {% for product_handle in product_handles %}
+      {% assign product_ref = all_products[product_handle] %}
+      {% if product_ref.images.size > 0 %}
+        {% assign valid_product_count = valid_product_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+
+    {% case valid_product_count %}
+      {% when 4 %}
+        {% assign grid_class = 'grid--2-col grid--4-col-desktop' %}
+      {% else %}
+        {% assign grid_class = 'grid--2-col grid--3-col-desktop' %}
+    {% endcase %}
+
+    <div class="grid {{ grid_class }}">
+      {% for product_handle in product_handles %}
+        {% assign product_ref = all_products[product_handle] %}
+        {% if product_ref.images.size > 0 %}
+          {% assign class_name = 'single-product__sm grid__item' %}
+          {% render 'single-product', product: product_ref, class: class_name, include_atc: true %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll(".lazy-image");
+
+    const options = {
+      root: null, // Use the viewport as the root
+      rootMargin: "0px",
+      threshold: 0.1 // Load the image when at least 10% of it is in view
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+
+          // Set the src and srcset attributes
+          img.srcset = img.getAttribute('data-srcset');
+          img.src = img.getAttribute('data-src');
+
+          // Remove the observer once the image is loaded
+          observer.unobserve(img);
+        }
+      });
+    }, options);
+
+    lazyImages.forEach(image => {
+      imageObserver.observe(image);
+    });
+  });
+</script>

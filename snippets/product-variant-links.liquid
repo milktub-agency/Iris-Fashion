@@ -1,0 +1,85 @@
+{% assign sizes_in_order = settings.size_order %}
+{% assign sizes_in_order = sizes_in_order | downcase | split: ',' %}
+
+
+{%- unless product.variants.size == 1 -%}
+    {% assign last_product_option = 0 %}
+    {% assign product_option_index = 0 %}
+    {% assign product_options_with_more_than_one_value = 0 %}
+    {%- for product_option in product.options_with_values -%}
+        {% assign product_option_index = product_option_index | plus: 1 %}
+        {%- if product_option.values.size > 1 -%}
+            {% assign product_options_with_more_than_one_value = product_options_with_more_than_one_value | plus: 1 %}
+            {% assign last_product_option = product_option_index %}
+        {%- endif -%}
+    {%- endfor -%}
+
+    <div class="product-variants{% if class %} {{ class }}{% endif %}" data-option-count="{{ product_options_with_more_than_one_value }}" data-options-chosen="0">
+        {% assign index = 0 %}
+        {% assign last_option = false %}
+        {% for product_option in product.options_with_values %}
+            {%- if forloop.index == last_product_option -%}
+                {% assign last_option = true %}
+            {%- endif -%}
+            {% assign index = index | plus: 1 %}
+            {% assign option_key = 'option' | append: index %}
+            {% assign selected_product_option = product.selected_variant[option_key] %}
+            {% assign product_option_name = product_option.name | downcase %}
+            {% assign is_color = false %}
+            {% if product_option_name == 'color' or product_option_name == 'colour' %}
+                {% assign is_color = true %}
+            {% endif %}
+
+            {%- if product_option.values.size > 1 -%}
+                <div class="product-variants__option{% if is_color %} color-option{% endif %}" data-option="{{ forloop.index }}">
+                    {%- if main_product -%}
+                        <h3 class="product-variants__option-title sm bold uc fnt-pri">{{'products.product.select' }} {{ product_option.name }}</h3>
+                    {%- endif -%}
+                    <div class="product-variants__values{% if is_color %} swatches{% endif %}">
+                        {% assign values = product_option.values %}
+                        {% comment %} VARIANTS IN THE SIZING ORDER {% endcomment %}
+                        {%- for ordered_size in sizes_in_order -%}
+                            {% for value in values %}
+                                {% assign value_lc = value | downcase | strip %}
+                                {%- if value_lc == ordered_size -%}
+                                    {%- comment %} Get matching variant {% endcomment -%}
+                                    {%- for variant in product.variants -%}
+                                        {% assign success = true %}
+                                        {%- for option in product.options_with_values -%}
+                                            {%- if option.position != index -%}
+                                                {% assign inner_option_key = 'option' | append: option.position  %}
+                                                {% assign selected_value_at_index = product.selected_or_first_available_variant[inner_option_key] %}
+                                                {%- if variant[inner_option_key] != selected_value_at_index -%}
+                                                    {% assign success = false %}
+                                                {%- endif -%}
+                                            {%- endif -%}
+                                        {%- endfor -%}
+                                        {%- if success -%}
+                                            {%- if variant[option_key] == value -%}
+                                                {% assign matching_variant = variant %}
+                                            {%- endif -%}
+                                        {%- endif -%}
+                                    {%- endfor -%}
+
+                                    {% assign variant_element_id = product.id | append: '-' | append: value | append: '-' | append: template.name | replace: ' ', '-' | downcase %}
+
+                                    <a href="{{ matching_variant.url }}" class="product-variants__value{% if is_color %} swatch swatch-{{- value | downcase | replace: ' ', '-' -}}{% endif %}{% if matching_variant.available == false and is_color == false %} variant--out-of-stock{% endif %}">{{ value }}</a>
+                                {%- endif -%}
+                            {% endfor %}
+                        {%- endfor -%}
+
+                    </div>
+
+                    {%- if main_product and product_option_name == 'size' -%}
+                        {%- if product.selected_variant.metafields.custom_fields["size_equivalent"] != blank -%}
+                            <p class="size-equivalent">This is the equivalent of a <strong>{{ product.selected_variant.metafields.custom_fields["size_equivalent"] }}</strong></p>
+                        {%- endif -%}
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+        {% endfor %}
+        <input type="hidden" value="{{ product.selected_variant.id }}" data-product-selected-variant>
+    </div>
+{%- else -%}
+    <input type="hidden" value="{{ product.selected_or_first_available_variant.id }}" data-product-selected-variant>
+{%- endunless -%}

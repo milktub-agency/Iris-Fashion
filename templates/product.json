@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "style_guide_fXWVka": {
+          "type": "style-guide",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "icons_VcKrTh": {
+          "type": "icons",
+          "settings": {
+          }
+        },
+        "style_guide_2_AbVaBR": {
+          "type": "style-guide-2",
+          "settings": {
+          }
+        },
+        "product_tabs_TpNQrc": {
+          "type": "product-tabs",
+          "settings": {
+          }
+        },
+        "style_it_with_WDBMTN": {
+          "type": "style_it_with",
+          "disabled": true,
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "vendor",
+        "price",
+        "style_guide_fXWVka",
+        "variant_picker",
+        "buy_buttons",
+        "icons_VcKrTh",
+        "style_guide_2_AbVaBR",
+        "product_tabs_TpNQrc",
+        "style_it_with_WDBMTN"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "shop_the_look_section_LQyAfg": {
+      "type": "shop-the-look-section",
+      "settings": {
+        "heading": "Style it with",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "enable_product_featured_image": false,
+        "featured_image_style": "media media--square",
+        "padding_top": 52,
+        "padding_bottom": 56
+      }
+    },
+    "fera_review_cAYEEM": {
+      "type": "fera-review",
+      "settings": {
+      }
+    },
+    "also_bought_widget_jWPhNX": {
+      "type": "also-bought-widget",
+      "settings": {
+      }
+    },
+    "custom_newsletter_68tbaf": {
+      "type": "custom-newsletter",
+      "blocks": {
+        "heading_UL8QRb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign up for 10% off"
+          }
+        },
+        "paragraph_HNF3nn": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers, By Signing up you agree we will send you marketing updates<\/p>"
+          }
+        },
+        "email_form_DFrC6G": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_UL8QRb",
+        "paragraph_HNF3nn",
+        "email_form_DFrC6G"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "shop_the_look_section_LQyAfg",
+    "fera_review_cAYEEM",
+    "also_bought_widget_jWPhNX",
+    "custom_newsletter_68tbaf"
+  ]
+}

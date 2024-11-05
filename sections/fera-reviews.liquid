@@ -1,0 +1,59 @@
+{% if section.settings.top_margin > 0 or section.settings.bottom_margin > 0 %}
+  {% style %}
+    .fera-reviews-dh {
+        padding-top: {{  section.settings.top_margin| append: 'px' }};
+        padding-bottom: {{ section.settings.bottom_margin| append: 'px' }};
+    }
+  {% endstyle %}
+{% endif %}
+<div
+  data-fera-widget="product_reviews"
+  data-fera-id="fwid_2hP8qoi"
+  data-rating-count="{{ product.metafields.reviews.rating_count }}"
+  data-rating-average="{{ product.metafields.reviews.rating.value }}"
+  data-product-id="{{ product.id }}"
+  class="fera-reviews-dh color-{{ section.settings.color_scheme }}"
+  id="fera-reviews"
+></div>
+
+{% schema %}
+{
+  "name": "Fera Reviews",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+      {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+      {
+            "type": "range",
+            "id": "top_margin",
+            "label": "Spacing above Reviews",
+            "default": 35,
+            "min": 0,
+            "max": 500,
+            "step": 5,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin",
+            "label": "Spacing below Reviews",
+            "default": 35,
+            "min": 0,
+            "max": 500,
+            "step": 5,
+            "unit": "px"
+        },
+  ],
+  "presets": [
+    {
+      "name": "Fera Reviews"
+    }
+  ]
+}
+{% endschema %}

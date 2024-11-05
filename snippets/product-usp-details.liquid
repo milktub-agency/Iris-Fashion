@@ -1,0 +1,49 @@
+<div class="product-usp-details">
+    {% if settings.enable_product_usp_block_one %}
+        {% if settings.product_usp_block_1_icon != blank or settings.product_usp_block_1_text != blank %}
+            <div class="product-usp-details--block">
+                {% assign image_width = settings.product_usp_block_1_icon %}
+                {% assign image_height = settings.product_usp_block_1_icon %}
+                {% assign aspect_ratio = image_width | divided_by: image_height %}
+                <img class="deferimg lazy-load-image product-usp-details--icon" loading="lazy"
+                    data-src="{{ settings.product_usp_block_1_icon | img_url: 'master' }}" width="{{ image_width }}"
+                    height="{{ image_width | divided_by: aspect_ratio | round }}" alt="{{ section.settings.image.alt | escape }}">
+                <p class="product-usp-details__text rte">{{ settings.product_usp_block_1_text }}</p>
+            </div>
+        {% endif %}
+    {% endif %}
+    {% if settings.enable_product_usp_block_two %}
+        {% if settings.product_usp_block_2_icon != blank or settings.product_usp_block_2_text != blank %}
+            <div class="product-usp-details--block">
+                {% assign image_width = settings.product_usp_block_2_icon %}
+                {% assign image_height = settings.product_usp_block_2_icon %}
+                {% assign aspect_ratio = image_width | divided_by: image_height %}
+                <img class="deferimg lazy-load-image product-usp-details--icon" loading="lazy" data-src="{{ settings.product_usp_block_2_icon | img_url: 'master' }}"
+                    width="{{ image_width }}" height="{{ image_width | divided_by: aspect_ratio | round }}"
+                    alt="{{ section.settings.image.alt | escape }}">
+                <p class="product-usp-details__text rte">{{ settings.product_usp_block_2_text }}</p>
+            </div>
+        {% endif %}
+    {% endif %}
+    {% if settings.enable_product_usp_block_three %}
+        {% if settings.product_usp_block_3_icon != blank or settings.product_usp_block_3_text != blank %}
+            <div class="product-usp-details--block">
+                {% assign image_width = settings.product_usp_block_3_icon %}
+                {% assign image_height = settings.product_usp_block_3_icon %}
+                {% assign aspect_ratio = image_width | divided_by: image_height %}
+                <img class="deferimg lazy-load-image product-usp-details--icon" loading="lazy"
+                    data-src="{{ settings.product_usp_block_3_icon | img_url: 'master' }}" width="{{ image_width }}"
+                    height="{{ image_width | divided_by: aspect_ratio | round }}" alt="{{ section.settings.image.alt | escape }}">
+                <p class="product-usp-details__text rte">{{ settings.product_usp_block_3_text }}</p>
+            </div>
+        {% endif %}
+    {% endif %}
+    {% if settings.enable_product_usp_block_four %}
+        {% if settings.product_usp_block_4_icon != blank or settings.product_usp_block_4_text != blank %}
+            <div class="product-usp-details--block">
+                {% render 'responsive-picture', desktopImage: settings.product_usp_block_4_icon, class:'product-usp-details--icon' %}
+                <p class="product-usp-details__text rte">{{ settings.product_usp_block_4_text }}</p>
+            </div>
+        {% endif %}
+    {% endif %}
+</div>

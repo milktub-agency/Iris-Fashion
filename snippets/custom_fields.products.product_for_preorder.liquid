@@ -1,0 +1,13 @@
+{% if product.metafields["custom_fields"]["product_for_preorder"] != blank %}
+  <div class="custom-field custom-field__product-for-preorder custom-field__type--checkbox">
+    <h3 class="custom-field--title">Product for pre-order</h3>
+    <div class="custom-field--value">
+      {% if product.metafields["custom_fields"]["product_for_preorder"] == 1 %}
+        TRUE
+      {% else %}
+        FALSE
+      {% endif %}
+
+    </div>
+  </div>
+{% endif %}

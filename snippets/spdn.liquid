@@ -1,0 +1,36 @@
+<script data-spdn=="1">var _listeners = [];
+    EventTarget.prototype.addEventListenerBase = EventTarget.prototype.addEventListener, EventTarget.prototype.addEventListener = function (e, t, p) { _listeners.push({ target: this, type: e, listener: t }), this.addEventListenerBase(e, t, p) }, EventTarget.prototype.removeEventListeners = function (e) { for (var t = 0; t != _listeners.length; t++) { var r = _listeners[t], n = r.target, s = r.type, i = r.listener; n == this && s == e && this.removeEventListener(s, i) } };
+</script>
+<script type="text/worker" data-spdn=="1"
+    id="spdnworker">onmessage=function(e){var t=new Request("https://"+"{{ 'spdn.js' | asset_url }}",{redirect:"follow"});fetch(t).then(e=>e.text()).then(e=>{postMessage(e)})};</script>
+<script type="text/javascript"
+    data-spdn=="1">var spdnx = new Worker("data:text/javascript;base64," + btoa(document.getElementById("spdnworker").textContent)); spdnx.onmessage = function (t) { var e = document.createElement("script"); e.type = "text/javascript", e.textContent = t.data, document.head.appendChild(e) }, spdnx.postMessage("init");</script>
+<script type="text/javascript" data-spdn=="1">
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(({ addedNodes }) => {
+            addedNodes.forEach(node => {
+                if (node.tagName === 'SCRIPT' && node.async == true) { node.type = 'text/spdnscript' }
+                if (node.tagName === 'SCRIPT' && node.async == false) {
+                    if (
+                        node.dataset.spdn == "1"
+                        || node.id == "shopify-features"
+                        || node.id == '__st'
+                        || node.src.includes('cdn.shopify')
+                        || node.src.includes('jquery')
+                    ) {
+                        node.type = 'text/javascript'
+                    }
+                    else if (node.type.includes('json')) {
+                        node.type = 'application/json';
+                    }
+                    else {
+
+                        node.type = 'text/spdnscript'
+                    }
+                }
+
+            })
+        })
+    })
+    var ua = navigator.userAgent.toLowerCase(); if ((ua.indexOf('chrome') > -1 || ua.indexOf('firefox') > -1) && window.location.href.indexOf("no-optimization") === -1) { observer.observe(document.documentElement, { childList: true, subtree: true }) }
+</script>

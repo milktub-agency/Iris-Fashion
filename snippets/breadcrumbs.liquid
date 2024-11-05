@@ -1,0 +1,263 @@
+{% assign separator = ' > ' %}
+
+<nav class="breadcrumbs {%- if parent_class %} {{ parent_class }} {%- endif %}" role="navigation">
+    <ul class="breadcrumbs-list {%- if class %} {{ class }}{%- endif %}">
+        <li>
+            <a href="{{ shop.url }}">
+                <span>Home</span>
+            </a>
+            <span class="breadcrumbs-separator">{{ separator }}</span>
+        </li>
+        {%- if template contains 'page' -%}
+            {%- if template.suffix == 'location' -%}
+                <li>
+                    <a href="{{ pages[settings.location_parent_page].url }}">
+                        <span>{{ pages[settings.location_parent_page].title }}</span>
+                    </a>
+                    <span class="breadcrumbs-separator">{{ separator }}</span>
+                </li>
+            {%- endif -%}
+            <li>
+                <a href="{{ page.url }}">
+                    <span>{{ page.title }}</span>
+                </a>
+            </li>
+        {%- elsif template contains 'cart' -%}
+            <li>
+                <a href="/cart">
+                    <span>Basket</span>
+                </a>
+            </li>
+        {%- elsif template contains 'product' -%}
+
+            {%- comment -%}Check for parent collection{%- endcomment -%}
+            {%- if product.metafields.custom_fields["primary_collection"] != blank -%}
+
+                {% assign product_parent_collection = collections[product.metafields.custom_fields["primary_collection"]] %}
+                {% if product_parent_collection.published_at != empty %} {%- comment -%} Only show if parent collection is published {%- endcomment -%}
+
+                    {%- comment -%} Grandparent collection markup {%- endcomment -%}
+                    {%- if product_parent_collection.metafields.custom_fields["primary_collection"] != blank -%}
+                        {% assign product_grandparent_collection = collections[product_parent_collection.metafields.custom_fields["primary_collection"]] %}
+                        {% if product_grandparent_collection.published_at != empty %} {%- comment -%} Only show if grandparent collection is published {%- endcomment -%}
+                            <li>
+                                <a href="{{ product_grandparent_collection.url }}">
+                                    <span>{{ product_grandparent_collection.title }}</span>
+                                </a>
+                                <span class="breadcrumbs-separator">{{ separator }}</span>
+                            </li>
+                        {% endif %}
+                    {%- endif -%}
+
+                    {%- comment -%} Parent collection markup {%- endcomment -%}
+                    <li>
+                        <a href="{{ product_parent_collection.url }}">
+                            <span>{{ product_parent_collection.title }}</span>
+                        </a>
+                        <span class="breadcrumbs-separator">{{ separator }}</span>
+                    </li>
+
+                {% endif %}
+            {%- endif -%}
+
+            <li>
+                <span>{{ product.title }}</span>
+            </li>
+
+        {%- elsif template contains 'collection' and collection.handle -%}
+
+            {%- if collection.metafields.custom_fields["primary_collection"] != blank -%}
+                {% assign collection_collection = collections[collection.metafields.custom_fields["primary_collection"]] %}
+                <li>
+                    <a href="{{ collection_collection.url }}">
+                        <span>{{ collection_collection.title }}</span>
+                    </a>
+                    <span class="breadcrumbs-separator">{{ separator }}</span>
+                </li>
+            {%- endif -%}
+
+            <li>
+                <span>{{ collection.title }}</span>
+            </li>
+            {%- if current_tags -%}
+            <span class="breadcrumbs-separator">{{ separator }}</span>
+            <li>
+                <a href="/collections/{{ collection.handle }}/{{ current_tags }}">
+                    <span>{{ current_tags | join: " + " }}</span>
+                </a>
+            </li>
+            {%- endif -%}
+        {%- elsif template == 'blog' -%}
+            <li>
+                <a href="{{ blog.url }}">
+                    <span>{{ blog.title }}</span>
+                </a>
+            </li>
+            {%- if current_tags -%}
+                <span class="breadcrumbs-separator">{{ separator }}</span>
+                <li>
+                    <a href="{{ blog.url }}/tagged/{{ current_tags }}">
+                        <span>{{ current_tags | join: " + " }}</span>
+                    </a>
+                </li>
+            {%- endif -%}
+        {%- elsif template == 'article' -%}
+            <li>
+                <a href="{{ blog.url }}">
+                    <span>{{ blog.title }}</span>
+                </a>
+            </li>
+            <span class="breadcrumbs-separator">{{ separator }}</span>
+            <li>
+                <a href="{{ article.url }}">
+                    <span>{{ article.title }}</span>
+                </a>
+            </li>
+        {%- else -%}
+            <li>
+                <a href="{{ page.url }}">
+                    <span>{{ page.title }}</span>
+                </a>
+            </li>
+        {%- endif -%}
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+            {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"{{ shop.url }}/"
+            }
+            {%- if template contains 'page' -%}
+                {%- if template.suffix == 'location' -%}
+                ,{
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"{{ pages[settings.location_parent_page].title }}",
+                    "item":"{{ shop.url }}{{ pages[settings.location_parent_page].url }}"
+                }
+                {%- endif -%}
+                ,{
+                    "@type":"ListItem",
+                    "position":{%- if template.suffix == 'location' -%}3{%- else -%}2{%- endif -%},
+                    "name":"{{ page.title }}",
+                    "item":"{{ shop.url }}{{ page.url }}"
+                }
+            {%- elsif template contains 'cart' -%}
+                ,{
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"Basket",
+                    "item":"{{ shop.url }}/cart"
+                }
+            {%- elsif template contains 'product' -%}
+                {% assign productPosition = 2 %}
+                {%- if product.metafields.custom_fields["primary_collection"] != blank -%}
+                    {% assign product_parent_collection = collections[product.metafields.custom_fields["primary_collection"]] %}
+                    {% if product_parent_collection.published_at != empty %} {%- comment -%} Only show if parent collection is published {%- endcomment -%}
+                        {% assign productPosition = 3 %}
+
+                        {%- if product_parent_collection.metafields.custom_fields["primary_collection"] != blank -%}
+                            {% assign product_grandparent_collection = collections[product_parent_collection.metafields.custom_fields["primary_collection"]] %}
+                            {% if product_grandparent_collection.published_at != empty %} {%- comment -%} Only show if parent collection is published {%- endcomment -%}
+                                {% assign productPosition = 4 %}
+                                
+                                ,{
+                                    "@type":"ListItem",
+                                    "position":2,
+                                    "name":"{{ product_grandparent_collection.title }}",
+                                    "item":"{{ shop.url }}{{ product_grandparent_collection.url }}"
+                                }
+                            {% endif %}
+                        {%- endif -%}
+                    
+                        ,{
+                            "@type":"ListItem",
+                            "position":{%- if product_parent_collection.metafields.custom_fields["primary_collection"] != blank -%}3{% else %}2{% endif %},
+                            "name":"{{ product_parent_collection.title }}",
+                            "item":"{{ shop.url }}{{ product_parent_collection.url }}"
+                        }
+                    {% endif %}
+                {%- endif -%}
+                ,{
+                    "@type":"ListItem",
+                    "position":{{ productPosition }},
+                    "name":"{{ product.title }}",
+                    "item":"{{ shop.url }}{{ product.url }}"
+                }
+            {%- elsif template contains 'collection' and collection.handle -%}
+                {%- if collection.metafields.custom_fields["primary_collection"] != blank -%}
+                    {% assign collection_collection = collections[collection.metafields.custom_fields["primary_collection"]] %}
+                    ,{
+                        "@type":"ListItem",
+                        "position":2,
+                        "name":"{{ collection_collection.title }}",
+                        "item":"{{ shop.url }}{{ collection_collection.url }}"
+                    }
+                {%- endif -%}
+                ,{
+                    "@type":"ListItem",
+                    "position":{%- if collection.metafields.custom_fields["primary_collection"] != blank %}3{%- else %}2{%- endif -%},
+                    "name":"{{ collection.title }}",
+                    "item":"{{ shop.url }}{{ collection.url }}"
+                }
+                {%- if current_tags -%}
+                    ,{
+                        "@type":"ListItem",
+                        "position":{%- if collection.metafields.custom_fields["primary_collection"] != blank %}4{%- else %}3{%- endif -%},
+                        "name":"{{ current_tags | join: " + " }}",
+                        "item":"{{ shop.url }}/collections/{{ collection.handle }}/{{ current_tags }}"
+                    }
+                {%- endif -%}
+            {%- elsif template == 'blog' -%}
+                ,{
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"{{ blog.title }}",
+                    "item":"{{ shop.url }}{{ blog.url }}"
+                }
+                {%- if current_tags -%}
+                    ,{
+                        "@type":"ListItem",
+                        "position":3,
+                        "name":"{{ current_tags | join: " + " }}",
+                        "item":"{{ shop.url }}{{ blog.url }}/tagged/{{ current_tags }}"
+                    }
+                {%- endif -%}
+            {%- elsif template == 'article' -%}
+                ,{
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"{{ blog.title }}",
+                    "item":"{{ shop.url }}{{ blog.url }}"
+                },
+                {
+                    "@type":"ListItem",
+                    "position":3,
+                    "name":"{{ article.title }}",
+                    "item":"{{ shop.url }}{{ article.url }}"
+                }
+            {%- else -%}
+                ,{
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"{{ page.title }}",
+                    "item":"{{ shop.url }}{{ page.url }}"
+                }
+            {%- endif -%}
+        ]
+    }
+</script>
