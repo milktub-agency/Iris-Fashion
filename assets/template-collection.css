@@ -102,7 +102,7 @@
   opacity: 0;
 }
 
-.overlay-slider {
+.card-overlay--splider {
   position: absolute;
   top: 0;
   left: 0;
@@ -112,42 +112,42 @@
   transition: opacity 0.4s ease;
 }
 
-.hover-trigger:hover .overlay-slider {
+.slider-wrapper:hover .card-overlay--splider {
   opacity: 1;
 }
 
-.splide__slide {
+.card-overlay--splider .splide__slide {
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-.splide__slide.is-active {
+.card-overlay--splider .splide__slide.is-active {
   opacity: 1;
 }
 
-.splide__pagination__page.is-active {
+.card-overlay--splider .splide__pagination__page.is-active {
   background: #c1857e;
 }
 
-.splide__slide a {
+.card-overlay--splider .splide__slide a {
   display: block;
   height: 100%;
 }
 
-.splide__slide img {
+.card-overlay--splider .splide__slide img {
   transform: scale(1);
   transition: transform 0.6s ease;
 }
 
-.hover-trigger:hover .splide__slide.is-active img {
+.slider-wrapper:hover .splide__slide.is-active img {
   transform: scale(1.03);
 }
 
-.splide__arrow {
+.card-overlay--splider .splide__arrow {
   background: #c1857e;
 }
 
-.splide__arrow svg {
+.card-overlay--splider .splide__arrow svg {
   fill: #fff;
 }
 
@@ -155,15 +155,13 @@
   .featured-image--new {
     display: none;
   }
-
-  .splide.overlay-slider {
+  .splide.card-overlay--splider {
     opacity: 1;
   }
-
-  .splide__pagination {
+  .card-overlay--splider .splide__pagination {
     bottom: 1rem;
   }
-  .splide__pagination__page{
+  .card-overlay--splider .splide__pagination__page{
     height: 6px;
     width: 6px;
   }
