@@ -63,7 +63,7 @@
   }
 }
 
-.collection__description > * {
+.collection__description>* {
   margin: 0;
 }
 
@@ -97,59 +97,74 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
-  .card__media {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .media--transparent {
-    display: block;
-    width: 100%;
-    transition: opacity 0.4s ease;
-  }
-  
-  .hover-trigger:hover .media--transparent {
-    opacity: 0;
+
+.hover-trigger:hover .media--transparent {
+  opacity: 0;
+}
+
+.overlay-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hover-trigger:hover .overlay-slider {
+  opacity: 1;
+}
+
+.splide__slide {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
+
+.splide__pagination__page.is-active {
+  background: #c1857e;
+}
+
+.splide__slide a {
+  display: block;
+  height: 100%;
+}
+
+.splide__slide img {
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+.hover-trigger:hover .splide__slide.is-active img {
+  transform: scale(1.03);
+}
+
+.splide__arrow {
+  background: #c1857e;
+}
+
+.splide__arrow svg {
+  fill: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .featured-image--new {
+    display: none;
   }
 
-  .overlay-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  
-  .hover-trigger:hover .overlay-slider {
+  .splide.overlay-slider {
     opacity: 1;
   }
 
-  .splide__track, 
-  .splide__list {
-    height: 100%;
+  .splide__pagination {
+    bottom: 1rem;
   }
-
-  .splide__slide {
-    opacity: 0;
-    transition: opacity 0.4s ease;
+  .splide__pagination__page{
+    height: 6px;
+    width: 6px;
   }
-
-  .splide__slide.is-active {
-    opacity: 1;
-  }
-
-  .splide__slide a {
-    display: block;
-    height: 100%;
-  }
-
-  .splide__slide img {
-    transform: scale(1);
-    transition: transform 0.6s ease;
-  }
-
-  .hover-trigger:hover .splide__slide.is-active img {
-    transform: scale(1.03);
-  }
+}
