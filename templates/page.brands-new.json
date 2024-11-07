@@ -380,6 +380,15 @@
             "title": "Wilson Jewellery",
             "first_letter": ""
           }
+        },
+        "brand_GXAKpR": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "jerome-dreyfuss-1",
+            "title": "Jerome Dreyfuss",
+            "first_letter": ""
+          }
         }
       },
       "block_order": [
@@ -422,7 +431,8 @@
         "brand_G79iLL",
         "brand_yHyYL6",
         "brand_3XgNtM",
-        "brand_DjiEed"
+        "brand_DjiEed",
+        "brand_GXAKpR"
       ],
       "settings": {
         "enable_hero": true,

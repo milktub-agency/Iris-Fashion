@@ -14,8 +14,9 @@
         },
         "announcement_bfynm4": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
-            "text": "SPEND & SAVE THIS WEEK AND SAVE  UP TO £150",
+            "text": "SPEND & SAVE ENDS TONIGHT! SAVE  UP TO £150",
             "link": ""
           }
         }

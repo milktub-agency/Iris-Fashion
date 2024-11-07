@@ -13,7 +13,7 @@
         "text_MNKAUm": {
           "type": "text",
           "settings": {
-            "text": "The Holiday Collection",
+            "text": "PARTYWEAR HAS ARRIVED",
             "text_style": "subtitle"
           }
         },
@@ -136,6 +136,7 @@
         "text_barcQW",
         "button_T7nH4q"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/2024_08_12_Iris_AW_Campaign_SHOT_16_069.jpg",
         "height": "adapt",
@@ -187,6 +188,7 @@
         "product_Qg6G9e",
         "product_e6ztRB"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -262,14 +264,14 @@
         "heading_hqtqfh": {
           "type": "heading",
           "settings": {
-            "heading": "Autumnal Heritage",
+            "heading": "Back In Stock - The Freya Dress",
             "heading_size": "h0"
           }
         },
         "text_YeyFdT": {
           "type": "text",
           "settings": {
-            "text": "<p>We're going autumnal heritage for bonfire night this year: think classic tweeds and checks layered over vintage florals in soft, earthy colourways.<\/p>",
+            "text": "<p>With her frilled shoulders; smocked bodice; and full skirt, Freya is your most comfortable statement dress. To celebrate, we've made an adorable, limited-edition Little Freya for your little ones<\/p>",
             "text_style": "body"
           }
         },
@@ -277,7 +279,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify:\/\/collections\/new-in-this-week-1",
+            "button_link": "shopify:\/\/collections\/style-your-shae",
             "button_style_secondary": false
           }
         }
@@ -288,7 +290,7 @@
         "button_Vjp47A"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/def0e1376e6b1add086b678f17f3d1ec_2a42edfa-cf81-4526-af7d-0fe5e66e0ba1.jpg",
+        "image": "shopify:\/\/shop_images\/IMG_5444.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -307,36 +309,36 @@
     "featured_product_list_WmVGRP": {
       "type": "featured-product-list",
       "blocks": {
-        "product_FUeXU8": {
-          "type": "product",
-          "settings": {
-            "product_item": "sonia-long-coat-oatmeal"
-          }
-        },
-        "product_PFh7Mg": {
-          "type": "product",
-          "settings": {
-            "product_item": "roberta-dress-print"
-          }
-        },
         "product_UpzwNw": {
           "type": "product",
           "settings": {
-            "product_item": "harpe-check-pants-black-white"
+            "product_item": "freya-tartan-dress-red"
           }
         },
         "product_8JUeHE": {
           "type": "product",
           "settings": {
-            "product_item": "flower-blouse-black"
+            "product_item": "little-freya-dress-green"
+          }
+        },
+        "product_FUeXU8": {
+          "type": "product",
+          "settings": {
+            "product_item": "freya-tartan-dress-green-and-navy"
+          }
+        },
+        "product_PFh7Mg": {
+          "type": "product",
+          "settings": {
+            "product_item": "little-freya-dress-red"
           }
         }
       },
       "block_order": [
-        "product_FUeXU8",
-        "product_PFh7Mg",
         "product_UpzwNw",
-        "product_8JUeHE"
+        "product_8JUeHE",
+        "product_FUeXU8",
+        "product_PFh7Mg"
       ],
       "settings": {
         "title": "",

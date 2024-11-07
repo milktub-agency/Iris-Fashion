@@ -4,6 +4,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
+        "color_scheme": "",
         "padding_top": 28,
         "padding_bottom": 28
       }
@@ -24,7 +25,8 @@
           "type": "location",
           "settings": {
             "page": "barnes-new-2",
-            "image": "shopify:\/\/shop_images\/Barnes_c50ba590-3992-4433-8b76-a948ab65f33b.jpg",
+            "enable_page_description": true,
+            "image": "shopify:\/\/shop_images\/STORE_BAR_1.jpg",
             "email": "barnes@irisfashion.co.uk",
             "telephone": "020 8741 0816",
             "address": "86 Church Road, Barnes, SW13 0DQ",
@@ -39,7 +41,8 @@
           "type": "location",
           "settings": {
             "page": "battersea-new-2",
-            "image": "shopify:\/\/shop_images\/Battersea.jpg",
+            "enable_page_description": true,
+            "image": "shopify:\/\/shop_images\/STORE_BATT_1.jpg",
             "email": "battersea@irisfashion.co.uk",
             "telephone": "020 7924 6948",
             "address": "143-145 Northcote Road, London, SW11 6PX",
@@ -54,7 +57,8 @@
           "type": "location",
           "settings": {
             "page": "hampstead-new-2",
-            "image": "shopify:\/\/shop_images\/Store_Hampstead.jpg",
+            "enable_page_description": true,
+            "image": "shopify:\/\/shop_images\/STORE_HAM_1.jpg",
             "email": "hampstead@irisfashion.co.uk",
             "telephone": "0207 435 3007.",
             "address": "28 Rosslyn Hill, London, NW3 1NH",
@@ -69,7 +73,8 @@
           "type": "location",
           "settings": {
             "page": "wimbledon-new-2",
-            "image": "shopify:\/\/shop_images\/wimbledon_pic.jpg",
+            "enable_page_description": true,
+            "image": "shopify:\/\/shop_images\/STORE_WIM_1.jpg",
             "email": "wimbledon@irisfashion.co.uk",
             "telephone": "0203 7505699",
             "address": "74 High St, Wimbledon SW19 5EG",
@@ -84,6 +89,7 @@
           "type": "location",
           "settings": {
             "page": "chiswick-pop-up-store-2",
+            "enable_page_description": true,
             "image": "shopify:\/\/shop_images\/CHISWICK_STORE.jpg",
             "email": "chiswick@irisfashoin.co.uk",
             "telephone": "",

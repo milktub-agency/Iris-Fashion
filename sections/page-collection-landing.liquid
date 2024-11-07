@@ -148,19 +148,22 @@
               image_cta_image_url: cf_image_cta_1_image[index],
               image_cta_title: cf_image_cta_1_title[index],
               image_cta_text: cf_image_cta_1_text[index],
-              image_cta_url: cf_image_cta_1_url[index]
+              image_cta_url: cf_image_cta_1_url[index],
+              image_content_bg: section.settings.overlay_background
             -%}
             {%- render 'single-image-cta',
               image_cta_image_url: cf_image_cta_2_image[index],
               image_cta_title: cf_image_cta_2_title[index],
               image_cta_text: cf_image_cta_2_text[index],
-              image_cta_url: cf_image_cta_2_url[index]
+              image_cta_url: cf_image_cta_2_url[index],
+              image_content_bg: section.settings.overlay_background
             -%}
             {%- render 'single-image-cta',
               image_cta_image_url: cf_image_cta_3_image[index],
               image_cta_title: cf_image_cta_3_title[index],
               image_cta_text: cf_image_cta_3_text[index],
-              image_cta_url: cf_image_cta_3_url[index]
+              image_cta_url: cf_image_cta_3_url[index],
+              image_content_bg: section.settings.overlay_background
             -%}
           </div>
         </section>
@@ -219,6 +222,15 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Background color for overlay content on image"
+    },{
+      "type": "color",
+      "id": "overlay_background",
+      "default":"#fff",
+      "label": "Background color"
     },
       {
       "type": "header",
