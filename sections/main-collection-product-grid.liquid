@@ -1,7 +1,8 @@
+{{ 'splide.min.css' | asset_url |  stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-
+<script src="{{ 'splide-slider.js' |  asset_url}}" defer></script>
 
 
 {% if section.settings.image_shape == 'blob' %}
@@ -161,6 +162,7 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
+                {%- if section.settings.product_card_type == 'hover_variant' -%}
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
@@ -172,7 +174,18 @@
                     quick_add: section.settings.quick_add,
                     section_id: section.id
                   %}
-                </li>
+                {% endif %}
+                {%- if section.settings.product_card_type == 'hover_slider' -%}
+                  {% render 'card-product-two',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    image_shape: section.settings.image_shape,
+                    show_vendor: section.settings.show_vendor,
+                    lazy_load: lazy_load,
+                    section_id: section.id
+                  %}
+                {% endif %}
+              </li>
               {%- endfor -%}
             </ul>
             <div class="hidden">
@@ -348,6 +361,26 @@ pagination: '.infinite_next',
       "id": "show_collection_description",
       "default": true,
       "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "header",
+      "content": "Product Card Type"
+    },
+    {
+      "type": "select",
+      "id": "product_card_type",
+      "options": [
+        {
+          "value": "hover_variant",
+          "label": "Show varaint on hover"
+        },
+        {
+          "value": "hover_slider",
+          "label": "Show Slider on hover"
+        }
+      ],
+      "default": "hover_variant",
+      "label": "Product Card Type"
     },
     {
       "type": "header",

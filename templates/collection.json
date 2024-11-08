@@ -15,6 +15,7 @@
         "columns_desktop": 4,
         "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
         "show_collection_description": true,
+        "product_card_type": "hover_slider",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
