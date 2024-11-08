@@ -151,6 +151,9 @@
   fill: #fff;
 }
 
+.slider-wrapper:hover .featured-image--new{
+    display: none;
+}
 @media screen and (max-width: 768px) {
   .featured-image--new {
     display: none;

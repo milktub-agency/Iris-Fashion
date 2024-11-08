@@ -20,14 +20,16 @@ Usage:
 {% capture slider_settings %}
   {
     "pagination": true,
-    "type": "slide",
+    "type": "loop",
     "perPage": 1,
     "arrows": true,
     "perMove": 1,
+    "start"  : 1,
+    "speed" : 0,
     "breakpoints": {
 	  "640": {
         "arrows": false
-	  }
+	    }
     }
   }
 {% endcapture %}
