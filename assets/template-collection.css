@@ -149,6 +149,10 @@
 .slider-wrapper:hover .featured-image--new{
     display: none;
 }
+
+.card-overlay--splider .splide__pagination {
+  bottom: 1.5rem;
+}
 @media screen and (max-width: 768px) {
   .featured-image--new {
     display: none;
