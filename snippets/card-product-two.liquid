@@ -28,7 +28,8 @@ Usage:
     "speed" : 0,
     "breakpoints": {
 	  "640": {
-        "arrows": false
+        "arrows": false,
+        "start": 0
 	    }
     }
   }
@@ -63,6 +64,7 @@ Usage:
                       </ul>
                     </div>
                   </div>
+                  {% render 'product-variant-links', product: card_product, class: 'single-product__variants' %}
               </div>
               {% render 'product-badge', product: card_product, position: 'top' %}
           </div>

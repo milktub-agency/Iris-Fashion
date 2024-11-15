@@ -59,7 +59,7 @@
         {% assign grid_class = 'grid--2-col grid--3-col-desktop' %}
     {% endcase %}
 
-    <div class="grid {{ grid_class }}">
+    <div class="grid grid--2-col grid--4-col-desktop">
       {% for product_handle in product_handles %}
         {% assign product_ref = all_products[product_handle] %}
         {% if product_ref.images.size > 0 %}
