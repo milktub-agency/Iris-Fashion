@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -14,10 +23,9 @@
         },
         "announcement_bfynm4": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "SPEND & SAVE ENDS TONIGHT! SAVE  UP TO £150",
-            "link": ""
+            "text": "BLACK FRIDAY EDIT NOW LIVE! 25% off",
+            "link": "shopify://collections/black-friday"
           }
         }
       },
@@ -56,10 +64,10 @@
         "column_3mqPyW": {
           "type": "column",
           "settings": {
-            "link_image": "shopify:\/\/shop_images\/HP_NEW_SEASON_AW24.jpg",
+            "link_image": "shopify://shop_images/HP_NEW_SEASON_AW24.jpg",
             "link_text": "New in",
             "link_text_description": "Shop our newest deliveries",
-            "link_url": "shopify:\/\/collections\/by-iris-new-in"
+            "link_url": "shopify://collections/by-iris-new-in"
           }
         }
       },
@@ -69,7 +77,7 @@
       "settings": {
         "parent": "New In[title]",
         "menu_heading": "Shop All",
-        "menu_heading_url": "shopify:\/\/collections\/new-in-this-week-1",
+        "menu_heading_url": "shopify://collections/new-in-this-week-1",
         "menu": "new-in",
         "second_menu_heading": "",
         "second_menu_heading_url": "",
@@ -85,10 +93,10 @@
         "column_3TC6KU": {
           "type": "column",
           "settings": {
-            "link_image": "shopify:\/\/shop_images\/Mega_Menu_3.jpg",
+            "link_image": "shopify://shop_images/Mega_Menu_3.jpg",
             "link_text": "Brands",
             "link_text_description": "View all Brands",
-            "link_url": "shopify:\/\/pages\/brands"
+            "link_url": "shopify://pages/brands"
           }
         }
       },
@@ -98,7 +106,7 @@
       "settings": {
         "parent": "brands",
         "menu_heading": "View All",
-        "menu_heading_url": "shopify:\/\/pages\/brands",
+        "menu_heading_url": "shopify://pages/brands",
         "menu": "brands",
         "second_menu_heading": "",
         "second_menu_heading_url": "",
@@ -114,10 +122,10 @@
         "column_wyygVU": {
           "type": "column",
           "settings": {
-            "link_image": "shopify:\/\/shop_images\/BY_IRISLand.jpg",
+            "link_image": "shopify://shop_images/BY_IRISLand.jpg",
             "link_text": "Women's Clothing",
             "link_text_description": "Shop Here",
-            "link_url": "shopify:\/\/collections"
+            "link_url": "shopify://collections"
           }
         }
       },
@@ -127,7 +135,7 @@
       "settings": {
         "parent": "clothing",
         "menu_heading": "Shop All",
-        "menu_heading_url": "shopify:\/\/collections\/all-clothing",
+        "menu_heading_url": "shopify://collections/all-clothing",
         "menu": "clothing",
         "second_menu_heading": "",
         "second_menu_heading_url": "",
@@ -143,10 +151,10 @@
         "column_NFNem3": {
           "type": "column",
           "settings": {
-            "link_image": "shopify:\/\/shop_images\/Mega_Menu_Bags_copy.jpg",
+            "link_image": "shopify://shop_images/Mega_Menu_Bags_copy.jpg",
             "link_text": "Accessories",
             "link_text_description": "View all the collections",
-            "link_url": "\/collections\/womens-designer-accessories"
+            "link_url": "/collections/womens-designer-accessories"
           }
         }
       },
@@ -156,13 +164,13 @@
       "settings": {
         "parent": "Accessories",
         "menu_heading": "Shop All",
-        "menu_heading_url": "shopify:\/\/collections\/womens-designer-accessories",
+        "menu_heading_url": "shopify://collections/womens-designer-accessories",
         "menu": "accessories",
         "second_menu_heading": "Shoes",
-        "second_menu_heading_url": "shopify:\/\/collections\/ladies-shoes",
+        "second_menu_heading_url": "shopify://collections/ladies-shoes",
         "second_menu": "shoes",
         "third_menu_heading": "Jewellery",
-        "third_menu_heading_url": "\/collections\/jewellery",
+        "third_menu_heading_url": "/collections/jewellery",
         "third_menu": "jewellery"
       }
     },
@@ -172,10 +180,10 @@
         "column_xFbtAN": {
           "type": "column",
           "settings": {
-            "link_image": "shopify:\/\/shop_images\/952b9864eeab8db5af34d3ddc63aaa43_8eb90d50-1487-4f9b-bca7-d8c22ce157bc.jpg",
+            "link_image": "shopify://shop_images/952b9864eeab8db5af34d3ddc63aaa43_8eb90d50-1487-4f9b-bca7-d8c22ce157bc.jpg",
             "link_text": "Denim",
             "link_text_description": "",
-            "link_url": "\/collections\/denim"
+            "link_url": "/collections/denim"
           }
         }
       },
@@ -185,7 +193,7 @@
       "settings": {
         "parent": "Denim",
         "menu_heading": "Shop All",
-        "menu_heading_url": "\/collections\/denim",
+        "menu_heading_url": "/collections/denim",
         "menu": "denim",
         "second_menu_heading": "",
         "second_menu_heading_url": "",
@@ -201,10 +209,10 @@
         "column_t97n46": {
           "type": "column",
           "settings": {
-            "link_image": "shopify:\/\/shop_images\/AW24_Mega_Menu.jpg",
+            "link_image": "shopify://shop_images/AW24_Mega_Menu.jpg",
             "link_text": "By Iris",
             "link_text_description": "Shop Now",
-            "link_url": "\/pages\/by-iris-collection"
+            "link_url": "/pages/by-iris-collection"
           }
         }
       },
@@ -214,10 +222,10 @@
       "settings": {
         "parent": "By Iris",
         "menu_heading": "Shop All",
-        "menu_heading_url": "shopify:\/\/collections\/by-iris-1",
+        "menu_heading_url": "shopify://collections/by-iris-1",
         "menu": "by-iris",
         "second_menu_heading": "Collections",
-        "second_menu_heading_url": "\/collections\/by-iris-1",
+        "second_menu_heading_url": "/collections/by-iris-1",
         "second_menu": "collections",
         "third_menu_heading": "",
         "third_menu_heading_url": "",
