@@ -1,7 +1,8 @@
+{{ 'splide.min.css' | asset_url |  stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-
+<script src="{{ 'splide-slider.js' |  asset_url}}" defer></script>
 
 
 {% if section.settings.image_shape == 'blob' %}
@@ -37,6 +38,9 @@
     }
   }
 {%- endstyle -%}
+{%- if section.settings.product_card_type == 'hover_slider' -%}
+  {{'hover-slider.css' |  asset_url |  stylesheet_tag}}
+{%- endif -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
@@ -161,6 +165,7 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
+                {%- if section.settings.product_card_type == 'hover_variant' -%}
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
@@ -172,10 +177,21 @@
                     quick_add: section.settings.quick_add,
                     section_id: section.id
                   %}
-                </li>
+                {% endif %}
+                {%- if section.settings.product_card_type == 'hover_slider' -%}
+                  {% render 'card-product-two',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    image_shape: section.settings.image_shape,
+                    show_vendor: section.settings.show_vendor,
+                    lazy_load: lazy_load,
+                    section_id: section.id
+                  %}
+                {% endif %}
+              </li>
               {%- endfor -%}
             </ul>
-            <div class="hidden">
+            <div>
               {%- if paginate.pages > 1 -%}
                 {% render 'pagination', paginate: paginate, anchor: '' %}
               {%- endif -%}
@@ -189,130 +205,7 @@
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
-<script>
-var Ajaxinate = function ajaxinateConstructor(config) {
-  var settings = config || {};
-  var defaultSettings = {
-    pagination: '#AjaxinatePagination',
-    method: 'scroll',
-    container: '#AjaxinateLoop',
-    offset: 0,
-    loadingText: 'Loading',
-    callback: null
-  };
-  // Merge configs
-  this.settings = Object.assign(defaultSettings, settings);
 
-  // Bind 'this' to applicable prototype functions
-  this.addScrollListeners = this.addScrollListeners.bind(this);
-  this.addClickListener = this.addClickListener.bind(this);
-  this.checkIfPaginationInView = this.checkIfPaginationInView.bind(this);
-  this.stopMultipleClicks = this.stopMultipleClicks.bind(this);
-  this.destroy = this.destroy.bind(this);
-
-  // Set up our element selectors
-  this.containerElement = document.querySelector(this.settings.container);
-  this.paginationElement = document.querySelector(this.settings.pagination);
-
-  this.initialize();
-};
-
-Ajaxinate.prototype.initialize = function initializeTheCorrectFunctionsBasedOnTheMethod() {
-  // Find and initialise the correct function based on the method set in the config
-  if (this.containerElement) {
-    var initializers = {
-      click: this.addClickListener,
-      scroll: this.addScrollListeners
-    };
-    initializers[this.settings.method]();
-  }
-};
-
-Ajaxinate.prototype.addScrollListeners = function addEventListenersForScrolling() {
-  if (this.paginationElement) {
-    document.addEventListener('scroll', this.checkIfPaginationInView);
-    window.addEventListener('resize', this.checkIfPaginationInView);
-    window.addEventListener('orientationchange', this.checkIfPaginationInView);
-  }
-};
-
-Ajaxinate.prototype.addClickListener = function addEventListenerForClicking() {
-  if (this.paginationElement) {
-    this.nextPageLinkElement = this.paginationElement.querySelector('a');
-    this.clickActive = true;
-    if (this.nextPageLinkElement !== null) {
-      this.nextPageLinkElement.addEventListener('click', this.stopMultipleClicks);
-    }
-  }
-};
-
-Ajaxinate.prototype.stopMultipleClicks = function handleClickEvent(event) {
-  event.preventDefault();
-  if (this.clickActive) {
-    this.nextPageLinkElement.innerHTML = this.settings.loadingText;
-    this.nextPageUrl = this.nextPageLinkElement.href;
-    this.clickActive = false;
-    this.loadMore();
-  }
-};
-
-Ajaxinate.prototype.checkIfPaginationInView = function handleScrollEvent() {
-  var top = this.paginationElement.getBoundingClientRect().top - this.settings.offset;
-  var bottom = this.paginationElement.getBoundingClientRect().bottom + this.settings.offset;
-  if (top <= window.innerHeight && bottom >= 0) {
-    this.nextPageLinkElement = this.paginationElement.querySelector('a');
-    this.removeScrollListener();
-    if (this.nextPageLinkElement) {
-      this.nextPageLinkElement.innerHTML = this.settings.loadingText;
-      this.nextPageUrl = this.nextPageLinkElement.href;
-      this.loadMore();
-    }
-  }
-};
-
-Ajaxinate.prototype.loadMore = function getTheHtmlOfTheNextPageWithAnAjaxRequest() {
-  this.request = new XMLHttpRequest();
-  this.request.onreadystatechange = function success() {
-    if (this.request.readyState === 4 && this.request.status === 200) {
-      var newContainer = this.request.responseXML.querySelectorAll(this.settings.container)[0];
-      var newPagination = this.request.responseXML.querySelectorAll(this.settings.pagination)[0];
-      this.containerElement.insertAdjacentHTML('beforeend', newContainer.innerHTML);
-      this.paginationElement.innerHTML = newPagination.innerHTML;
-      if (this.settings.callback && typeof this.settings.callback === 'function') {
-        this.settings.callback(this.request.responseXML);
-      }
-      this.initialize();
-    }
-  }.bind(this);
-  this.request.open('GET', this.nextPageUrl);
-  this.request.responseType = 'document';
-  this.request.send();
-};
-
-Ajaxinate.prototype.removeClickListener = function removeClickEventListener() {
-  this.nextPageLinkElement.addEventListener('click', this.stopMultipleClicks);
-};
-
-Ajaxinate.prototype.removeScrollListener = function removeScrollEventListener() {
-  document.removeEventListener('scroll', this.checkIfPaginationInView);
-  window.removeEventListener('resize', this.checkIfPaginationInView);
-  window.removeEventListener('orientationchange', this.checkIfPaginationInView);
-};
-
-Ajaxinate.prototype.destroy = function removeEventListenersAndReturnThis() {
-  var destroyers = {
-    click: this.removeClickListener,
-    scroll: this.removeScrollListener
-  };
-  destroyers[this.settings.method]();
-  return this;
-};
-
-const endlessCollection = new Ajaxinate({
-container: '#product-grid',
-pagination: '.infinite_next',
-});
-</script>
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
@@ -348,6 +241,26 @@ pagination: '.infinite_next',
       "id": "show_collection_description",
       "default": true,
       "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "header",
+      "content": "Product Card Type"
+    },
+    {
+      "type": "select",
+      "id": "product_card_type",
+      "options": [
+        {
+          "value": "hover_variant",
+          "label": "Show varaint on hover"
+        },
+        {
+          "value": "hover_slider",
+          "label": "Show Slider on hover"
+        }
+      ],
+      "default": "hover_variant",
+      "label": "Product Card Type"
     },
     {
       "type": "header",

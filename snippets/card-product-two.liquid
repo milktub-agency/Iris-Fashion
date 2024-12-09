@@ -1,0 +1,88 @@
+{% comment %}
+Renders a product card
+Usage:
+{% render 'card-product-two', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+{% if card_product and card_product != empty %}
+{% liquid
+    assign ratio = 1
+    if card_product.featured_media and media_aspect_ratio == 'portrait'
+      assign ratio = 0.8
+    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
+      assign ratio = card_product.featured_media.aspect_ratio
+    endif
+    if ratio == 0 or ratio == null
+      assign ratio = 1
+    endif
+%}
+
+{% capture slider_settings %}
+  {
+    "pagination": true,
+    "type": "loop",
+    "perPage": 1,
+    "arrows": true,
+    "perMove": 1,
+    "start"  : 1,
+    "speed" : 0,
+    "breakpoints": {
+	  "640": {
+        "arrows": false,
+        "start": 0
+	    }
+    }
+  }
+{% endcapture %}
+
+  <splide-slider class="card-wrapper product-card-wrapper" data-slider-settings='{{ slider_settings | strip }}'>
+      <div class="card card--{{ settings.card_style }}
+      {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
+      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+      {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
+      {% if extend_height %} card--extend-height{% endif %}
+      {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
+      {% if horizontal_class %} card--horizontal{% endif %}
+      " style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+          <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+              style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+              <div
+                  class="slider-wrapper card__media shimmer {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+                  <a href="{{ card_product.url }}" class="media media--transparent featured-image--new">
+                    {% render 'responsive-picture', desktopImage: card_product.featured_media %}
+                  </a>
+                  <div class="splide card-overlay--splider">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        {% for image in card_product.images %}
+                          <li class="splide__slide">
+                            <a href="{{ card_product.url }}">
+                              {%- render 'responsive-picture', desktopImage: image -%}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                  {% render 'product-variant-links', product: card_product, class: 'single-product__variants' %}
+              </div>
+              {% render 'product-badge', product: card_product, position: 'top' %}
+          </div>
+          <div class="card__content">
+              <div class="card__information">
+                  <h3 class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}">
+                      <a href="{{ card_product.url }}" class="full-unstyled-link caption-with-letter-spacing product-card--title">
+                        {{ card_product.title | escape }}
+                      </a>
+                  </h3>
+                  {% if show_vendor %}
+                    <div class="product-card--vendor">{{ card_product.vendor }}</div>
+                  {% endif %}
+                  <div class="card-information">
+                    {% render 'price', product: card_product, show_compare_at_price: true %}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </splide-slider>
+{% endif %}

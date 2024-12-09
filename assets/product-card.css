@@ -24,6 +24,10 @@
 .product-card-wrapper .product-variants[data-option-count="3"] {
   right: -165px;
 }
+#product-grid  .single-product--badge--bottom{
+  background: #614051
+}
+
 
 .product-card-wrapper .product-variants__option {
   width: 55px;
