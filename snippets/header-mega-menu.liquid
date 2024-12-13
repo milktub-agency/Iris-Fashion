@@ -12,7 +12,7 @@
         {%- if link.links != blank -%}
           <header-menu data-openOnHover='true'>
             <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
-              <summary id="HeaderMenu-{{ link.handle }}" class="nav-link header__menu-item list-menu__item link {% if link.handle == 'sale' %}sale-text{% endif %}">
+              <summary id="HeaderMenu-{{ link.handle }}" class="nav-link header__menu-item list-menu__item link {% if link.handle == 'sale' or link.handle == 'sale-title' %}sale-text{% endif %}">
                 <span {%- if link.child_active %} class="header__active-menu-item" {% endif %}>
                   <a href="{{ link.url}}" class="{{ link.handle }}-danush">
                     {{ link.title | split: '[' | first }}
