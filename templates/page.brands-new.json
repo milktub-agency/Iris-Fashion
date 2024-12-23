@@ -142,7 +142,6 @@
         },
         "brand_6j6nqQ": {
           "type": "brand",
-          "disabled": true,
           "settings": {
             "column": "1",
             "collection": "faune",
@@ -162,7 +161,6 @@
         },
         "brand_Dpi3mU": {
           "type": "brand",
-          "disabled": true,
           "settings": {
             "column": "1",
             "collection": "goddess-charms",
@@ -389,6 +387,33 @@
             "title": "Jerome Dreyfuss",
             "first_letter": ""
           }
+        },
+        "brand_RjFeCY": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "beck-sondergaard",
+            "title": "BECKSONDERGAARD",
+            "first_letter": ""
+          }
+        },
+        "brand_GqyKw8": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "soeur",
+            "title": "SOEUR",
+            "first_letter": ""
+          }
+        },
+        "brand_EfFRQh": {
+          "type": "brand",
+          "settings": {
+            "column": "1",
+            "collection": "albaray",
+            "title": "Albaray",
+            "first_letter": ""
+          }
         }
       },
       "block_order": [
@@ -432,7 +457,10 @@
         "brand_yHyYL6",
         "brand_3XgNtM",
         "brand_DjiEed",
-        "brand_GXAKpR"
+        "brand_GXAKpR",
+        "brand_RjFeCY",
+        "brand_GqyKw8",
+        "brand_EfFRQh"
       ],
       "settings": {
         "enable_hero": true,

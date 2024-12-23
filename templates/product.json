@@ -5,8 +5,7 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "vendor": {
           "type": "text",
@@ -17,14 +16,12 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "style_guide_fXWVka": {
           "type": "style-guide",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -32,6 +29,10 @@
             "picker_type": "button",
             "swatch_shape": "circle"
           }
+        },
+        "true_fit_widget_pw9gEK": {
+          "type": "shopify:\/\/apps\/true-fit\/blocks\/widget\/caa08c3b-c601-47cd-9c2a-32bb0567b191",
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -42,24 +43,20 @@
         },
         "icons_VcKrTh": {
           "type": "icons",
-          "settings": {
-          }
+          "settings": {}
         },
         "style_guide_2_AbVaBR": {
           "type": "style-guide-2",
-          "settings": {
-          }
+          "settings": {}
         },
         "product_tabs_TpNQrc": {
           "type": "product-tabs",
-          "settings": {
-          }
+          "settings": {}
         },
         "style_it_with_WDBMTN": {
           "type": "style_it_with",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -68,6 +65,7 @@
         "price",
         "style_guide_fXWVka",
         "variant_picker",
+        "true_fit_widget_pw9gEK",
         "buy_buttons",
         "icons_VcKrTh",
         "style_guide_2_AbVaBR",
@@ -122,13 +120,11 @@
     },
     "fera_review_cAYEEM": {
       "type": "fera-review",
-      "settings": {
-      }
+      "settings": {}
     },
     "also_bought_widget_jWPhNX": {
       "type": "also-bought-widget",
-      "settings": {
-      }
+      "settings": {}
     },
     "custom_newsletter_68tbaf": {
       "type": "custom-newsletter",
@@ -147,8 +143,7 @@
         },
         "email_form_DFrC6G": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [

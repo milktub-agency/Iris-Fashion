@@ -162,6 +162,9 @@
   padding: 4px 12px;
   margin-top: 15px;
 }
+#product-grid  .single-product--badge--bottom{
+  background: #614051
+}
 
 .product-card-wrapper .product-variants__value.variant--out-of-stock {
   position: relative;

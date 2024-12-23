@@ -65,7 +65,7 @@
     and page.metafields.custom_fields.mobile_hero_image != blank
   %}
     <!-- hide this on mobile -->
-    <section class="collection-landing-title above-mobile-large{% if page.metafields.custom_fields["dark_hero_text"] != blank and page.metafields.custom_fields["dark_hero_text"] == 1 %} primary{% else %} white{% endif %}">
+    <section class="collection-landing-title above-mobile-large {% if page.metafields.custom_fields["dark_hero_text"] != blank and page.metafields.custom_fields["dark_hero_text"] == 1 %} primary{% else %} white{% endif %}">
       <div class="text-center">
         <h1 class="text-center__title title">{{ page.title }}</h1>
         <div class="text-center__text rte">

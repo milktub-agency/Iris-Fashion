@@ -77,7 +77,7 @@
                 </small>
               </div>
             {%- else -%}
-              <div class="cart__ctas" {{ block.shopify_attributes }}>
+              <div class="cart__ctas js-contents" {{ block.shopify_attributes }}>
                  <p class="cart__ctas-text lg light">Subtotal (ex. VAT and Shipping): <strong>{{ cart.total_price | money }}</strong></p>
               
                 <button

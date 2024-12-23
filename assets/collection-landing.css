@@ -169,6 +169,9 @@ a {
     left: 0;
   }
 }
+.mobile-large-only{
+  display: none;
+}
 .image-cta {
   position: relative;
   margin: 0 10px;

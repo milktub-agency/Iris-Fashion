@@ -2,8 +2,7 @@
   "sections": {
     "main": {
       "type": "page-collection-landing",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
