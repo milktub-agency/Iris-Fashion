@@ -86,14 +86,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   .menu-drawer {
     width: 80%;
   }
-  .header--has-social .menu-drawer__utility-links {
-    width: 82% !important;
-  }
+
 }
 @media screen and (min-width: 500px) and (max-width: 767px) {
-  .header--has-social .menu-drawer__utility-links {
-    width: 82% !important;
-  }
+
 }
 @media screen and (min-width: 750px) {
   .menu-drawer {
@@ -257,6 +253,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   display: flex;
   justify-content: space-between;
   padding: 0;
+  width: 80%;
   background-color: rgb(var(--color-background));
   box-shadow: 4px 0 5px 1px #32323240;
   position: fixed;
@@ -267,7 +264,6 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .header--has-social .menu-drawer__utility-links {
   padding: 2rem 3rem;
-  width: 80%;
 }
 
 @media screen and (max-width: 749px) {
