@@ -50,7 +50,7 @@ menu-drawer > details[open] > summary::before {
 
 .js .menu-drawer {
   height: calc(100vh - 100%);
-  padding: 20px 0 73px;
+  padding: 40px 0 73px;
 }
 
 .js details[open] > .menu-drawer,
@@ -86,14 +86,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   .menu-drawer {
     width: 80%;
   }
-  .header--has-social .menu-drawer__utility-links {
-    width: 82% !important;
-  }
+
 }
 @media screen and (min-width: 500px) and (max-width: 767px) {
-  .header--has-social .menu-drawer__utility-links {
-    width: 82% !important;
-  }
+
 }
 @media screen and (min-width: 750px) {
   .menu-drawer {
@@ -256,18 +252,19 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__utility-links {
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding: 2rem 3.5rem;
+  margin: 0;
+  width: 80%;
   background-color: rgb(var(--color-background));
   box-shadow: 4px 0 5px 1px #32323240;
-  margin-left: -3.5rem;
   position: fixed;
-  bottom: 0rem;
+  bottom: 0;
+  left: 0;
   z-index: 1000;
 }
 
 .header--has-social .menu-drawer__utility-links {
   padding: 2rem 3rem;
-  width: 84.3%;
 }
 
 @media screen and (max-width: 749px) {
