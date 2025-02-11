@@ -236,7 +236,7 @@
       },
       "5133962947178206058": {
         "type": "shopify://apps/kraken-cart-drawer/blocks/cart-drawer/395e4ebd-4534-4c0b-b7c2-4ccc91f8fe1e",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "custom_style": "",
           "custom_script": ""
