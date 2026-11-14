@@ -1,1 +1,13 @@
-{% render "blocks.custom_fields" with resource_type: "articles", blocks: section.blocks %}
+{% render "blocks.custom_fields" with resource_type, resource_type: "articles", blocks: section.blocks %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% render "blocks.custom_fields" with resource_type: "articles", blocks:
+    section.blocks %}'
+  to: '{% render "blocks.custom_fields" with resource_type, resource_type: "articles",
+    blocks: section.blocks %}'
+  position: 0..105
+{% endcomment %}
